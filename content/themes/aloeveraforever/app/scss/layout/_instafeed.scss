@@ -1,0 +1,70 @@
+.instafeed{
+  max-width:100vw;
+  grid-area: instafeed;
+  &__main{
+    display:grid;
+    grid: {
+      template: {
+        areas: 
+
+        "pic1 pic2 "
+        "pic3 pic4";
+
+        columns: 1fr 1fr ;
+        rows: auto;
+      }
+    }
+    @media(min-width: $breakpoint-M){
+      grid: {
+        template: {
+          areas: 
+  
+          "pic1 pic2 pic3 pic4 pic5"
+          "pic6 pic7 pic8 pic9 pic10";
+  
+          columns: 1fr 1fr 1fr 1fr 1fr;
+          rows: auto;
+        }
+      }
+    }
+  }
+
+  &__header{
+    margin-top: $gutter;
+    padding: $gutter-large;
+    text-align: center;
+    background-color: $color-primary;
+    &__title{
+      font-size: $font-size-very-tall;
+      color: $color-text-secondary;
+
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+  }
+}
+
+.instapic{
+  &:nth-child(n+5){
+    display:none;
+    @media(min-width: $breakpoint-M){
+      display:block;
+    }
+  }
+  position: relative;
+  @for $i from 1 through 10 {
+    &:nth-child(#{$i}){
+      grid-area:pic#{$i};
+    }
+}
+&:hover{
+  & .overlay{
+    display:flex  !important;
+  }
+}
+&__img{
+  max-width:100%;
+  max-height:100%;
+}
+
+}

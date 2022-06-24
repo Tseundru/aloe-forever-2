@@ -1,0 +1,44 @@
+.loginForm {
+  width: 60%;
+  margin-right: auto;
+  margin-left: auto;
+ 
+  &__fieldset {
+    
+    &__item {
+      @media(min-width: $breakpoint-M){
+        font-size: $font-size-tall;
+      }
+
+      
+
+      
+      
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+     text-align: left;
+      margin-bottom: $gutter;
+
+      &__input {
+        display: block;
+        margin-top: $gutter-very-small;
+        border: none;
+        width: 100%;
+        border: 1px solid $color-secondary;
+        padding: $gutter-small;
+        color: #757575;
+        text-transform: uppercase;
+        font-family: $font-stack-title;
+        @media(min-width: $breakpoint-M){
+          padding: $gutter;
+        }
+        
+      }
+    }
+  }
+
+
+
+
+}

@@ -1,0 +1,112 @@
+.productCategory{
+  &__actions{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: $gutter;
+    &__filter{
+    }
+    &__sort{
+      
+      text-transform: uppercase;
+      font-weight: 600;
+      color:$color-text;
+      & >span{
+        display:none;
+        @media(min-width: $breakpoint-SM){
+          display: inline;
+        }
+      }
+  
+      &__select{
+        padding: $gutter-small $gutter $gutter-very-small $gutter-small;
+        grid-area: select;
+        //appearance: none; 
+        background-color: transparent;
+        border: 1px solid $color-secondary;
+        outline: none;
+        margin-right: $gutter-small;
+      }
+      
+    }
+  }
+  &__products{
+    @media(min-width: $breakpoint-L){
+      display: grid;
+  }
+    grid: {
+      template: {
+        areas : 
+          "list sidebar"
+          "description sidebar";
+        columns:   3fr 1fr;
+        rows: auto;
+      }
+    }
+    &__list{
+      grid-area: list;
+      margin-bottom: $gutter;
+      display: grid;
+      grid-template-columns: 1fr ;
+      grid-column-gap: $gutter;
+      grid-row-gap: $gutter;
+      @media(min-width: $breakpoint-SM){
+        grid-template-columns: 1fr 1fr;
+        grid-row: auto;
+      }
+      @media(min-width: $breakpoint-L){
+        grid-template-columns: 1fr 1fr;
+    }
+    @media(min-width: $breakpoint-XL){
+      grid-template-columns: 1fr 1fr 1fr;
+  }
+  }
+  &__category{
+    display: none;
+    grid-area: sidebar;
+    justify-self: center;
+    @media(min-width: $breakpoint-L){
+      display: block;
+  }
+    &__header{
+      &__title{
+      font-size: $font-size-very-tall;
+      text-transform: uppercase;
+      padding-bottom: $gutter;
+      color: $color-primary;
+      font-weight: 500;
+      }
+    }
+    &__main{
+      &__list{
+        &__item{
+          padding: $gutter-small;
+          border-bottom: 1px solid rgba(0, 0, 0, 0.235);
+          font-size: $font-size-tall;
+          
+          & >a{
+
+            color: $color-text;
+            &:hover{
+              color: $color-primary;
+            }
+          }
+          &--active{
+            & >a{
+
+              color: $color-secondary;
+              &:hover{
+                color: $color-primary;
+              }
+            }
+          }
+        }
+      }
+    }
+   
+  }
+
+  &__description{
+    grid-area: description;
+  }
+  }
+}

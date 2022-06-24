@@ -1,0 +1,36 @@
+.popup{
+
+  position: fixed;
+  display:none;
+  visibility: hidden;
+      top:0;
+    right:0;
+    left:0;
+    bottom:0;
+    margin: auto;
+    z-index: 9999;
+    opacity: 0;
+    transition: all .3s ease-in-out;
+    &__wrapper{
+      justify-content: center;
+    }
+    &--active{
+      display: flex;
+      opacity: 1;
+      visibility: visible;
+    }
+    &__closeIcon{
+      position: absolute;
+      top:$gutter;
+      right:$gutter;
+      cursor: pointer;
+      &__svg{
+        width: 32px;
+        height: 32px;
+      }
+    }
+    &--opener{
+      cursor: pointer;
+    }
+}
+

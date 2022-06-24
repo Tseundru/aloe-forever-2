@@ -1,0 +1,53 @@
+.homepage{
+  display: grid;
+  grid: {
+    template: {
+      areas: 
+              "header header"
+              "bannerGallery bannerGallery"
+              "topSeller topSeller"
+              "gallery2 gallery2"
+              "newProducts newProducts"
+              "gallery3 gallery3"
+              "aloeMax aloeMax"
+              "gallery4 gallery4"
+              "glutenFree glutenFree"
+              "gallery5 gallery5"
+              "lastPosts lastPosts"
+              "instafeed instafeed"
+              "footer footer";
+              
+          columns:  1fr 1fr;
+          rows: auto;
+    }
+  }
+}
+
+.aloeMax{
+  grid-area: aloeMax;
+  //max-width: 50vw;
+}
+
+.gallery2{
+  grid-area: gallery2;
+}
+
+.topSeller{
+  grid-area: topSeller;
+}
+
+.newProducts{
+  grid-area: newProducts;
+}
+
+.gallery3{
+  grid-area: gallery3;
+}
+
+.glutenFree{
+  grid-area: glutenFree;
+}
+
+.gallery4{
+  grid-area: gallery4;
+}

@@ -1,0 +1,26 @@
+# Composers dependencies
+vendor
+
+# WordPress core
+wp
+
+# WordPress config
+wp-config.php
+
+# WordPress plugins
+content/plugins/akismet
+content/plugins/advanced-custom-fields-pro
+content/plugins/contact-form-7
+content/plugins/mailjet-for-wordpress
+content/plugins/query-monitor
+content/plugins/seo-by-rank-math
+content/plugins/simply-show-hooks
+
+git rm --cached content/plugins/
+# WordPress themes
+content/themes/twentynineteen
+
+# WordPress wp-content directories
+content/languages
+content/upgrade
+

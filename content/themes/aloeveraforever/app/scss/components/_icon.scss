@@ -1,0 +1,23 @@
+.icon{
+  stroke:$color-text-secondary;
+  cursor:pointer;
+  fill:transparent;
+  width:25px;
+  max-width:50px;
+  max-height: 50px;
+
+  @media(min-width: $breakpoint-M){
+    width:35px;
+    
+  }
+
+  &__handle{
+    fill:$color-text-secondary;
+  }
+  &:hover{
+    stroke: $color-primary;
+    & .icon__handle{
+      fill:$color-primary;
+    }
+  }
+}

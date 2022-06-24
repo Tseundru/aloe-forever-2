@@ -1,0 +1,15 @@
+.feature{
+  background-color: $color-primary;
+  padding: $gutter-very-small;
+  margin-bottom: $gutter-very-small;
+  width: fit-content;
+  color: $color-text-secondary;
+  font-weight: 700;
+  // font-family: $font-stack-title-special;
+  font-size: $font-size-tall;
+  &::before{
+    content: "#";
+    padding-right: $gutter-small;
+  }
+
+}

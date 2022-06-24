@@ -1,0 +1,11 @@
+.featureBlock{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-left: auto;
+  margin-right: auto;
+  @media(min-width: $breakpoint-L){
+    width: 80%;
+  }
+  
+}

@@ -1,0 +1,26 @@
+.ingredient{
+  position: relative;
+  text-align: center;
+  &__title{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    height: 100%;
+    width: 100%;
+    top:$gutter*1.6;
+    left:0;
+    &__text{
+      font-family: $font-stack-title-special;
+      font-size: $font-size-very-tall*1.5;
+      color:$color-text-secondary;
+      transform: rotate(350deg);
+      padding: $gutter-small;
+      margin-bottom: -$gutter;
+    }
+    
+    
+  
+
+  }
+}

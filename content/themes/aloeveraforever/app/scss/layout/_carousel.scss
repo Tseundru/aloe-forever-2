@@ -1,0 +1,22 @@
+.carousel{
+  padding-top: $gutter-large;
+}
+
+.swiper-container {
+  max-width: $breakpoint-XL;
+  height: auto;
+}
+
+.swiper-button-prev, .swiper-button-next{
+  color:$color-primary;
+}
+
+
+.productGallerySwipperContainerPagination{
+  text-align: center;
+  color:$color-primary;
+}
+
+.swiper-pagination-bullet-active{
+  background-color:$color-primary;
+}

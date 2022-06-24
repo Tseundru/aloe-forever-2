@@ -1,0 +1,43 @@
+.pictureCard{
+  position: relative;
+  background-size:cover;
+  width:100%;
+  display: block;
+  &__text{
+    color: white;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: flex-end;
+    height:30vh;
+    width:100%;
+    font-weight: 500;
+    padding: $gutter-large;
+    background-color: rgba(20, 20, 21, 0.337);
+    transition: all .5s ease-in-out;
+    &:hover{
+      background-color: rgba(20, 20, 21, 0.632);
+    }
+    @media(min-width: $breakpoint-M){
+      height:100%;        
+    }
+    &__title{
+      //font-size: $font-size-very-tall;
+      display:inline-block;
+      padding-right: $gutter-small;
+      letter-spacing: 3px;
+      line-height: $gutter-large;
+      border-bottom: 1px solid white;
+      color: white;
+      
+    }
+    &__subtitle{
+      padding-top:$gutter-small;
+      color: white;
+    }
+    
+  }
+  
+
+}

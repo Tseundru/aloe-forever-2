@@ -1,0 +1,1 @@
+/Applications/MAMP/htdocs/aloeveraforever/content/plugins/query-monitor/wp-content/db.php

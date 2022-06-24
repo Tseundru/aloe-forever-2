@@ -1,0 +1,6 @@
+@mixin icon-accordion($icon){
+  @include fa-icon;
+        content:$icon;
+        color:$color-primary;
+        margin-right: $gutter-small;
+}

@@ -1,0 +1,12 @@
+.logo{
+  grid-area:logo;
+  width:70px;
+  justify-self: left;
+  align-self:flex-end;
+  margin-left:$gutter-small;
+  align-self: center;
+  @media(min-width: $breakpoint-M){
+    margin-left:$gutter-very-large;
+    width:100px;
+  }
+}

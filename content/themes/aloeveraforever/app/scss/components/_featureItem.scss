@@ -1,0 +1,25 @@
+.featureItem{
+  text-align: center;
+  padding: $gutter;
+  &--3{
+    @media(min-width: $breakpoint-SM){
+      width: 33%;
+    }
+  }
+  &--4{
+    @media(min-width: $breakpoint-S){
+      width: 50%;
+    }
+    @media(min-width: $breakpoint-M){
+      width: 25%;
+    }
+  }
+  
+  &__icon{
+padding-bottom: $gutter-small;
+  }
+  &__title{
+    text-transform: uppercase;
+    font-weight: 600;
+  }
+}

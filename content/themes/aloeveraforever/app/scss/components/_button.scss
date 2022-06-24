@@ -1,0 +1,122 @@
+.buttonOverlay{
+      background-color: $color-secondary;
+      color: white;
+      font-family: $font-stack-title-special;
+      // transform: rotate(350deg);
+      border:none;
+      font-size: $font-size-very-tall;
+      padding: $gutter-small;
+      margin-bottom : $gutter-large;
+      transition: all .2s ease-in-out;
+      
+      &:hover{
+            color: white;
+            background-color: $color-primary;
+            //border: 1px solid $color-secondary;
+      }
+      &--readmore{
+            transform: rotate(350deg);
+      }
+      &--basket{
+            margin-top: $gutter;
+            
+            &::before{
+                  @include fa-icon;
+                content: $fa-var-shopping-basket;
+                font-size: $font-size-tall;
+                }
+      }
+}
+
+.button{
+      padding: $gutter;
+      display: inline-block;
+      text-transform: uppercase;
+      background-color: $color-secondary;
+      color: white;
+      border: none;
+      text-align: center;
+      transition: all .2s ease-in-out;
+      cursor: pointer;
+      &:hover{
+            color: $color-text;
+            background-color: $color-primary;
+      }
+      &--order{
+            &::before{
+                  @include fa-icon;
+                content: $fa-var-shopping-basket;
+                font-size: $font-size-tall;
+                padding-right: $gutter;
+                }
+      }
+
+      &--loginForm{
+            @media(max-height: $breakpoint-XS) {
+                  display: flex;
+                 
+                }
+      }
+      &--share{
+            color: white;
+            background-color: $color-text;
+            &::before{
+                  @include fa-icon;
+                content: $fa-var-share-alt;
+                font-size: $font-size-tall;
+                padding-right: $gutter;
+                }
+      }
+      &--social{
+            color: white;
+            background-color: $color-text;
+            display:flex;
+            justify-content: space-around;
+            padding: 0;
+            &:hover{
+                  color: white;
+                  background-color: $color-text;
+            }
+            &__icon{
+                  width: 100%;
+                  height: 100%;
+                  color: white;
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  
+                  &:hover{
+                  color: $color-text;
+                  background-color: $color-primary;
+                  }
+            }
+            
+      }
+      &--sell{
+            color: white;
+            background-color: $color-text;
+            &::before{
+                  @include fa-icon;
+                content: $fa-var-user-circle-o;
+                font-size: $font-size-tall;
+                padding-right: $gutter;
+                }
+      }
+      &--filter{
+            padding: $gutter-small $gutter $gutter-small $gutter-small;
+            &::before{
+                  @include fa-icon;
+                content: $fa-var-filter;
+               
+                padding-right: $gutter;
+                }
+      }
+      &--center{
+            margin-left: auto;
+            margin-right: auto;
+            display: block;
+            width: fit-content;
+            margin-bottom: $gutter;
+      }
+
+}

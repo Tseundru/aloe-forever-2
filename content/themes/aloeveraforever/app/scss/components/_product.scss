@@ -1,0 +1,126 @@
+.product{
+  border: 1px solid rgba(0, 0, 0, 0.235);
+  padding: $gutter;
+  text-align: center ;
+  position:relative;
+  
+  &__header{
+    position:relative;  
+    &:hover{
+      & .overlay{
+        display:flex  !important;
+      }
+    }
+    &__link{
+      position: absolute;
+      top:0;
+      bottom:0;
+      left:0;
+      right:0;
+      height:100%;
+      width:100%;
+      z-index: 2;
+      
+      
+    }
+    
+    &__seal{
+      position: absolute;
+      right: 0;
+      
+    }
+    
+    &__overlay{
+      margin-bottom: -3px;
+      //display: flex;
+      &__stars{
+        // color:$color-primary;
+      }
+      &__basket{
+        
+      }
+      
+    }
+    &__picture{
+      width: 15em;
+      padding-bottom: $gutter;
+      border-bottom: 3px solid $color-secondary;
+    }
+    &__badge{
+      position: absolute;
+      top:0;
+      left:0;
+      //display:flex;
+      flex-direction: row;
+      justify-content:flex-start;
+      height:80%;
+      @media(min-width: $breakpoint-XL){
+        left:0;
+      }
+    }
+  }
+  &__main{
+    &__title{
+      font-size: $font-size-tall*.9;
+      padding: $gutter;
+      &>a{
+        color: $color-text;
+        transition: all .2s ease-in-out;
+
+        &:hover{
+          color: $color-primary;
+      }
+      }
+    }
+    &__subtitle{
+      &>a{
+        color: $color-text;
+        transition: all .2s ease-in-out;
+
+        &:hover{
+          color: $color-primary;
+      }
+      }
+    }
+    }
+  }
+  
+
+
+.seal{
+  border-radius: 50%;
+}
+
+.badge{
+  //border-radius: 50%;
+  //border: 1px solid;
+  padding: $gutter-very-small;
+  margin-bottom: $gutter-small;
+  width: fit-content;
+  font-size: $font-size-tall*.7;
+  text-transform: uppercase;
+  //height: 80px;
+  display: flex;
+  justify-content: center; /* align horizontal */
+  align-items: center;
+  //width: 80px;
+  text-align: center;
+  color:white;
+  &::before{
+    content:"#";
+    padding-right: $gutter-very-small;
+  }
+    &--top{
+      background-color:$color-primary;
+      color: $color-text;
+    }
+    &--aloe{
+      background-color: $color-secondary;
+    }
+    &--new{
+      background-color: $color-text-secondary;
+      //font-size: $font-size-tall*.7;
+      color:$color-primary;
+    }
+}
+

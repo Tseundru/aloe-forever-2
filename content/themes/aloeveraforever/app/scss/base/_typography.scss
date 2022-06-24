@@ -1,0 +1,58 @@
+body {
+    font-family: $font-stack;
+}
+
+.title {
+   font-family: $font-stack-title;
+   color: $color-text-secondary;
+   text-transform: uppercase;
+
+    &--1 {
+        font-size: $font-size-tall;
+        font-weight: 600;
+        @media(min-width: $breakpoint-M) {
+            font-size: $font-size-very-very-tall;
+        }
+    }
+
+    &--2 {
+        font-size: $font-size*1.3;
+        font-weight: 500;
+        @media(min-width: $breakpoint-M) {
+            font-size: $font-size-tall;
+        }
+    }
+
+    &--3 {
+        font-size: $font-size;
+        font-weight: 500;
+        padding-bottom: $gutter-very-small;
+    }
+
+    &--4{
+        
+    }
+
+}
+
+.productTitle{
+    font-size: $font-size-very-tall*2;
+    font-weight: 500;
+}
+
+.productSubtitle{
+    text-transform: none !important; 
+    font-size: $font-size-tall;
+    padding: $gutter 0;
+    font-weight: 400;
+}
+
+.fa-plus{
+    color: $color-primary;
+    
+}
+
+.fa-minus{
+    color: $color-primary;
+    
+}

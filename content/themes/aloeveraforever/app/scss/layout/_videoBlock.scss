@@ -1,0 +1,31 @@
+.videoBlock{
+  text-align: center;
+  padding: $gutter;
+  background: linear-gradient(
+    to top, 
+    $color-primary 0%, 
+    $color-primary 30%, 
+    white 33%, 
+    white 100%
+  );
+  &__title{
+    padding: $gutter-large;
+    margin-left: auto;
+    margin-right: auto;
+    @media(min-width: $breakpoint-SM){
+      width: 80%;
+    }
+    @media(min-width: $breakpoint-M){
+      width: 60%;
+    }
+    @media(min-width: $breakpoint-L){
+      width: 50%;
+    }
+  }
+  &__video{
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    border: $gutter solid black;
+  }
+}

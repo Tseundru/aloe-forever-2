@@ -1,0 +1,18 @@
+.products{
+  text-align: center;
+  background-color: white;
+  
+  padding: $gutter;
+  &__header{
+
+    &__title{
+      padding: $gutter-large;
+    }
+    &__subtitle{
+      font-weight: 600;
+    }
+  }
+  &--half{
+    width: 50vw;
+  }
+}

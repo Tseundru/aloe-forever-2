@@ -1,0 +1,26 @@
+.sectionBlock{
+  text-align:center;
+  padding: $gutter-large;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: $font-size;
+  @media(min-width: $breakpoint-M){
+    width: 60%;
+  }
+  & >h2 {
+    font-family: $font-stack-title;
+    font-size: $font-size-tall;
+    padding: $gutter;
+    // text-transform: uppercase;
+
+  }
+  & >ol {
+    list-style-type: decimal;
+  &>li {
+    padding: $gutter;
+    font-weight: 500;
+    border-bottom: 1px solid black;
+  }
+    
+  }
+}

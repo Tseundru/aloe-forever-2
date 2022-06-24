@@ -1,0 +1,205 @@
+.singleProduct{
+  max-width: 100%;
+  @media(min-width: $breakpoint-L){
+    max-width: $breakpoint-XL;
+
+    display: grid;
+    grid: {
+      template: {
+        areas: 
+                "breadcrumb breadcrumb breadcrumb breadcrumb"
+                "productGallery productGallery header header"
+                "label label header header"
+                "feature feature header header"
+                "ingredient ingredient ingredient ingredient"
+                "benefit benefit benefit benefit"
+                "use use use use"
+                "faq faq faq faq"
+                "additionalAccordions additionalAccordions additionalAccordions additionalAccordions"
+                "media media media media"
+                "description description image image"
+                ;
+                
+            columns:  1.5fr 1fr 1fr 1fr;
+            rows: auto;
+      }
+  
+    }
+  }
+
+&__header{
+  
+  @media(min-width: $breakpoint-L){
+  margin-left: $gutter-large;
+  }
+  grid-area: header;
+  &__action{
+    padding: $gutter 0;
+    margin-top: $gutter-large;
+    //width:100%;
+    display: grid;
+    grid: {
+      template: {
+        areas: 
+          "shop shop"
+          "sell share";
+          columns: 1fr 1fr;
+          rows: auto;
+        }
+    }
+    &__order{
+      grid-area: shop;
+      margin-bottom: $gutter-small;
+    }
+    &__sell{
+      grid-area: sell;
+      margin-right: $gutter-small;
+    }
+    &__share{
+      grid-area: share;
+    }
+  }
+
+  &__category{
+    font-weight: 500;
+    color: $color-secondary;
+  }
+
+  &__averageRating{
+    padding: $gutter 0;
+  }
+
+  &__data{
+    
+    font-weight: 500;
+    &__price{
+      color: $color-secondary;
+      padding: $gutter 0;
+      position: relative;
+      display: inline-block;
+      &__satisfaction{
+        position: absolute;
+        top:0;
+        right: -65%;
+        width: 100px;
+      }
+    }
+    &__ref{
+      color: $color-primary;
+      
+    }
+    &__content{
+      font-weight: 600;
+    }
+    &__quantity{
+      
+    }
+    
+  }
+  
+}
+
+&__description{
+  grid-area:description;
+  padding: $gutter-large 0;
+  &__main{
+
+    & >h3{
+  
+      font-size: $font-size-tall;
+        padding: $gutter-small 0;
+        font-weight: 500;
+        text-transform: uppercase;
+    }
+  }
+}
+
+&__label{
+  grid-area: label;
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: $gutter;
+}
+
+&__feature{
+  grid-area: feature;
+}
+
+&__ingredient{
+  grid-area: ingredient;
+  padding: $gutter-large 0;
+  text-align: center;
+  &__header{
+    padding: $gutter 0;
+    &__title{
+      padding: $gutter 0;
+    }
+    &__subtitle{
+      color: $color-secondary;
+    }
+    &__popup{
+      background-color: white;
+      width: 100vw;
+      height: 100vh;
+      @media(min-width: $breakpoint-M){
+      width: 700px;
+      height:250px;
+      }
+      max-width:100%;
+      max-height: 100%;
+      padding: $gutter-very-large;
+      &__wrapper{
+        position: relative;
+        height: 100%;
+        width:100%;
+        display: flex;
+        align-items: center;
+      }
+    }
+  }
+  &__main{
+    &__list{
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  }
+}
+
+&__benefit{
+  grid-area: benefit;
+}
+
+&__faq{
+  grid-area: faq;
+}
+
+&__use{
+  grid-area: use;
+}
+
+&__additionalAccordions{
+  grid-area: additionalAccordions;
+}
+
+&__image{
+  grid-area: image;
+  display: none;
+  @media(min-width: $breakpoint-L){
+    display: block;
+
+  }
+
+}
+
+
+
+
+
+
+  &__media{
+    grid-area: media;
+    padding: $gutter-large 0;
+    width: 100%;
+  }
+}

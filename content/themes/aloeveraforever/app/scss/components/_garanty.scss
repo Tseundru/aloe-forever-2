@@ -1,0 +1,18 @@
+.garanty{
+  display: flex;
+  justify-content: center;
+  margin-top: $gutter;
+  flex-wrap: wrap;
+  
+  &__row{
+    display: flex;
+    flex-wrap: nowrap;
+
+    &__feature{
+      //cursor: pointer;
+      padding: $gutter;
+      width: 150px;
+    }
+  }
+  
+}

@@ -1,0 +1,23 @@
+.infobar{
+  grid-area: infobar;
+  text-align: center;
+  background-color: $color-secondary;
+  padding: $gutter-small;
+  color: white;
+  width:100%;
+  &__info{
+    display: flex;
+    justify-content: space-between;
+    max-width: $breakpoint-XL;
+    margin: auto;
+    padding: 0 $gutter;
+    &::before{
+      @include fa-icon;
+        content: $fa-var-angle-left;
+    }
+    &::after{
+      @include fa-icon;
+        content: $fa-var-angle-right;
+    }
+  }
+}

@@ -1,0 +1,9 @@
+.ratingStars{
+  display: flex;
+  font-size: $font-size-tall;
+  color: $color-primary;
+  padding-bottom: $gutter-small;;
+  &__star{
+    padding-right: $gutter-small;
+  }
+}

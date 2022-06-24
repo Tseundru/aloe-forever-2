@@ -1,0 +1,186 @@
+.blogPost{
+  
+  padding : $gutter;
+  
+  &__header{
+    grid-area: content;
+
+    &__meta{
+      padding: $gutter 0;
+      &__author{
+
+      }
+      &__category{
+        //margin-top: $gutter;
+        &__item{
+          background-color: $color-secondary;
+          //transform: rotate(359deg);
+          margin-right: $gutter-small;
+
+          font-size: $font-size-small;
+          
+          
+          &>span{
+            color : white;;
+            padding-left: $gutter-small;
+            padding-right: $gutter-small;
+            text-transform: uppercase;
+            
+          }
+        }
+      }
+    }
+    
+    &__sharing{
+     position: absolute;
+     right: $gutter;
+     top: $gutter;
+     font-size: $font-size-very-tall;
+     padding: $gutter;
+     background-color: $color-primary;
+      &__link{
+        color: $color-text-secondary;
+        padding: $gutter-small;
+      &:hover{
+        
+        color: white;
+      }
+      //  text-shadow: 1px 1px 0 black;
+      
+     }
+     @media(min-width: $breakpoint-M){
+      display: none;
+      //margin-top: -2.5rem;
+    }
+    }
+    &__title{
+      font-family: $font-stack-title;
+      text-transform: uppercase;
+      font-size: $font-size-very-tall;
+      margin-top: $gutter-large;
+      color: $color-secondary;
+      @media(min-width: $breakpoint-S){
+        font-size: $font-size-very-very-tall;
+        //margin-top: -2.5rem;
+      }
+      &>span{
+        display: inline;
+        // line-height: 1.9rem;
+        //background-color: $color-primary;
+        margin: 0;
+        text-transform: uppercase;
+        //padding: 0 $gutter;
+        position: relative;
+       //left: -10px; 
+        // &:before{
+        //   content:"# ";
+        //   font-weight: 900;
+        // }
+
+        @media(min-width: $breakpoint-L){
+          font-size: $font-size-very-very-tall*1.2;
+          // line-height: 3rem;
+        }
+
+        @media(min-width: $breakpoint-S){
+          // line-height: 2.5rem;
+        }
+      }
+    }
+  }
+
+  &__main{
+    background-color: #fff;
+    position: relative;
+
+    &__content{
+      
+      padding: $gutter-large;
+      @media(min-width: $breakpoint-M){
+        padding: $gutter $gutter-very-large;
+      }
+      &--blur{
+        filter:blur(4px);
+      }
+      &>h2{
+        font-size: $font-size-very-tall;
+        font-family: $font-stack-title;
+        display: inline-block;
+        color: $color-text-secondary;
+        text-transform: uppercase;
+        margin: $gutter 0 $gutter-small ;
+        background-color: $color-primary;
+            //transform: rotate(359deg);
+            margin-right: $gutter-small;
+  
+            &:before{
+              content:"#";
+              font-weight: 700;
+              color : $color-text-secondary;
+              padding-left: $gutter-small;
+            }
+      }
+      &>h3{
+        font-size: $font-size-tall;
+        margin: $gutter 0 $gutter-small ;
+        font-weight: 700;
+      }
+  
+      &>h4{
+        font-size: $font-size-tall*.8;
+        margin: $gutter 0 $gutter-small ;
+        font-weight: 700;
+      }
+  
+      &>ul{
+        margin-left: $gutter-large ;
+        &>li{
+          padding: $gutter-small/2 0;
+          list-style-type: disc;
+        }
+      }
+    }
+
+
+
+
+    &__overlay{
+      position: absolute;
+      background: linear-gradient( to top,
+        white 95%,  rgba(255, 255, 255, 0) );
+        padding-top: $gutter-very-large;
+        @media(min-width: $breakpoint-M){
+          //padding:  $gutter-very-large $gutter-very-large;
+        }
+      
+      //height: 100%;
+      width: 100%;
+      
+      z-index: 999;
+      &__text{
+        position: absolute; top: $gutter-large; right: $gutter-large; left: $gutter-large;
+        
+        //max-height: 80vh;
+        $padding: $gutter;
+        @media(min-width: $breakpoint-M) and (min-height: $breakpoint-XS){
+          padding-top: $gutter-large;
+        }
+        
+        text-align: center;
+        &__content{
+          border: 3px solid $color-primary;
+          margin-bottom: $gutter-large;
+          padding: $gutter;
+          background-color: #fff;
+          &__title{
+            
+            padding: $gutter-large;
+          }
+          
+            
+        }
+
+      }
+    }
+  }
+}

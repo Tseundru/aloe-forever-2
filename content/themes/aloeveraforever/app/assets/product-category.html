@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Webpack</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+  <div class="fullOverlay"></div>
+  <div id="fb-root"></div>
+  <script async defer crossorigin="anonymous"
+    src="https://connect.facebook.net/fr_FR/sdk.js#xfbml=1&version=v11.0&appId=1994970534156032&autoLogAppEvents=1"
+    nonce="PzJvz49M"></script>
+
+  <div class="container productCategoryPage">
+    <!--<div class="alert shipping">
+      Délai de livraison dans les 1-3 jours ouvrables
+    </div>-->
+    <header class="header">
+      <img src="./images/logo-forever.png" alt="logo aloe vera forever living" class="logo">
+      <h1 class="brand js-brand">
+        <a href="index.html">Aloe Vera Forever</a> 
+      </h1>
+
+      <nav class="mobilemenu js-mobileMenu">
+        <ul class="mobilemenu__list">
+          <div class="mobilemenu__list__icon js-closeIcon">
+            <svg class="mobilemenu__list__icon__svg" xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Calque_1" x="0px" y="0px"
+              viewBox="0 0 200 200" style="enable-background:new 0 0 200 200;" xml:space="preserve">
+              <path fill="currentColor"
+                d="M103.6,100l95.6-95.6c1-1,1-2.6,0-3.6c-1-1-2.6-1-3.6,0L100,96.4L4.4,0.8c-1-1-2.6-1-3.6,0s-1,2.6,0,3.6L96.4,100L0.8,195.6  c-1,1-1,2.6,0,3.6s2.6,1,3.6,0l95.6-95.6l95.6,95.6c1,1,2.6,1,3.6,0c1-1,1-2.6,0-3.6L103.6,100z" />
+            </svg>
+          </div>
+          <li class="mobilemenu__list__item"><a href="#" class="mobilemenu__list__item__link">Produits</a>
+            <ul class="mobilemenu__list__item__sublist">
+              <li class="mobilemenu__list__item__sublist__subitem"><a href="#"
+                  class="mobilemenu__list__item__sublist__subitem__link">Tous les produits</a></li>
+              <li class="mobilemenu__list__item__sublist__subitem"><a href="#"
+                  class="mobilemenu__list__item__sublist__subitem__link">Boissons aloe</a></li>
+              <li class="mobilemenu__list__item__sublist__subitem"><a href="#"
+                  class="mobilemenu__list__item__sublist__subitem__link">Produits de la ruche</a></li>
+              <li class="mobilemenu__list__item__sublist__subitem"><a href="#"
+                  class="mobilemenu__list__item__sublist__subitem__link">Nutrition</a></li>
+              <li class="mobilemenu__list__item__sublist__subitem"><a href="#"
+                  class="mobilemenu__list__item__sublist__subitem__link">Fitness et minceur</a></li>
+              <li class="mobilemenu__list__item__sublist__subitem"><a href="#"
+                  class="mobilemenu__list__item__sublist__subitem__link">Les indispensables</a></li>
+              <li class="mobilemenu__list__item__sublist__subitem"><a href="#"
+                  class="mobilemenu__list__item__sublist__subitem__link">Visage</a></li>
+              <li class="mobilemenu__list__item__sublist__subitem"><a href="#"
+                  class="mobilemenu__list__item__sublist__subitem__link">Corps et cheveux</a></li>
+              <li class="mobilemenu__list__item__sublist__subitem"><a href="#"
+                  class="mobilemenu__list__item__sublist__subitem__link">Les solaires</a></li>
+              <li class="mobilemenu__list__item__sublist__subitem"><a href="#"
+                  class="mobilemenu__list__item__sublist__subitem__link">Les parfums</a></li>
+              <li class="mobilemenu__list__item__sublist__subitem"><a href="#"
+                  class="mobilemenu__list__item__sublist__subitem__link">Les indispensables</a></li>
+              <li class="mobilemenu__list__item__sublist__subitem"><a href="#"
+                  class="mobilemenu__list__item__sublist__subitem__link">Les huiles essentielles</a></li>
+              <li class="mobilemenu__list__item__sublist__subitem"><a href="#"
+                  class="mobilemenu__list__item__sublist__subitem__link">Animaux</a></li>
+              <li class="mobilemenu__list__item__sublist__subitem"><a href="#"
+                  class="mobilemenu__list__item__sublist__subitem__link">Maison</a></li>
+            </ul>
+          </li>
+          <li class="mobilemenu__list__item"> <a href="#" class="mobilemenu__list__item__link">Aloe vera</a> </li>
+          <li class="mobilemenu__list__item"><a href="#" class="mobilemenu__list__item__link">Forever Living</a></li>
+          <li class="mobilemenu__list__item"><a href="#" class="mobilemenu__list__item__link">Rejoignez-nous !</a></li>
+          <li class="mobilemenu__list__item"><a href="#" class="mobilemenu__list__item__link">Commander</a></li>
+        </ul>
+        <div class="mobilemenu__emptyspace js-emptySpace"></div>
+      </nav>
+      <nav class="mainmenu">
+        <ul class="mainmenu__list">
+          <li class="mainmenu__list__item"><a href="#" class="mainmenu__list__item__link">Produits</a>
+            <ul class="mainmenu__list__item__sublist">
+              <li class="mainmenu__list__item__sublist__subitem">
+                <a href="#" class="mainmenu__list__item__sublist__subitem__link">
+                  Gel d'aloe vera
+                </a>
+                <ul class="mainmenu__list__item__sublist__subitem__subsublist">
+                  <li class="mainmenu__list__item__sublist__subitem__subsublist__subsubitem">
+                    <a href="#" class="mainmenu__list__item__sublist__subitem__subsublist__subsubitem__link">
+                      <img src="./images/715.png" alt=""
+                        class="mainmenu__list__item__sublist__subitem__subsublist__subsubitem__picture">
+                      <p class="mainmenu__list__item__sublist__subitem__subsublist__subsubitem__title">Forever Aloe Vera
+                        Gel</p>
+                    </a>
+                  </li>
+                  <li class="mainmenu__list__item__sublist__subitem__subsublist__subsubitem">
+                    <a href="#" class="mainmenu__list__item__sublist__subitem__subsublist__subsubitem__link">
+                      <img src="./images/734.png" alt=""
+                        class="mainmenu__list__item__sublist__subitem__subsublist__subsubitem__picture">
+                      <p class="mainmenu__list__item__sublist__subitem__subsublist__subsubitem__title">Aloe Berry Nectar
+                      </p>
+                    </a>
+                  </li>
+                  <li class="mainmenu__list__item__sublist__subitem__subsublist__subsubitem">
+                    <a href="#" class="mainmenu__list__item__sublist__subitem__subsublist__subsubitem__link">
+                      <img src="./images/715.png" alt=""
+                        class="mainmenu__list__item__sublist__subitem__subsublist__subsubitem__picture">
+                      <p class="mainmenu__list__item__sublist__subitem__subsublist__subsubitem__title">Forever Aloe Vera
+                        Gel</p>
+                    </a>
+                  </li>
+                  <li class="mainmenu__list__item__sublist__subitem__subsublist__subsubitem">
+                    <a href="#" class="mainmenu__list__item__sublist__subitem__subsublist__subsubitem__link">
+                      <img src="./images/777.png" alt=""
+                        class="mainmenu__list__item__sublist__subitem__subsublist__subsubitem__picture">
+                      <p class="mainmenu__list__item__sublist__subitem__subsublist__subsubitem__title">Forever Aloe
+                        Pèches</p>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li class="mainmenu__list__item__sublist__subitem">Boissons aloe</li>
+              <li class="mainmenu__list__item__sublist__subitem">Produits de la ruche</li>
+              <li class="mainmenu__list__item__sublist__subitem">Nutrition</li>
+              <li class="mainmenu__list__item__sublist__subitem">Fitness et minceur</li>
+              <li class="mainmenu__list__item__sublist__subitem">Les indispensables</li>
+              <li class="mainmenu__list__item__sublist__subitem">Visage</li>
+              <li class="mainmenu__list__item__sublist__subitem">Corps et cheveux</li>
+              <li class="mainmenu__list__item__sublist__subitem">Les solaires</li>
+              <li class="mainmenu__list__item__sublist__subitem">Les parfums</li>
+              <li class="mainmenu__list__item__sublist__subitem">Les indispensables</li>
+              <li class="mainmenu__list__item__sublist__subitem">Les huiles essentielles</li>
+              <li class="mainmenu__list__item__sublist__subitem">Animaux</li>
+              <li class="mainmenu__list__item__sublist__subitem">Maison
+              </li>
+            </ul>
+          </li>
+          <li class="mainmenu__list__item"> <a href="#" class="mainmenu__list__item__link">Aloe vera</a> </li>
+          <li class="mainmenu__list__item"><a href="#" class="mainmenu__list__item__link">Forever Living</a></li>
+          <li class="mainmenu__list__item"><a href="#" class="mainmenu__list__item__link">Rejoignez-nous !</a></li>
+          <li class="mainmenu__list__item"><a href="#" class="mainmenu__list__item__link">Commander</a></li>
+        </ul>
+        <i class="fa fa-bars mainmenu__icon js-burger-icon" aria-hidden="true"></i>
+      </nav>
+      <nav class="header__actions">
+        <div class="header__actions__search js-search-bar">
+          <input type="text" name="search" id="search" class="header__actions__search__input js-search-bar-input"
+            placeholder="recherche..." autocomplete="off">
+          <i class="fa fa-times header__actions__search__closeIcon js-search-close-icon" aria-hidden="true"></i>
+        </div>
+
+        <ul class="header__actions__list">
+          <li class="header__actions__list__item">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon--user js-user-icon" viewBox="0 0 33 31">
+              <path
+                d="M30.2 30.2c0-5.9-4.1-10.7-9.8-12.3 3.1-1.4 5.4-4.6 5.4-8.2 0-5.1-4.2-9.1-9.2-9.1S7.3 4.7 7.3 9.7c0 3.7 2.2 6.8 5.4 8.2-5.6 1.6-9.8 6.4-9.9 12.3">
+              </path>
+            </svg>
+          </li>
+          <li class="header__actions__list__item">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon--search js-search-icon" viewBox="0 0 33 31">
+              <path d="M12.7 22.3c6.1 0 11-4.9 11-11s-4.9-11-11-11-11 4.9-11 11 5 11 11 11"></path>
+              <circle cx="12.7" cy="11.5" r="11"></circle>
+              <path d="M28.5 30.9L18.2 20.5l2.2-1.8 10.1 10.2z" class="icon__handle"></path>
+            </svg>
+          </li>
+        </ul>
+
+      </nav>
+      <div class="infobar">
+        <div class="infobar__info"> Livraison 24h - 72h jours ouvrés </div>
+      </div>
+    </header>
+    <div class="headerPicture">
+      <div class="headerPicture__imageBlur" style="background-image: url('./images/les-trois-gels-aloe-tetrapack.jpg');"></div>
+        <div class="headerPicture__image" style="background-image: url('./images/les-trois-gels-aloe-tetrapack.jpg');">
+        <div class="headerPicture__image__text">
+          <h1 class="headerPicture__image__text__title">Boissons aloe</h1>
+          <h2 class="headerPicture__image__text__subtitle">Gel Aloe Vera</h2>
+
+        </div>
+        </div>
+      
+    </div>
+    <main class="main productCategory">
+      <nav class="breadcrumb">
+        <ul class="breadcrumb__list">
+          <li class="breadcrumb__list__item"> <a href="#" class="breadcrumb__list__item__link">Produits Forever</a> </li>
+          <li class="breadcrumb__list__item">Boisson et gel d'aloe vera</li>
+        </ul>
+      </nav>
+      <div class="productCategory__actions">
+        <div class="productCategory__actions__sort">
+          <span>Trier par :</span>  
+          <select name="sort" id="sortSelect" class="productCategory__actions__sort__select">
+            <option value="Popularite">Teneur en aloe vera</option>
+            <option value="Popularite">Popularité</option>
+            <option value="Popularite">Prix croissant</option>
+            <option value="Popularite">Prix décroissant</option>
+            <option value="Popularite">Nom de A à Z</option>
+            <option value="Popularite">Nom de Z à A</option>
+            <option value="Popularite">Référence</option>
+          </select>
+          <span class="focus"></span>
+        </div>
+        <div class="filter filter--product">
+          <button class="button button--filter popup--opener">Filtrer</button>
+          <div class="popup filter__popup">
+            <div class="popup__closeIcon">
+              <svg class="popup__closeIcon__svg" xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Calque_1" x="0px" y="0px"
+                viewBox="0 0 200 200" style="enable-background:new 0 0 200 200;" xml:space="preserve">
+                <path fill="currentColor"
+                  d="M103.6,100l95.6-95.6c1-1,1-2.6,0-3.6c-1-1-2.6-1-3.6,0L100,96.4L4.4,0.8c-1-1-2.6-1-3.6,0s-1,2.6,0,3.6L96.4,100L0.8,195.6  c-1,1-1,2.6,0,3.6s2.6,1,3.6,0l95.6-95.6l95.6,95.6c1,1,2.6,1,3.6,0c1-1,1-2.6,0-3.6L103.6,100z" />
+              </svg>
+            </div>
+            <div class="filter__popup__wrapper">
+            <div class="filter__popup__wrapper__element">
+              <input type="checkbox" name="glutenFree" id="glutenFree" class="filter__popup__wrapper__element__input">
+              <label for="glutenFree" class="filter__popup__wrapper__element__label"> <img src="./images/glutenfree-69.jpg" alt="" class="filter__popup__wrapper__element__label__image"> </label>
+              <p class="filter__popup__wrapper__element__text" >Sans gluten</p>
+            </div>
+              <div class="filter__popup__wrapper__element">
+                <input type="checkbox" name="iasc" id="iasc" class="filter__popup__wrapper__element__input">
+                <label for="iasc" class="filter__popup__wrapper__element__label"> <img src="./images/iasc-seal_69.jpg" alt="" class="filter__popup__wrapper__element__label__image"> </label>
+                <p class="filter__popup__wrapper__element__text" >I.A.S.C</p>
+              </div>
+              <div class="filter__popup__wrapper__element">
+                <input type="checkbox" name="halal" id="halal" class="filter__popup__wrapper__element__input">
+                <label for="halal" class="filter__popup__wrapper__element__label"> <img src="./images/halal.jpg" alt="" class="filter__popup__wrapper__element__label__image"> </label>
+                <p class="filter__popup__wrapper__element__text" >Halal</p>
+              </div>
+                <div class="filter__popup__wrapper__element">
+                  <input type="checkbox" name="kasher" id="kasher" class="filter__popup__wrapper__element__input">
+                  <label for="kasher" class="filter__popup__wrapper__element__label"> <img src="./images/kasher.jpg" alt="" class="filter__popup__wrapper__element__label__image"> </label>
+                  <p class="filter__popup__wrapper__element__text" >Kasher</p>
+                </div>
+                <div class="filter__popup__wrapper__element">
+                  <input type="checkbox" name="dermatest" id="dermatest" class="filter__popup__wrapper__element__input">
+                  <label for="dermatest" class="filter__popup__wrapper__element__label"> <img src="./images/dermatest.jpg" alt="" class="filter__popup__wrapper__element__label__image"> </label>
+                  <p class="filter__popup__wrapper__element__text" >Dermatest</p>
+                </div>
+                  <div class="filter__popup__wrapper__element">
+                    <input type="checkbox" name="leapingBunny" id="leapingBunny" class="filter__popup__wrapper__element__input">
+                    <label for="leapingBunny" class="filter__popup__wrapper__element__label"> <img src="./images/LeapingBunny.jpg" alt="" class="filter__popup__wrapper__element__label__image"> </label>
+                    <p class="filter__popup__wrapper__element__text" >Leaping Bunny</p>
+                  </div>
+                  <div class="filter__popup__wrapper__element">
+                    <input type="checkbox" name="animal" id="animal" class="filter__popup__wrapper__element__input">
+                    <label for="animal" class="filter__popup__wrapper__element__label"> <img src="./images/animaux.jpg" alt="" class="filter__popup__wrapper__element__label__image"> </label>
+                    <p class="filter__popup__wrapper__element__text" >Pour animaux</p>
+                  </div>
+                    <div class="filter__popup__wrapper__element">
+                      <input type="checkbox" name="kolner" id="kolner" class="filter__popup__wrapper__element__input">
+                      <label for="kolner" class="filter__popup__wrapper__element__label"> <img src="./images/koelner-liste.jpg" alt="" class="filter__popup__wrapper__element__label__image"> </label>
+                      <p class="filter__popup__wrapper__element__text" >kölner liste</p>
+                    </div>
+            </div>
+            <button class="button">Filtrer</button>
+          </div>
+        </div>
+      </div>
+      <div class="productCategory__products">
+        <div class="productCategory__products__list">
+
+        
+        <article class="product swiper-slide">
+
+          <header class="product__header">
+            <a href="product.html" class="product__header__link"></a>
+            <ul class="product__header__badge">
+              <li class="badge badge--top">Top Vente</li>
+            </ul>
+            <img src="./images/715.png" alt="" class="product__header__picture">
+            <div class="product__header__overlay overlay">
+              <a class=" buttonOverlay buttonOverlay--readmore" href="product.html">Voir le produit !</a>
+              <p class="product__header__overlay__stars">
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+              </p>
+              <p class="product__header__overlay__comment">61 avis clients !</p>
+              
+            </div>
+          </header>
+          <main class="product__main">
+            <h3 class="product__main__title"><a href="#"> Forever Aloe vera Gel</a></h3>
+            <p class="product__main__subtitle"><a href="#">Ref. 715 | 129,75 €</a></p>
+          </main>
+        </article>
+        <article class="product swiper-slide">
+
+            <header class="product__header">
+              <a href="product.html" class="product__header__link"></a>
+              <ul class="product__header__badge">
+                <li class="badge badge--aloe">99% d'aloe</li>
+                <li class="badge badge--new">Nouveau !</li>
+              </ul>
+              <img src="./images/777.png" alt="" class="product__header__picture">
+              <div class="product__header__overlay overlay">
+                <a class=" buttonOverlay buttonOverlay--readmore" href="product.html">Voir le produit !</a>
+                <p class="product__header__overlay__stars">
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                </p>
+                <p class="product__header__overlay__comment">61 avis clients !</p>
+                
+              </div>
+            </header>
+            <main class="product__main">
+              <h3 class="product__main__title"><a href="#"> Forever Aloe vera Gel</a></h3>
+              <p class="product__main__subtitle"><a href="#">Ref. 715 | 129,75 €</a></p>
+            </main>
+          </article>
+          <article class="product swiper-slide">
+
+            <header class="product__header">
+              <a href="product.html" class="product__header__link"></a>
+              <ul class="product__header__badge">
+                <li class="badge badge--new">Nouveau !</li>
+              </ul>
+              <img src="./images/F15-forever-fit.png" alt="" class="product__header__picture">
+              <div class="product__header__overlay overlay">
+                <a class=" buttonOverlay buttonOverlay--readmore" href="product.html">Voir le produit !</a>
+                <p class="product__header__overlay__stars">
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                </p>
+                <p class="product__header__overlay__comment">61 avis clients !</p>
+                
+              </div>
+            </header>
+            <main class="product__main">
+              <h3 class="product__main__title"><a href="#"> Forever Aloe vera Gel</a></h3>
+              <p class="product__main__subtitle"><a href="#">Ref. 715 | 129,75 €</a></p>
+            </main>
+          </article>
+          
+          <article class="product swiper-slide">
+            <header class="product__header">
+              <a href="product.html" class="product__header__link"></a>
+              <ul class="product__header__badge">
+                <li class="badge badge--aloe">99% d'aloe</li>
+                <li class="badge badge--new">Nouveau !</li>
+              </ul>
+              <img src="./images/ultra-lite-vanille-forever.png" alt="" class="product__header__picture">
+              <div class="product__header__overlay overlay">
+                <a class=" buttonOverlay buttonOverlay--readmore" href="product.html">Voir le produit !</a>
+                <p class="product__header__overlay__stars">
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                </p>
+                <p class="product__header__overlay__comment">61 avis clients !</p>
+                
+              </div>
+            </header>
+            <main class="product__main">
+              <h3 class="product__main__title"><a href="#"> Forever Aloe vera Gel</a></h3>
+              <p class="product__main__subtitle"><a href="#">Ref. 715 | 129,75 €</a></p>
+            </main>
+          </article>
+
+          <article class="product swiper-slide">
+            <header class="product__header">
+              <a href="product.html" class="product__header__link"></a>
+              <ul class="product__header__badge">
+                <li class="badge badge--top">Top Vente</li>
+                <li class="badge badge--aloe">99% d'aloe</li>
+              </ul>
+              <img src="./images/vital-5-forever.png" alt="" class="product__header__picture">
+              <div class="product__header__overlay overlay">
+                <p class=" buttonOverlay buttonOverlay--readmore">Voir le produit !</p>
+                <p class="product__header__overlay__stars">
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                </p>
+                <p class="product__header__overlay__comment">61 avis clients !</p>
+              </div>
+            </header>
+            <main class="product__main">
+              <h3 class="product__main__title"><a href="#"> Forever Aloe vera Gel</a></h3>
+              <p class="product__main__subtitle"><a href="#">Ref. 715 | 129,75 €</a></p>
+            </main>
+          </article>
+          <article class="product swiper-slide">
+
+            <header class="product__header">
+              <a href="product.html" class="product__header__link"></a>
+              <ul class="product__header__badge">
+                <li class="badge badge--aloe">99% d'aloe</li>
+                <li class="badge badge--new">Nouveau !</li>
+              </ul>
+              <img src="./images/argi+-forever.png" alt="" class="product__header__picture">
+              <div class="product__header__overlay overlay">
+                <a class=" buttonOverlay buttonOverlay--readmore" href="product.html">Voir le produit !</a>
+                <p class="product__header__overlay__stars">
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                  <i class="fa fa-star" aria-hidden="true"></i>
+                </p>
+                <p class="product__header__overlay__comment">61 avis clients !</p>
+                
+              </div>
+            </header>
+            <main class="product__main">
+              <h3 class="product__main__title"><a href="#"> Forever Aloe vera Gel</a></h3>
+              <p class="product__main__subtitle"><a href="#">Ref. 715 | 129,75 €</a></p>
+            </main>
+          </article>
+      </div>
+
+      <div class="productCategory__products__description">
+        <p>Vous trouverez ici les 4 variantes de la <a href="#"> pulpe d’aloe vera stabilisée de Forever</a>. Chacun de ces produits vous offre les avantages uniques du précieux gel d’aloe vera de Forever. Ils ont tous comme ingrédients principal, la pulpe d’aloe vera obtenu à partir du coeur de la plante d’aloe vera. Comme tous les produits Forever à base d’aloe vera, la pulpe qui les compose est issue de notre brevet unique au monde de stabilisation à froid, ce qui permet de conserver toutes la qualité de la plante.
+
+          Lorsque vous consommez le gel d’aloe vera de Forever, c’est comme-ci vous consommiez directement la plante dans le champs. Nous les appelons les bases du bien-être car ils représentent une riche source de santé, contenant plus de 200 composants naturels qui soutiennent le corps humain. Avec ses 20 minéraux, ses 18 acides aminés et ses 12 vitamines, le gel d’aloe vera stimule les fonctions immunitaires du corps et cela génère un sentiment de bien-être général, une énergie renouvelée et vous aide à maintenir un système digestif sain. Ces effets positifs au niveau du système digestif auront un impact bénéfique sur la qualité de votre peau.</p>
+        </div>
+        <aside class="productCategory__products__category">
+          <header class="productCategory__products__category__header">
+            <h2 class="productCategory__products__category__header__title ">
+              Produits Forever
+            </h2>
+          </header>
+          <main class="productCategory__products__category__main">
+            <ul class="productCategory__products__category__main__list">
+              <li class="productCategory__products__category__main__list__item"> 
+                <a href="#"> Tous les produits</a>
+              </li>
+              <li class="productCategory__products__category__main__list__item"> 
+                <a href="#"> Boissons Aloe Vera</a>
+              </li>
+              <li class="productCategory__products__category__main__list__item"> 
+                <a href="#"> Gel aloe vera</a>
+              </li>
+              <li class="productCategory__products__category__main__list__item"> 
+                <a href="#"> Produits de la ruche</a>
+              </li>
+              <li class="productCategory__products__category__main__list__item"> 
+                <a href="#"> Nutrition</a>
+              </li>
+              <li class="productCategory__products__category__main__list__item"> 
+                <a href="#"> Fitness & Minceur</a>
+              </li>
+              <li class="productCategory__products__category__main__list__item"> 
+                <a href="#"> Soins du corps</a>
+              </li>
+              <li class="productCategory__products__category__main__list__item"> 
+                <a href="#"> Soin du visage</a>
+              </li>
+              <li class="productCategory__products__category__main__list__item"> 
+                <a href="#"> Pour la maison</a>
+              </li>
+              <li class="productCategory__products__category__main__list__item"> 
+                <a href="#">Aromathérapie</a>
+              </li>
+              <li class="productCategory__products__category__main__list__item"> 
+                <a href="#"> Soins des animaux</a>
+              </li>
+              <li class="productCategory__products__category__main__list__item"> 
+                <a href="#"> Les solaires</a>
+              </li>
+              <li class="productCategory__products__category__main__list__item"> 
+                <a href="#"> Parfums</a>
+              </li>
+
+            </ul>
+          </main>
+        </aside>
+      </div>
+</main>
+
+    
+
+
+
+    <footer class="footer">
+      <header class="footer__header">
+        <h2 class="footer__header__title">
+          Aloe Vera Forever
+        </h2>
+        <ul class="footer__header__social">
+          <li class="footer__header__social__item"><a class="footer__header__social__item__link" href="#"><i
+                class="fa fa-facebook" aria-hidden="true"></i></a>
+          </li>
+          <li class="footer__header__social__item"><a class="footer__header__social__item__link" href="#"><i
+                class="fa fa-instagram" aria-hidden="true"></i></a>
+          </li>
+          <li class="footer__header__social__item"><a class="footer__header__social__item__link" href="#"><i
+                class="fa fa-youtube-square" aria-hidden="true"></i></a>
+          </li>
+        </ul>
+      </header>
+      <div class="garanty">
+        <div class="garanty__row">
+          <img class="garanty__feature" src = "./svg/sav.svg"  alt="My Happy SVG"/>
+          <img class="garanty__feature" src = "./svg/satisfaction.svg"  alt="My Happy SVG"/>
+        </div>
+
+        <div class="garanty__row">
+          <img class="garanty__feature" src = "./svg/conseille.svg"  alt="My Happy SVG"/>
+          <img class="garanty__feature" src = "./svg/fidelite.svg"  alt="My Happy SVG"/>
+        </div>
+      </div>
+      <main class="footer__main">
+
+        <nav class="footer__main__menu footer__main__widget">
+          <p class="footer__main__menu__title  footer__main__widget__title">
+            Service Client
+          </p>
+          <ul class="footer__main__menu__list footer__main__widget__text">
+            <li class="footer__main__menu__list__item"><a href="#"> FAQ</a></li>
+            <li class="footer__main__menu__list__item"><a href="#">Expédition</a></li>
+            <li class="footer__main__menu__list__item"><a href="#">Contact</a></li>
+            <li class="footer__main__menu__list__item"><a href="#">Politique de confidentialité</a></li>
+            <li class="footer__main__menu__list__item"><a href="#">CGV</a></li>
+
+          </ul>
+        </nav>
+        <div class="footer__main__info footer__main__widget">
+          <p class="footer__main__info__title  footer__main__widget__title ">
+            Aloe Vera Forever
+          </p>
+          <div class="footer__main__info__text footer__main__widget__text">
+            <p class="footer__main__info__text__phone"> <a href="tel:+33671743983">06 71 74 39 83</a> </p>
+            <p class="footer__main__info__text__mail"><a href="mailto:ilovaloe@gmail.com">ilovaloe{@}gmail.com</a></p>
+
+            <p class="footer__main__info__text__title">Entrepreneur indépendant <br /> Partenaire de la société <br />
+              Forever Living Products</p>
+
+
+            <p class="footer__main__info__text__nFBO">N°FBO : 330001220879</p>
+          </div>
+        </div>
+
+
+        <div class="footer__main__newsletter footer__main__widget">
+          <p class="footer__main__newsletter__title  footer__main__widget__title">
+            Newsletter
+          </p>
+          <form action="#" method="post" class="footer__main__widget__text">
+            <input class="footer__main__widget__text__input" type="text" name="email" id="email"
+              placeholder="Adress e-mail" autocomplete="off">
+            <button class="footer__main__widget__text__button" type="submit">S'abonner</button>
+          </form>
+        </div>
+        <div class="footer__main__eatmove footer__main__widget">
+          <p class="footer__main__eatmove__title  footer__main__widget__title">Notice</p>
+          <div class="footer__main__eatmove__text footer__main__widget__text">
+            <p>Pour votre santé, pratiquez une activité physique régulière.</p>
+            <p>Les compléments alimentaires doivent être utilisé dans le cadre d'un mode de vie sain et ne pas se
+              substituer à une alimentation variée et équilibrée.</p>
+            <p>Plus d'info sur <a href="https://mangerbouger.fr">mangerbouger.fr</a> </p>
+          </div>
+        </div>
+      </main>
+      <footer class="footer__footer">
+        <nav class="footer__footer__menu">
+          <ul class="footer__footer__menu__list">
+            <li class="footer__footer__menu__list__item"><a href="#">www.foreverliving.fr</a> </li>
+            <li class="footer__footer__menu__list__item"><a href="#">www.fevad.com</a></li>
+            <li class="footer__footer__menu__list__item"><a href="#">www.foreverliving.com</a></li>
+            <li class="footer__footer__menu__list__item"><a href="#">Mentions légales</a></li>
+            <li class="footer__footer__menu__list__item"><a href="#">Plan du site</a></li>
+          </ul>
+        </nav>
+      </footer>
+    </footer>
+  </div>
+
+
+
+  <script src="js/app.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,12 @@
+.gallery{
+  &--2pics{
+    margin-top:$gutter;
+    width: 100vw;
+    
+    
+    @media(min-width: $breakpoint-M){
+      display: flex;  
+      height: 33vw;
+    }
+  }
+}

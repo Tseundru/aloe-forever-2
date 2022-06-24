@@ -1,0 +1,87 @@
+@charset 'UTF-8';
+
+// 1. Abstracts
+@import 'abstracts/variables',
+                 'abstracts/mixins';
+
+// 2. Vendors
+@import '~reset-css/sass/reset';       
+@import '~leaflet/dist/leaflet.css';
+$fa-font-path: '~font-awesome/fonts';
+@import '~font-awesome/scss/font-awesome';         
+@import '~swiper/swiper-bundle.css';
+// 3. Base
+@import 'base/base',
+                'base/fonts',
+               'base/typography',
+               'base/svg',
+               'base/utils';
+
+
+// 4. Layout
+@import 
+                'layout/header',
+                'layout/bannerGallery',
+                'layout/blockProduct',
+                'layout/blogPost',
+                'layout/blogSidebar',
+                'layout/blogSingle',
+                'layout/carousel',
+                'layout/container',
+                'layout/dubbleSection',
+                'layout/evaluations',
+                'layout/featureBlock',
+                'layout/footer',
+                'layout/gallery',
+                'layout/instafeed',
+                'layout/lastPosts',
+                'layout/main',
+                'layout/ourAloe',
+                'layout/products',
+                'layout/productCategory',
+                'layout/singleProduct',
+                'layout/sectionBlock',
+                'layout/videoBlock'
+                ;
+
+//5. Components
+@import  
+                  'components/accordion',
+                  'components/brand',
+                  'components/breadcrumb',
+                  'components/burger',
+                  'components/button',
+                  'components/feature',
+                  'components/featureItem',
+                  'components/filter',
+                  'components/garanty',
+                  'components/headerPicture',
+                  'components/icon',
+                  'components/imageTitle',
+                  'components/infobar',
+                  'components/ingredient',
+                  'components/loginForm',
+                  'components/logo',
+                  'components/mainmenu',
+                  'components/mobilemenu',
+                  'components/overlay',
+                  'components/pictureCard',
+                  'components/popup',
+                  'components/product',
+                  'components/productGallery',
+                  'components/rates',
+                  'components/ratingStars',
+                  'components/review',
+                  'components/seal',
+                  'components/shipping',
+                  'components/video',
+                  'components/wordpress'
+                  ;
+                
+                
+
+
+
+ //6. Pages
+ @import  'pages/homepage',
+                  'pages/singleProductPage';

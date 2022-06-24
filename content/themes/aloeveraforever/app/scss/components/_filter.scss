@@ -1,0 +1,55 @@
+.filter{
+  &__popup{
+    background-color: white;
+    text-align: center ;
+    padding: $gutter;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+    @media(min-width: $breakpoint-M){
+      width: 700px;
+      height: 500px;
+    }
+    &__wrapper{
+      
+      padding: $gutter;
+      display: grid;
+      grid-gap: $gutter;
+
+      
+    grid-template-columns: 1fr 1fr 1fr;
+        
+      
+      &__element{
+        text-align: center ;
+        $self: &;
+        &__label{
+          &__image{
+            width: 50px;
+            border-radius: 50%;
+            cursor: pointer;
+            @media(min-width: $breakpoint-SM){
+              width: 75px;
+              
+            }
+          }
+          &__text{
+            font-size: $font-size-small;
+            @media(min-width: $breakpoint-SM){
+              font-size: $font-size;
+            }
+          }
+        }
+        &__input{
+          position: fixed;
+          top: -9999px;
+          left: -9999px;
+          &:checked+label>img{
+              border: 3px solid $color-primary;
+          }
+        }
+      }
+    }
+  }
+}

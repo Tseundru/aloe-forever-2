@@ -1,0 +1,131 @@
+.mainmenu{
+  grid-area: mainmenu;
+  justify-self: center;
+  background-color: $color-primary; 
+  color: $color-text-secondary;
+  width:100%;
+  position:relative;
+  z-index: 11;
+  &__icon{
+    font-size: $font-size-tall;
+    position: absolute;
+    z-index:999;
+    top:10px;
+    right: 10px;
+    @media(min-width: $breakpoint-M){
+      display : none;
+    }
+  }
+  
+  &__list{
+    display:none;
+    
+    @media(min-width: $breakpoint-M){
+    display: flex;
+    justify-content:center;
+    
+    
+    &__item{
+      padding: $gutter ;
+      text-transform: uppercase;
+      font-weight:600;
+      transition: all  .1s ease;
+      cursor:pointer;
+      display:inline-block;
+      position:relative;
+      
+      &:hover{
+        border-bottom: 3px solid white;
+        
+        & .mainmenu__list__item__sublist{
+          display:block  !important;
+        }
+      }
+      
+      &>a{
+        color: $color-text-secondary;
+        &:hover{
+          color: $color-text-secondary;
+        }
+      }
+      
+      &__sublist{
+        display: none;
+        padding: $gutter ;
+        position:absolute;
+        background-color: white;
+        box-shadow: 0 1px 5px 0 #bbb;
+        top:48px;
+        left:-40px;
+        width: 280px;
+        
+        &:hover{
+          display:block;
+        }
+        
+        &__subitem{
+          padding:$gutter-small;
+          
+          &:hover{
+              border-bottom: 2px solid  $color-text-secondary;      
+              display:inline-block;     
+              & .mainmenu__list__item__sublist__subitem__subsublist{
+              display:flex  !important;
+            }
+          }
+          
+          &>a{
+            color: $color-text-secondary;
+            &:hover{
+              color: $color-text-secondary;
+            }
+          }
+          
+          &__subsublist{
+            position:absolute;
+            left: 230px;
+            display:none;
+            justify-content: space-between;
+            top:$gutter;
+            width: 550px;
+            flex-wrap: wrap;
+            
+            &__subsubitem{
+              width: 50%;
+              padding:$gutter;
+              &__link{
+                display:flex;
+                flex-direction: column;
+                align-items: center;
+                color:$color-text;
+                &:hover{
+                  color:$color-text;
+                  & .mainmenu__list__item__sublist__subitem__subsublist__subsubitem__title{
+                    border-color: $color-primary  !important;
+                  }
+                }
+                
+                
+              }
+             
+              &__picture{
+                height: auto;
+                width:100px;
+                margin-bottom: $gutter;
+              }
+              
+              &__title{
+                padding: $gutter-small 0 $gutter 0;
+                border-bottom: 3px solid $color-secondary;
+                transition: all .2s ease-in-out;
+              }
+              
+            }
+            
+          }
+        }
+      }
+    }
+  }
+  }
+}

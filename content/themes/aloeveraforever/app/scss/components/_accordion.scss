@@ -1,0 +1,47 @@
+.accordion{
+  
+  border-bottom: 1px solid $color-secondary;
+  &__header{
+    padding: $gutter 0 $gutter 0;
+    
+    display: flex;
+    justify-content: space-between;
+    &__title{
+      text-transform: uppercase;
+      color: $color-text-secondary;
+      cursor: pointer;
+      width: 100%;
+      &:hover{
+        color: $color-text;
+      }
+    }
+    &__icon{
+      color: $color-text-secondary;
+      cursor: pointer;
+      &:hover{
+        color: $color-text;
+      }
+    }
+  }
+  &__main{
+    padding: $gutter 0 $gutter 0;
+    display: none;
+    &.open{
+      display: block;
+    }
+    & >h3{
+      font-size: $font-size-tall;
+      padding: $gutter-small 0;
+      font-weight: 500;
+    }
+    & >ul{
+      list-style-type: square;
+      padding-left: $gutter-large;
+      & >li{
+        padding-bottom: $gutter;
+        line-height: $gutter*1.5;
+      }
+    }
+    
+  }
+}

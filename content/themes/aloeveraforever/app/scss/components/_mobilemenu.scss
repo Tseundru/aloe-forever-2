@@ -1,0 +1,114 @@
+.mobilemenu{
+  grid-area: mainmenu;
+  // background-color:#494b4b87; 
+  position:fixed;
+  z-index: 0;
+  width: 0;
+  overflow: hidden;
+  min-height: 100vh;
+  top:0;
+  font-size: $font-size;
+  transition: width .1s ease-in-out;
+  &--open{
+    width: 100vw;
+    z-index: 999;
+    & > .mobilemenu__list{
+      width: 70vw;
+      overflow: scroll;
+    }
+    
+  }
+&__emptyspace{
+  display:none;
+  width: 100vw;
+  height: 100vh;
+  background-color: #494b4b87;
+  z-index: -1;
+  position:absolute;
+  top:0;
+  right:0;
+}
+
+ &__list{
+    background-color: $color-primary;
+    width: 0vw;
+    height: 100vh;
+    box-shadow: 0 1px 2px 0 rgb(80, 76, 76);
+    transition: width .1s ease-in-out;
+    &__icon{
+      display:none;
+      text-align: right;
+      cursor: pointer;
+      padding: {
+        top: $gutter;
+        bottom: $gutter;
+      }
+  
+      margin: { 
+        left: $gutter-small;
+        right: $gutter-small;
+      }
+      
+      border-bottom: 3px dotted $color-text-secondary;
+      &__svg{
+        width:24px;
+      }
+    }
+    &__item{
+      display:none;
+      position: relative;
+      cursor: pointer;
+      border-bottom: 1px solid $color-text;
+      &__link{
+        color: $color-text-secondary;
+        display:block;
+        padding: $gutter;
+        &:hover{
+          color: $color-text-secondary;
+        }
+        &::after{
+          @include fa-icon;
+           content: $fa-var-angle-right;
+           position: absolute;
+           right:$gutter;
+        }
+      }
+      &:hover{
+        & .mobilemenu__list__item__sublist{
+          height:auto  !important;
+          max-height:2000px;
+        }
+      }
+      &:active{
+        & .mobilemenu__list__item__sublist{
+          height:auto  !important;
+          max-height:2000px;
+        }
+      }
+      &__sublist{
+        
+        max-height:0px;
+        background-color: #fff;
+        overflow: scroll;
+        transition: all .1s ease-in-out;
+        &__subitem{
+          
+
+          border-bottom: 1px solid rgb(189, 181, 181);
+          &:hover{
+          background-color: $color-primary;
+          }
+          &__link{
+            color: $color-text-secondary;
+            display:block;
+            padding: $gutter;
+            &:hover{
+              color: white;
+            }
+          }
+        }
+
+      }
+    }
+  }
+}

@@ -1,0 +1,23 @@
+.blogSingle{
+  
+  max-width: $breakpoint-XL;
+  margin: auto;
+  grid-area: main;
+  
+  @media(min-width: $breakpoint-M){
+    display: grid;
+   
+  }
+    grid: {
+      template: {
+        areas : 
+          "content sidebar";
+        columns:   3fr 1fr;
+        rows: auto;
+        column-gap: 20px;
+        
+      }
+    }
+    grid-column-gap: 20px;
+
+}

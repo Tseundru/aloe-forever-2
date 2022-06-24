@@ -1,0 +1,26 @@
+.imageTitle{
+  height: 250px;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  
+  &__title{
+    text-align: center;
+    color: white;
+    font-size: $font-size-very-very-tall;
+    text-transform: uppercase;
+    font-weight: 700;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    text-shadow: 1px 1px black;
+  }
+  &--medium{
+    height: 350px;
+  }
+  &--large{
+    height: 450px;
+  }
+}

@@ -1,0 +1,40 @@
+{
+    "repositories":[
+        {
+            "type":"composer",
+            "url":"https://wpackagist.org"
+        },
+        {
+            "type": "package",
+            "package": {
+              "name": "advanced-custom-fields/advanced-custom-fields-pro",
+              "version": "5.11.4",
+              "type": "wordpress-plugin",
+              "dist": {
+                "type": "zip",
+                "url": "https://connect.advancedcustomfields.com/index.php?p=pro&a=download&k=Nzc3ZTY1YjIxZDRjZDBkMDFjOTE5NDQxMTM2OWYyOTFlYWMyZDM1Y2MxOTgyZjNiOTcwM2Jj&t=5.11.4"
+              }
+            }
+          }
+    ],
+    "require": {
+        "johnpbloch/wordpress": "^6.0",
+        "wpackagist-plugin/akismet":"4.1.4",
+        "advanced-custom-fields/advanced-custom-fields-pro": "^5.12.2",
+        "wpackagist-plugin/seo-by-rank-math":"1.0.91",
+        "wpackagist-plugin/contact-form-7":"5.6",
+        "wpackagist-plugin/mailjet-for-wordpress":"5.2.19"
+    },
+    "require-dev": {
+        "wpackagist-plugin/simply-show-hooks":"*",
+        "symfony/var-dumper": "^5.2",
+        "wpackagist-plugin/query-monitor":"*"
+    },
+    "extra": {
+        "wordpress-install-dir": "wp",
+        "installer-paths": {
+            "content/themes/{$name}": ["type:wordpress-theme"],
+            "content/plugins/{$name}": ["type:wordpress-plugin"]
+        }
+    }
+}

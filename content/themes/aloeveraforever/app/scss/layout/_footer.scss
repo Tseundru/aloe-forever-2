@@ -1,0 +1,292 @@
+.footer {
+  grid-area: footer;
+  background-color: $color-footer;
+  color: white;
+
+
+  &__header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $color-primary;
+    color: $color-text-secondary;
+    font-size: $font-size-very-tall;
+    text-transform: uppercase;
+    font-weight: 600;
+    padding: $gutter-large;
+
+    @media(min-width: $breakpoint-M) {
+      justify-content: space-between;
+    }
+
+    &__title {
+      display: none;
+
+      @media(min-width: $breakpoint-M) {
+        display: block;
+      }
+    }
+
+    &__social {
+      display: flex;
+      justify-content: space-between;
+
+      &__item {
+
+        &__link {
+          margin-left: $gutter;
+          border: 1px solid $color-text-secondary;
+          padding: $gutter-small;
+          border-radius: 50%;
+          width: 1.5em;
+          height: 1.5em;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          color: $color-text-secondary;
+
+          &:hover {
+            color: $color-primary;
+            background-color: $color-text-secondary;
+
+          }
+        }
+      }
+    }
+  }
+
+  &__main {
+    display: grid;
+    padding: $gutter-small;
+
+    @media(min-width: $breakpoint-L) {
+      padding: $gutter;
+    }
+
+    //background-color: $color-secondary;
+    grid: {
+      template: {
+        areas:
+          " info "
+          "menu"
+          "newsletter"
+          "eatmove";
+        columns: auto;
+        rows: auto;
+      }
+    }
+
+    @media(min-width: $breakpoint-SM) {
+      grid: {
+        template: {
+          areas:
+            " info newsletter"
+            "menu eatmove";
+          columns: 1fr 1fr;
+          rows: auto;
+        }
+      }
+    }
+
+    @media(min-width: $breakpoint-L) {
+      grid: {
+        template: {
+          areas:
+            " info newsletter  menu eatmove";
+
+          columns: 1fr 1fr 1fr 1fr;
+          rows: auto;
+        }
+      }
+    }
+
+    &__widget {
+      padding: $gutter;
+      font-weight: 300;
+
+      &__title {
+        margin: $gutter-small/2 0;
+        font-weight: 300;
+        font-family: $font-stack-title;
+        text-transform: uppercase;
+        // color: $color-text-secondary;
+        // background-color: $color-primary;
+        color: white;
+        padding: $gutter-small;
+        //transform: rotate(358deg);
+        border-bottom: 1px solid white;
+      }
+
+      &__text {
+        //background-color:$color-secondary;
+        padding: $gutter;
+        color: white;
+
+        &>li {
+          padding-bottom: $gutter-very-small;
+        }
+
+        &>li>a,
+        p>a {
+          color: white;
+
+          //text-decoration: underline;
+          &:hover {
+            color: $color-primary;
+          }
+
+
+        }
+
+        &_input {
+          border: none;
+          border-bottom: 1px solid white;
+          background-color: transparent;
+          padding: $gutter-small 0;
+          width: 100%;
+          margin-bottom: $gutter-small;
+          color: white;
+          text-transform: uppercase;
+
+          &:focus {
+            outline: none;
+          }
+        }
+
+        &_button {
+          width: 100%;
+          padding: $gutter-small;
+          background-color: transparent;
+          border: 1px solid white;
+          color: white;
+          text-transform: uppercase;
+
+          &:hover {
+            background-color: $color-primary;
+            color: $color-footer;
+            border: none;
+          }
+        }
+
+      }
+    }
+
+    &__logo {
+      grid-area: logo;
+      //background-color: yellow;
+      width: 100%;
+      justify-self: center;
+      align-self: center;
+
+    }
+
+    &__info {
+      grid-area: info;
+
+      //background-color: blue;
+      &__text {
+
+        &__phone {
+          &::before {
+            @include fa-icon;
+            content: $fa-var-phone;
+            padding-right: $gutter-very-small;
+
+          }
+        }
+
+        &__mail {
+          &::before {
+            @include fa-icon;
+            content: $fa-var-envelope-o;
+            padding-right: $gutter-very-small;
+
+          }
+        }
+      }
+    }
+
+    &__menu {
+      grid-area: menu;
+      //background-color: green;
+
+    }
+
+    &__newsletter {
+      grid-area: newsletter;
+      //background-color: orange;
+
+    }
+
+    &__eatmove {
+      grid-area: eatmove;
+      //background-color: red;
+
+    }
+
+    &__facebook {
+      grid-area: facebook;
+      //background-color: purple;
+
+    }
+  }
+
+  &__footer {
+    background-color: $color-text-secondary;
+    padding: $gutter-small;
+
+    //border-top: 1px solid white;
+    &__menu {
+      &__list {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+
+        &__item {
+          color: white;
+          margin: $gutter-small;
+          font-weight: 300;
+          font-size: $font-size-small;
+
+          &>a {
+            color: white;
+
+            &:hover {
+              color: $color-primary;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+#mailjet_widget_email {
+  border: none;
+  border-bottom: 1px solid white;
+  background-color: transparent;
+  padding: $gutter-small 0;
+  width: 100%;
+  margin-bottom: $gutter-small;
+  color: white;
+  text-transform: uppercase;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+#mailjetSubscriptionForm>input[type=submit] {
+  width: 100%;
+  padding: $gutter-small;
+  background-color: transparent;
+  border: 1px solid white;
+  color: white;
+  text-transform: uppercase;
+  margin-bottom: $gutter-small;
+  &:hover {
+    background-color: $color-primary;
+    color: $color-footer;
+    border: none;
+  }
+}

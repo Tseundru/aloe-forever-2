@@ -1,0 +1,17 @@
+.productGallery{
+  width:100%;
+  grid-area: productGallery;
+  overflow: hidden;
+  position: relative;
+  &__list{
+    &__image{
+      display: block;
+      object-fit: cover;
+      height: 100%;
+      width:100%;
+    }
+  }
+}
+
+.productRelatedSwipperContainer{
+  overflow: hidden;position: relative;}

@@ -1,0 +1,43 @@
+.evaluations{
+  grid-area:evaluations;
+  background-color: white;
+  max-width: $breakpoint-XL;
+  width:100%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  margin-top: $gutter-large;
+  &__header{
+    &__title{
+      padding-bottom: $gutter;
+    }
+    &__form{
+      width: 60%;
+      margin: auto;
+      display: none;
+      &--open{
+        display: block;
+      }
+      &__input{
+        font-size: $font-size-tall;
+        display: block;
+        width: 100%;
+        border: none;
+        border-bottom: 1px solid $color-text;
+        padding: $gutter;
+        color: #757575;
+        text-transform: uppercase;
+        font-family: $font-stack-title;
+      }
+      &__button{
+        display: block;
+        margin-top: $gutter;
+      }
+    }
+    
+  }
+  &__main{
+    padding: $gutter-large;
+    
+  }
+}

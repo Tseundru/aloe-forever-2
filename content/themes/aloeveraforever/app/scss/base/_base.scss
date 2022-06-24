@@ -1,0 +1,62 @@
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    color: $color-text;
+    font-family: $font-stack;
+    font-weight: 300;
+    min-height: 100vh;
+    background-color: #e6ebeb;
+    
+}
+
+a {
+    color: $color-secondary;
+    text-decoration: none;
+    &:hover{
+        color: $color-primary;
+    }
+
+    
+}
+
+p {
+    margin-bottom: $gutter-small;
+    line-height: $gutter*1.5;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+img{
+    max-width: 100%;
+}
+
+.invisible{
+    font-weight: 300;
+}
+
+// h1 {
+//     font-size: $font-size-very-tall;
+// }
+
+// h2 {
+//     font-size: $font-size-very-tall;
+// }
+
+// h3 {
+//     font-size: $font-size-very-tall;
+// }
+
+// h4 {
+//     font-size: $font-size-very-tall;
+// }
+
+strong {
+    font-weight: 700;
+}

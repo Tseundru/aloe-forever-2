@@ -1,0 +1,73 @@
+.header{
+  grid-area: header;
+  background-color: white;
+  display:grid;
+  padding: $gutter-very-small 0 0 0 ;
+  grid: {
+    template: {
+          areas:
+            
+              "logo brand actions"
+              "mainmenu mainmenu mainmenu"
+              "infobar infobar infobar";
+              
+          columns:  1fr 3fr 1r;
+          rows: auto 40px auto ;
+    }  
+  }
+  @media(min-width: $breakpoint-M){
+    grid-template-rows: auto 48px;            
+  }
+  &__actions{
+    grid-area: actions;
+    position: relative;
+    font-size: $font-size-very-tall*1.5;
+    justify-self: right;
+    align-self: center;
+    &__search{
+      position: absolute;
+      top:-10px;
+      width: 0vw;
+      
+      height: $gutter-large;
+      background-color: white;
+      border-bottom: 1px solid black;
+      transition: all .1s ease-in-out;
+      &--open{
+        width: 65vw;
+        display: flex;
+        right:$gutter;
+        justify-content: space-between;
+        align-items:center;
+      }
+      &__input{
+        width:90%;
+        height:100%;
+        border: none;
+        padding-bottom: $gutter-small;
+        font-size: $font-size-tall;
+        &:focus{
+          outline: none;
+        }
+      }
+      &__closeIcon{
+        font-size:$font-size-tall;
+        display:none;
+      }
+    }
+    &__list{
+      display:flex;
+      &__item{
+        padding: 0 $gutter-small;
+        &:last-child{
+          @media(min-width: $breakpoint-M){
+            padding: 0 $gutter;
+            margin-right:$gutter-large;            
+          }
+        }
+      }
+    }
+  }
+}
+
+

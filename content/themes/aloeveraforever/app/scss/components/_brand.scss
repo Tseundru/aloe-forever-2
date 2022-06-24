@@ -1,0 +1,17 @@
+.brand{
+  grid-area: brand;
+  font-family: $font-stack-title-special;
+  padding: $gutter;
+  text-align: center;
+  color:$color-secondary;
+  transform: rotate(355deg);
+  font-size: $font-size-tall;
+  @media(min-width: $breakpoint-M){
+    font-size: $font-size-very-tall;
+  }
+  
+  @media(min-width: $breakpoint-L){
+    font-size: $font-size-very-tall*1.5;
+    margin-bottom: $gutter;
+  }
+}

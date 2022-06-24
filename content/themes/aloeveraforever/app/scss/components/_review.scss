@@ -1,0 +1,72 @@
+.review{
+  display: grid;
+  text-align: left;
+  margin-bottom: $gutter-large;
+  @media(min-width: $breakpoint-M){
+  grid: {
+    template: {
+      areas : 
+        "avatar content";
+        columns: 1fr 5fr;
+        rows: auto;
+    }
+  }
+}
+  &__text{
+    display: flex;
+    flex-direction: column;
+    grid-area: header;
+    grid-area: content;
+    background-color: #DCDEE8;
+    padding: $gutter-large;
+    position : relative;
+    &::before{
+      content: ' ';
+      display: block;
+    position: absolute;
+    top: 30px;
+    left: -20px;
+    border: 1px solid gold;
+    border-width: 30px 20px;
+    border-color: transparent transparent #dcdede transparent;
+    width: 0;
+    height: 0;
+    border-top: none;
+    }
+    &__title{
+      font-weight: 700;
+      font-size: $font-size-tall;
+    }
+    &__userName{
+      color: $color-secondary;
+      font-weight: 600;
+      @media(min-width: $breakpoint-M){
+        display: none;
+      }
+    }
+    
+  }
+  
+
+  &__footer{
+    grid-area: avatar;
+    display: none;
+    @media(min-width: $breakpoint-M){
+    display: flex;
+    }
+   //text-align: center;
+   flex-direction: column;
+   justify-content: center;
+    align-items: center;
+    color: $color-secondary;
+    font-weight: 600;
+    &__userName{
+      text-align: center;
+    }
+    &__picture{
+      border-radius: 50%; 
+    }
+  }
+  
+}
+

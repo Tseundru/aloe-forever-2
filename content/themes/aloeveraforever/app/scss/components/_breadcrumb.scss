@@ -1,0 +1,30 @@
+.breadcrumb{
+  margin-bottom: $gutter;
+  grid-area: breadcrumb;
+  &__list{
+    display:flex;
+    &__item{
+      padding-right: $gutter-small;
+      text-transform: uppercase;
+      display: none;
+      @media(min-width: $breakpoint-M){
+        display: block;
+      }
+      &::after{
+        @include fa-icon;
+        content: $fa-var-angle-right;
+        padding-left: $gutter-small;
+      }
+      &:last-child{
+        text-transform: none;
+        display: block;
+        &::after{
+          content:"";
+        }
+      }
+      &__link{
+        color: $color-text;
+      }
+    }
+  }
+}

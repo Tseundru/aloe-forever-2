@@ -1,0 +1,62 @@
+// Borders
+$border-width: 3px;
+$border-width-small: $border-width - 1px;
+$border-width-thin: $border-width-small - 1px;
+
+$border-radius: 5px;
+$border-radius-large: $border-radius*2;
+$border-radius-very-large: $border-radius-large*2;
+$border-radius-small: $border-radius/2;
+$border-radius-round: 50px;
+
+// Breakpoints
+$breakpoint-XS: 520px;
+$breakpoint-S: 576px;
+$breakpoint-SM: 600px;
+$breakpoint-M: 768px;
+$breakpoint-L: 992px;
+$breakpoint-XL: 1200px;
+$breakpoint-XXL: 1366px;
+
+// Colors
+$color-primary: #fdc503;
+$color-secondary: #74aa50;
+
+$color-text:#3F434D;
+$color-text-secondary:#2c2a2a;
+
+$color-footer: #474442;
+
+// Duration
+$duration: 0.5s;
+$duration-fast: $duration / 2;
+$duration-slow: $duration * 2;
+
+// Fonts
+$font-size: 1rem;
+$font-size-small: $font-size * 0.875;
+$font-size-very-small: $font-size * 0.65;
+$font-size-tall: $font-size * 1.25;
+$font-size-very-tall: $font-size * 1.5;
+$font-size-very-very-tall: $font-size * 2;
+
+$font-stack: 'Roboto', sans-serif;
+$font-stack-title: 'EuclidFlex', sans-serif;
+//$font-stack-logo: 'Montserrat', sans-serif;
+$font-stack-title-special: 'scriptorama', sans-serif;
+
+// Margins / Paddings
+$gutter: 1rem;
+$gutter-large: $gutter * 2;
+$gutter-small: $gutter / 2;
+$gutter-very-large: $gutter-large * 2;
+$gutter-very-small: $gutter-small / 2;
+
+//grid
+$grid-gap: 3rem;
+
+
+// WordPress
+$wordpress-admin-bar-height: 32px;
+$wordpress-mobile-admin-bar-height: 46px;
+$wordpress-mobile-breakpoint: 782px;

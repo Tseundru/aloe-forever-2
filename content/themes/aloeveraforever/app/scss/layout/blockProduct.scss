@@ -1,0 +1,71 @@
+.blockProduct{
+  border: 1px solid rgba(0, 0, 0, 0.235);
+    
+    @media(min-width: $breakpoint-L){
+      //display: grid;
+    }
+  padding: $gutter;
+
+  &__header{
+    grid-area: header;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    position: relative;
+    &:hover{
+      & .overlay{
+        display:flex  !important;
+      }
+    }
+
+    &__picture{
+      border-bottom: 3px solid $color-secondary;
+      //width: 5em;
+      padding-bottom: $gutter;
+    }
+    
+  }
+
+  &__main{
+    grid-area: main;
+    text-align: center;
+  }
+
+  &__footer{
+    grid-area: footer;
+    display: flex;
+    margin-top: $gutter;
+    justify-content: center;
+  }
+
+  &__meta{
+    grid-area: meta;
+    display: flex;
+    justify-content: center;
+    padding-bottom: $gutter;
+    &>a{
+      color: $color-text;
+      transition: all .2s ease-in-out;
+
+      &:hover{
+        color: $color-primary;
+    }
+    }
+  }
+
+  &__title{
+    grid-area: title;
+    font-size: $font-size-tall*.9;
+    padding: $gutter;
+    &>a{
+      color: $color-text;
+      transition: all .2s ease-in-out;
+
+      &:hover{
+        color: $color-primary;
+    }
+    }
+    display: flex;
+    justify-content: center;
+  }
+}

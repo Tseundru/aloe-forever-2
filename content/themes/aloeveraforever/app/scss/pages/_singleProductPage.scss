@@ -1,0 +1,22 @@
+.singleProductPage{
+  display: grid;
+  //background-color: #e6ebeb;
+  grid: {
+    template: {
+      areas: 
+              "header header"
+              "main main"
+              "lastPosts lastPosts"
+              "relatedProducts relatedProducts"
+              "evaluations evaluations"
+              "footer footer";
+              
+          columns:  1fr 1fr;
+          rows: auto;
+    }
+  }
+}
+
+.relatedProducts{
+  grid-area: relatedProducts;
+}

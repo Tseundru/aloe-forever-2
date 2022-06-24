@@ -1,0 +1,52 @@
+.lastPosts {
+  grid-area: lastPosts;
+  background-color: white;
+  text-align: center;
+  padding: $gutter;
+
+  &__header {
+    &__title {
+      padding: $gutter-large;
+    }
+  }
+
+  &__main {
+    &__list {
+      &__item {
+        position: relative;
+        height: 15rem;
+
+        &__img {
+          display: block;
+          width: auto;
+          height: 100%;
+          object-fit: cover;
+        }
+
+        &__title {
+          position: absolute;
+          bottom: $gutter;
+          margin: 0 $gutter-small;
+          text-align: left;
+          padding: $gutter-small;
+          left: 0;
+          //margin: 0 $gutter;
+          background-color: $color-primary;
+          transform: rotate(359deg);
+
+          &:before {
+            content: "#";
+            font-weight: 700;
+          }
+        }
+
+        &:hover {
+          & .overlay {
+            display: flex !important;
+          }
+        }
+      }
+    }
+  }
+
+}

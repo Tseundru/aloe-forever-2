@@ -1,0 +1,45 @@
+.dubbleSection{
+  display:flex;
+  flex-wrap: wrap;
+  &__block{
+    color: white;
+    padding: $gutter;
+    text-align: left;
+    @media(min-width: $breakpoint-M){
+      width: 50%;
+    }
+    &--primary{
+      background-color: $color-primary;
+    }
+    &--secondary{
+      background-color: $color-secondary;
+    }
+    & > h3 {
+      text-align: center;
+      text-transform: uppercase;
+      font-size: $font-size-tall;
+      font-weight: 600;
+      padding-bottom: $gutter;
+    }
+    &  img {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      padding: $gutter;
+      max-width: 95%;
+    }
+
+    &  p {
+      font-weight: 500;
+    }
+    
+    & ul {
+      text-align: center;
+      text-transform: uppercase;
+      font-weight: 600;
+      & >li {
+        padding: $gutter-small;
+      }
+    }
+  }
+}
