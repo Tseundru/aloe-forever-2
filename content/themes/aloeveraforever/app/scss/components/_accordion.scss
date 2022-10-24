@@ -42,6 +42,15 @@
         line-height: $gutter*1.5;
       }
     }
+
+    & >ol{
+      list-style-type: decimal;
+      padding-left: $gutter-large;
+      & >li{
+        padding-bottom: $gutter;
+        line-height: $gutter*1.5;
+      }
+    }
     
   }
 }

@@ -1,5 +1,8 @@
 <?php 
 $badge = get_the_terms( get_the_ID() , 'product_badge') ; 
+$best_seller_product = [];
+$newest_product = [];
+if ($badge){
 $newest_product = count(array_filter($badge, function($obj){
   if (isset($obj->slug)) {
       if($obj->slug == 'nouveaute') return true;
@@ -7,12 +10,15 @@ $newest_product = count(array_filter($badge, function($obj){
   return false;
 }));
 
+
 $best_seller_product = count(array_filter($badge, function($obj){
   if (isset($obj->slug)) {
       if($obj->slug == 'top-vente') return true;
   }
   return false;
 }));
+
+};
 
 
 // Calcul de la note moyenne du produit

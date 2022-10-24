@@ -230,7 +230,7 @@ if ($comments) {
       <p class="singleProduct__header__data__price productTitle">
         <?= get_field('product_price'); ?>€
         <a href="#">
-          <img src="./images/garantie_30_jours.png" alt="" class="singleProduct__header__data__price__satisfaction">
+          <img src="<?= wp_get_attachment_image_url( 944, 'full' ); ?>" alt="" class="singleProduct__header__data__price__satisfaction">
         </a>
       </p>
       <p class="singleProduct__header__data__ref">
