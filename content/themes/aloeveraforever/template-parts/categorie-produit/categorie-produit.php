@@ -189,7 +189,7 @@ ksort($terms_sort_by_order, SORT_NUMERIC);
         <select onchange="document.sort_form.submit();" name="sort" id="sortSelect" class="productCategory__actions__sort__select">
           <option value="none">sélectionner une option</option>
           <option value="aloe" <?= $sort_option == "aloe" ? 'selected' : '' ?>>Teneur en aloe vera</option>
-          <option value="rate" <?= $sort_option == "rate" ? 'selected' : '' ?>>Popularité</option>
+          <!-- rate -->
           <option value="price" <?= $sort_option == "price" ? 'selected' : '' ?>>Prix le plus bas</option>
           <option value="abc" <?= $sort_option == "abc" ? 'selected' : '' ?>>Alphabétiquement</option>
           <option value="ref" <?= $sort_option == "ref" ? 'selected' : '' ?>>Référence produit</option>
