@@ -1,9 +1,4 @@
-<section class=" evaluations">
-      <header class=" evaluations__header">
-        <h2 class=" evaluations__header__title title title--2" id="evaluations">
-          Ce que nos clients disent sur Forever Aloe Vera Gel
-        </h2>
-        <button class="button evaluations__header__button"> Laisser un avis </button>
+
        
 <div id="commentaires" class="comments">
     <?php if ( have_comments() ) : ?>
@@ -91,7 +86,7 @@
           </footer>
         </article>-->
       </main>
-</section>
+
 
 
 

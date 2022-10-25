@@ -522,7 +522,14 @@ if ($comments) {
     <!-- If we need scrollbar -->
   </main>
 </section>
+<section class=" evaluations">
+      <header class=" evaluations__header">
+        <h2 class=" evaluations__header__title title title--2" id="evaluations">
+          Ce que nos clients disent sur <?php the_title(); ?>
+        </h2>
+        <button class="button evaluations__header__button"> Laisser un avis </button>
 <?php comments_template(); // Par ici les commentaires 
 ?>
+</section>
 
 <?php get_footer(); ?>
