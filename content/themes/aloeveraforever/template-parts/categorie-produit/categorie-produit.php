@@ -70,6 +70,7 @@ if(is_page(ALL_PRODUCTS_SLUG)){
     'order'         => $filter_order,
     'orderby'   => $filter_order_type,
     'meta_key'     => $filter_orderby,
+    'posts_per_page' => -1,
     'tax_query' => [
       [
         'taxonomy' => $taxonomy_label,
@@ -92,6 +93,7 @@ if(is_tax($taxonomy_category)){
     'order'         => $filter_order,
     'orderby'   => $filter_order_type,
     'meta_key'     => $filter_orderby,
+    'posts_per_page' => -1,
     'tax_query' => [
       [
         'taxonomy' => $taxonomy_category,
@@ -119,6 +121,7 @@ if(is_tax($taxonomy_badge)){
     'order'         => $filter_order,
     'orderby'   => $filter_order_type,
     'meta_key'     => $filter_orderby,
+    'posts_per_page' => -1,
     'tax_query' => [
       [
         'taxonomy' => $taxonomy_badge,
