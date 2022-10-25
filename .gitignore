@@ -16,6 +16,7 @@ content/plugins/mailjet-for-wordpress
 content/plugins/query-monitor
 content/plugins/seo-by-rank-math
 content/plugins/simply-show-hooks
+content/plugins/importwp-pro
 
 git rm --cached content/plugins/
 # WordPress themes
@@ -24,4 +25,5 @@ content/themes/twentynineteen
 # WordPress wp-content directories
 content/languages
 content/upgrade
+content/uploads
 
