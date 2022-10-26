@@ -8,7 +8,13 @@ $category_term_link = get_term_link($category_term);
 $pictures_gallery = get_field('product_picture_gallery_field');
 $label_terms = get_the_terms($id, Post_Type_Product::TAXONOMY_NAME_LABEL) ? get_the_terms($id, Post_Type_Product::TAXONOMY_NAME_LABEL) : [];
 $ingredient_terms = get_the_terms($id, Post_Type_Product::TAXONOMY_NAME_INGREDIENT) ? get_the_terms($id, Post_Type_Product::TAXONOMY_NAME_INGREDIENT) : [];
+
 $is_pack = get_field('product_pack');
+$is_variant = get_field('product_is_variant');
+if($is_variant){
+  $original_product_ID = get_field('product_variant')[0]->ID;
+  
+}
 
 // Calcul de la note moyenne du produit
 $comments = get_comments(['post_id' => $id, 'status' => 'approve']);
@@ -190,11 +196,11 @@ if ($comments) {
     </h1>
 
     <h2 class="singleProduct__header__subtitle productSubtitle">
-      <?= get_field('product_subtitle'); ?>
+      <?= $is_variant ? get_field('product_subtitle', $original_product_ID) : get_field('product_subtitle'); ?>
     </h2>
     <!-- singleProduct Excerpt-->
     <p class="singleProduct__header__excerpt">
-      <?= get_field('product_intro'); ?>
+      <?= $is_variant ? get_field('product_intro', $original_product_ID) : get_field('product_intro'); ?>
 
     </p>
 
@@ -314,7 +320,8 @@ if ($comments) {
   <div class="singleProduct__feature">
     <ul class="singleProduct__feature__list">
       <?php
-      $strengths_list = get_field('product_strengths_list');
+      
+      $strengths_list = $is_variant ? get_field('product_strengths_list', $original_product_ID) : get_field('product_strengths_list');
       foreach ($strengths_list as $strength) :
       ?>
         <li class="feature">
@@ -415,8 +422,11 @@ if ($comments) {
 
 
   </section>
-
-  <?php if (get_field('product_benefits')) : ?>
+<!-- REPRENDRE ICI -->
+<?php 
+$product_benefits = $is_variant ? get_field('product_benefits', $original_product_ID) : get_field('product_benefits');
+?>
+  <?php if ($product_benefits) : ?>
     <!--Bienfaits -->
     <section class="accordion singleProduct__benefit">
       <header class="accordion__header js-accordion">
@@ -426,7 +436,7 @@ if ($comments) {
         <i class="fa fa-plus accordion__header__icon" aria-hidden="true"></i>
       </header>
       <main class="accordion__main">
-        <?= get_field('product_benefits'); ?>
+        <?= $product_benefits; ?>
       </main>
     </section>
   <?php endif; ?>
@@ -439,11 +449,11 @@ if ($comments) {
       <i class="fa fa-plus accordion__header__icon" aria-hidden="true"></i>
     </header>
     <main class="accordion__main">
-      <?= get_field('product_how_to_use'); ?>
+      <?= $is_variant ? get_field('product_how_to_use', $original_product_ID) : get_field('product_how_to_use'); ?>
     </main>
   </section>
-
-  <?php if (get_field('product_faq')) : ?>
+<?php $product_faq = $is_variant ? get_field('product_faq', $original_product_ID) : get_field('product_faq'); ?>
+  <?php if ($product_faq) : ?>
     <!--FAQ -->
     <section class="accordion singleProduct__faq">
       <header class="accordion__header js-accordion">
@@ -453,14 +463,15 @@ if ($comments) {
         <i class="fa fa-plus accordion__header__icon" aria-hidden="true"></i>
       </header>
       <main class="accordion__main">
-        <?= get_field('product_faq'); ?>
+        <?= $product_faq; ?>
       </main>
     </section>
   <?php endif; ?>
-  <?php $additionnal_accordions = get_field('product_more_info_accordeon');?>
-  <section class="accordion singleProduct__additionalAccordions">
+
+  <?php $additionnal_accordions = $is_variant ? get_field('product_more_info_accordeon', $original_product_ID) : get_field('product_more_info_accordeon');?>
   <?php if ($additionnal_accordions) :
       foreach ($additionnal_accordions as $accordion) :?>
+    <section class="accordion singleProduct__additionalAccordions">
   <header class="accordion__header js-accordion">
         <h2 class="accordion__header__title title title--2">
           <?= $accordion['more_info_accordeon_title']; ?>
@@ -470,29 +481,29 @@ if ($comments) {
       <main class="accordion__main">
         <?= $accordion['more_info_accordeon_content']; ?>
       </main>
+    </section>
       <?php endforeach; ?>
       <?php endif;?>
-  </section>
 
   <!--singleProduct Media-->
   <div class="singleProduct__media">
     <?php
-    $with_video = get_field('product_with_video');
+    $with_video = $is_variant ? get_field('product_with_video', $original_product_ID) : get_field('product_with_video');
     if ($with_video == true) :
-      $iframe = get_field('product_video');
+      $iframe = $is_variant ? get_field('product_video', $original_product_ID) : get_field('product_video');
       preg_match('/src="(.+?)"/', $iframe, $src);
       preg_match('/title="(.+?)"/', $iframe, $title);
       $src = $src[1];
       $title = $title[1];
     ?>
-      <iframe class="video video--full" src=<?= $src; ?> title="<?= $title; ?> " frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+      <iframe class="video--full" src=<?= $src; ?> title="<?= $title; ?> " frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
       </iframe>
     <?php else : ?>
-      <?php $no_vide_image = get_field('product_image_no_video')['url']; ?>
+      <?php $no_vide_image = $is_variant ? get_field('product_image_no_video', $original_product_ID)['url'] : get_field('product_image_no_video')['url']; ?>
       <img src="<?= $no_vide_image ?>" alt="">
     <?php endif; ?>
   </div>
-  <div class="singleProduct__image" style="background-image: url(<?= get_field('product_image_description')['url']; ?>); background-repeat:no-repeat">
+  <div class="singleProduct__image" style="background-image: url(<?= $is_variant ? get_field('product_image_description', $original_product_ID)['url'] : get_field('product_image_description')['url']; ?>); background-repeat:no-repeat">
   </div>
   <!--singleProduct description-->
   <section class="singleProduct__description">
@@ -503,9 +514,9 @@ if ($comments) {
     </header>
     <main class="singleProduct__description__main">
       <h3 class="singleProduct__description__header__subtitle productSubtitle">
-        <?= get_field('product_descrition_intro'); ?>
+        <?= $is_variant ? get_field('product_descrition_intro', $original_product_ID) : get_field('product_descrition_intro'); ?>
       </h3>
-      <?= get_field('product_description'); ?>
+      <?= $is_variant ? get_field('product_description', $original_product_ID) : get_field('product_description'); ?>
     </main>
   </section>
 </main>

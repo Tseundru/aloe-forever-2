@@ -36,6 +36,61 @@ function create_product_field_group(){
     endif;
 }
 
+add_action('acf/init', 'create_product_is_variant_field');
+function create_product_is_variant_field(){
+    acf_add_local_field(
+      [
+    'key'                           => 'product_is_variant_field',
+    'label'                         => 'Produits dérivé',
+    'parent'                      => 'product_group',
+    'name'                        => 'product_is_variant',
+    'type'                          => 'true_false',
+    'instructions'            => 'Indiqué si ce produit est une variante d\'un produit similaire',
+    'required'                  => 0,
+    'conditional_logic'  => 0,
+    'ui'                              => 1,
+    'default_value'         => 0,
+    'ui_on_text'               => 'Oui',
+    'ui_off_text'               => 'Non',
+      ]
+  );
+}
+
+add_action('acf/init', 'create_product_variant_field');
+function create_product_variant_field(){
+    acf_add_local_field(
+      [
+    'key'                           => 'product_variant_field',
+    'label'                         => 'Produit original',
+    'parent'                      => 'product_group',
+    'name'                        => 'product_variant',
+    'type'                          => 'relationship',
+    'instructions'            => '',
+    'required'                  => 1,
+    'conditional_logic'  => [
+      'field'         => 'product_is_variant_field',
+      'operator' => '==',
+       'value'       => '1'
+    ],
+    'post_type'       => 
+      [
+        0  => 'product',
+      ],
+      'taxonomy'    => '',
+      'filters'           => 
+      [
+				0   => 'search',
+				1   => 'post_type',
+				2   => 'taxonomy',
+			],
+      'elements'        => '',
+			'min'                   => 1,
+			'max'                  => 1,
+			'return_format' => 'object',
+    ]);
+}
+
+
 add_action('acf/init', 'create_product_subtitle_field');
 function create_product_subtitle_field(){
     acf_add_local_field(
@@ -47,7 +102,11 @@ function create_product_subtitle_field(){
     'type'                          => 'text',
     'instructions'            => '',
     'required'                  => 1,
-    'conditional_logic'  => 0,
+    'conditional_logic'  => [
+      'field'         => 'product_is_variant_field',
+      'operator' => '==',
+       'value'       => '0'
+    ],
       ]
   );
 }
@@ -79,7 +138,7 @@ function create_product_price_field(){
     'type'                          => 'number',
     'instructions'            => '',
     'required'                  => 1,
-    'conditional_logic'  => 0,
+    'conditional_logic'  =>0,
       ]
   );
 }
@@ -95,7 +154,11 @@ function create_product_aloe_percentage_field(){
     'type'                          => 'number',
     'instructions'            => '',
     'required'                  => 0,
-    'conditional_logic'  => 0,
+    'conditional_logic'  => [
+      'field'         => 'product_is_variant_field',
+      'operator' => '==',
+       'value'       => '0'
+    ],
       ]
   );
 }
@@ -182,7 +245,11 @@ function create_product_intro_field(){
     'type'                          => 'wysiwyg',
     'instructions'            => '',
     'required'                  => 1,
-    'conditional_logic'  => 0,
+    'conditional_logic'  => [
+      'field'         => 'product_is_variant_field',
+      'operator' => '==',
+       'value'       => '0'
+    ],
       ]
   );
 }
@@ -198,23 +265,32 @@ function create_product_descrition_intro_field(){
     'type'                          => 'text',
     'instructions'            => '',
     'required'                  => 1,
-    'conditional_logic'  => 0,
+    'conditional_logic'  => [
+      'field'         => 'product_is_variant_field',
+      'operator' => '==',
+       'value'       => '0'
+    ],
       ]
   );
 }
+
 
 add_action('acf/init', 'create_product_description_field');
 function create_product_description_field(){
     acf_add_local_field(
       [
     'key'                           => 'product_description',
-    'label'                         => 'Description',
+    'label'                         => 'Description 2',
     'parent'                      => 'product_group',
     'name'                        => 'product_description',
     'type'                          => 'wysiwyg',
-    'instructions'            => '',
+    'instructions'            => 'Décrivez le produit',
     'required'                  => 1,
-    'conditional_logic'  => 0,
+    'conditional_logic'  => [
+      'field'         => 'product_is_variant_field',
+      'operator' => '==',
+       'value'       => '0'
+    ],
       ]
   );
 }
@@ -230,7 +306,11 @@ function create_product_strengths_list_repeater_field(){
       'type'                                 => 'repeater',
       'instructions'                   => 'Points forts du produit une ligne par idée',
       'required'                         => 0,
-      'conditional_logic'         => 0,
+      'conditional_logic'         => [
+                      'field'                => 'product_is_variant_field',
+                      'operator'        => '==',
+                      'value'              => '0'
+                    ],
       'collapsed'                      => 'strength_field',
       'min'                                 => 0,
       'max'                                => 0,
@@ -244,7 +324,7 @@ function create_product_strengths_list_repeater_field(){
         'type' => 'text',
         'instructions' => '',
         'required' => 1,
-        'conditional_logic' => 0,
+        'conditional_logic'  => 0,
         'default_value' => '',
         'placeholder' => '',
         'prepend' => '',
@@ -295,7 +375,11 @@ function create_product_image_description_field(){
     'type'                          => 'image',
     'instructions'            => '',
     'required'                  => 1,
-    'conditional_logic'  => 0,
+    'conditional_logic'  => [
+      'field'         => 'product_is_variant_field',
+      'operator' => '==',
+       'value'       => '0'
+    ],
     'return_format' => 'array',
 		'preview_size' => 'medium',
 		'library' => 'all'
@@ -314,7 +398,11 @@ function create_product_how_to_use_field(){
     'type'                          => 'wysiwyg',
     'instructions'            => '',
     'required'                  => 1,
-    'conditional_logic'  => 0,
+    'conditional_logic'  => [
+      'field'         => 'product_is_variant_field',
+      'operator' => '==',
+       'value'       => '0'
+    ],
       ]
   );
 }
@@ -330,7 +418,11 @@ function create_product_benefits_field(){
     'type'                          => 'wysiwyg',
     'instructions'            => '',
     'required'                  => 0,
-    'conditional_logic'  => 0,
+    'conditional_logic'  => [
+      'field'         => 'product_is_variant_field',
+      'operator' => '==',
+       'value'       => '0'
+    ],
       ]
   );
 }
@@ -346,7 +438,11 @@ function create_product_faq_field(){
     'type'                          => 'wysiwyg',
     'instructions'            => '',
     'required'                  => 0,
-    'conditional_logic'  => 0,
+    'conditional_logic'  => [
+      'field'         => 'product_is_variant_field',
+      'operator' => '==',
+       'value'       => '0'
+    ],
       ]
   );
 }
@@ -363,7 +459,11 @@ function create_product_more_info_accordeon_repeater_field(){
       'type'                                 => 'repeater',
       'instructions'                   => 'Créez autant d\'accordeon que souhaité pour apporter plus d\'info sur le produits',
       'required'                         => 0,
-      'conditional_logic'         => 0,
+      'conditional_logic'  => [
+        'field'         => 'product_is_variant_field',
+        'operator' => '==',
+         'value'       => '0'
+      ],
       'collapsed'                      => 'instruction_field',
       'min'                                 => 0,
       'max'                                => 0,
@@ -414,7 +514,11 @@ function create_product_with_video_field(){
     'type'                          => 'true_false',
     'instructions'            => 'Indiquez la fiche de ce produit est accompagné d\'une video',
     'required'                  => 0,
-    'conditional_logic'  => 0,
+    'conditional_logic'  => [
+      'field'         => 'product_is_variant_field',
+      'operator' => '==',
+       'value'       => '0'
+    ],
     'ui'                              => 1,
     'default_value'         => 0,
     'ui_on_text'               => 'Oui',
