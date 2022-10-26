@@ -75,6 +75,14 @@ add_action( 'admin_init', 'remove_dashboard_meta' );
 //Remove unused wp functions
 remove_action( 'wp_head', 'wp_generator' );
 remove_action( 'wp_head', 'wlwmanifest_link' );
+
+//shortcode page title
+function page_title_sc( ){
+  return get_the_title();
+}
+add_shortcode( 'page_title', 'page_title_sc' );
+
+
 //Sort image srcset
 function getSrcSet($id) {
     $img_srcset   = wp_get_attachment_image_srcset($id, 'full');
