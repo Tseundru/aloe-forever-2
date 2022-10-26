@@ -6,6 +6,20 @@ if (is_singular('post')){
   $page_custom_classes ="blog-post-article" ;
 
 };
+
+
+$canonical_link = 0;
+if (is_singular('product')){
+  $is_variant = get_field('product_is_variant');
+if($is_variant){
+  $original_product_ID = get_field('product_variant')[0]->ID;
+  $canonical_link = get_permalink($original_product_ID);
+} 
+
+};
+
+
+
 $logo_words_array = explode(' ', get_bloginfo( 'name' ) ,2);
 $taxonomy =  Post_Type_Product::TAXONOMY_NAME_CATEGORY;
 $tax_terms = get_terms($taxonomy, [
@@ -54,6 +68,8 @@ $blog_categories = get_categories($args);
   {"@context": "https://schema.org","@type":"WebSite","url":"<?= get_home_url();?>","potentialAction": { "@type": "SearchAction","target": "<?= get_home_url();?>?s={search_term_string}","query-input": "required name=search_term_string"}}
   </script>
 <!-- Shema site link -->
+<?= $canonical_link ? '<link rel="canonical" href="'.$canonical_link.'" />' : '' ?>
+
 </head>
 <body <?php body_class( $page_custom_classes ); ?>>
 <div class="fullOverlay"></div>
