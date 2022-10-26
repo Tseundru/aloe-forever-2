@@ -457,9 +457,9 @@ if ($comments) {
       </main>
     </section>
   <?php endif; ?>
-
+  <?php $additionnal_accordions = get_field('product_more_info_accordeon');?>
   <section class="accordion singleProduct__additionalAccordions">
-  <?php $additionnal_accordions = get_field('product_more_info_accordeon');
+  <?php if ($additionnal_accordions) :
       foreach ($additionnal_accordions as $accordion) :?>
   <header class="accordion__header js-accordion">
         <h2 class="accordion__header__title title title--2">
@@ -471,6 +471,7 @@ if ($comments) {
         <?= $accordion['more_info_accordeon_content']; ?>
       </main>
       <?php endforeach; ?>
+      <?php endif;?>
   </section>
 
   <!--singleProduct Media-->
