@@ -459,6 +459,18 @@ if ($comments) {
   <?php endif; ?>
 
   <section class="accordion singleProduct__additionalAccordions">
+  <?php $additionnal_accordions = get_field('product_more_info_accordeon_repeater_field');
+      foreach ($$additionnal_accordions as $accordion) :?>
+  <header class="accordion__header js-accordion">
+        <h2 class="accordion__header__title title title--2">
+          <?= $accordion['more_info_accordeon_title']; ?>
+        </h2>
+        <i class="fa fa-plus accordion__header__icon" aria-hidden="true"></i>
+      </header>
+      <main class="accordion__main">
+        <?= $accordion['more_info_accordeon_content']; ?>
+      </main>
+      <?php endforeach; ?>
   </section>
 
   <!--singleProduct Media-->
