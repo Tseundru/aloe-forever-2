@@ -554,7 +554,11 @@ function create_product_image_no_video_field(){
     'type'                          => 'image',
     'instructions'            => '',
     'required'                  => 1,
-    'conditional_logic'  => 0,
+    'conditional_logic'  => [
+      'field'         => 'product_with_video',
+      'operator' => '==',
+       'value'       => '0'
+    ],
       ]
   );
 }
