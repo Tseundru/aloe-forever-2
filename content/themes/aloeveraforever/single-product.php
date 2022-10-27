@@ -499,11 +499,11 @@ $product_benefits = $is_variant ? get_field('product_benefits', $original_produc
       <iframe class="video--full" src=<?= $src; ?> title="<?= $title; ?> " frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
       </iframe>
     <?php else : ?>
-      <?php $no_vide_image = $is_variant ? get_field('product_image_no_video', $original_product_ID)['url'] : get_field('product_image_no_video')['url']; ?>
+      <?php $no_vide_image = get_field('product_image_no_video')['url']; ?>
       <img src="<?= $no_vide_image ?>" alt="">
     <?php endif; ?>
   </div>
-  <div class="singleProduct__image" style="background-image: url(<?= $is_variant ? get_field('product_image_description', $original_product_ID)['url'] : get_field('product_image_description')['url']; ?>); background-repeat:no-repeat">
+  <div class="singleProduct__image" style="background-image: url(<?=  get_field('product_image_description')['url']; ?>); background-repeat:no-repeat">
   </div>
   <!--singleProduct description-->
   <section class="singleProduct__description">

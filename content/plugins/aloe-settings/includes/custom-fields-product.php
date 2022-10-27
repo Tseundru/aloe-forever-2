@@ -375,11 +375,7 @@ function create_product_image_description_field(){
     'type'                          => 'image',
     'instructions'            => '',
     'required'                  => 1,
-    'conditional_logic'  => [
-      'field'         => 'product_is_variant_field',
-      'operator' => '==',
-       'value'       => '0'
-    ],
+    'conditional_logic'  => 0,
     'return_format' => 'array',
 		'preview_size' => 'medium',
 		'library' => 'all'
@@ -558,11 +554,7 @@ function create_product_image_no_video_field(){
     'type'                          => 'image',
     'instructions'            => '',
     'required'                  => 1,
-    'conditional_logic'  => [
-      'field'         => 'product_with_video',
-      'operator' => '==',
-       'value'       => '0'
-    ],
+    'conditional_logic'  => 0,
       ]
   );
 }
