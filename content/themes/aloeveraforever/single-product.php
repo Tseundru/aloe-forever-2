@@ -322,6 +322,7 @@ if ($comments) {
       <?php
       
       $strengths_list = $is_variant ? get_field('product_strengths_list', $original_product_ID) : get_field('product_strengths_list');
+      if ($strengths_list):
       foreach ($strengths_list as $strength) :
       ?>
         <li class="feature">
@@ -329,6 +330,7 @@ if ($comments) {
         </li>
       <?php
       endforeach;
+    endif;
       ?>
     </ul>
   </div>
