@@ -123,7 +123,7 @@ if ($comments) {
       <?php foreach ($comments as $comment) : ?>
         <div itemprop="review" itemtype="https://schema.org/Review" itemscope>
           <div itemprop="author" itemtype="https://schema.org/Person" itemscope>
-            <meta itemprop="name" content="<?= get_comment_author($comment) ?>r" />
+            <meta itemprop="name" content="<?= get_comment_author($comment) ?>" />
           </div>
           <div itemprop="reviewRating" itemtype="https://schema.org/Rating" itemscope>
             <meta itemprop="ratingValue" content="<?= get_field('note', $comment) ?>" />
