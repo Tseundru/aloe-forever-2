@@ -498,8 +498,9 @@ $product_benefits = $is_variant ? get_field('product_benefits', $original_produc
       $src = $src[1];
       $title = $title[1];
     ?>
-      <iframe class="video--full" src=<?= $src; ?> title="<?= $title; ?> " frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
-      </iframe>
+      <div class="video--full lazyframe"  data-title="<?= $title; ?>" data-src="<?= $src; ?>" data-vendor="youtube" data-thumbnail="<?=get_field('product_image_no_video')['url'];?>">
+
+      </div>
     <?php else : ?>
       <?php $no_vide_image = get_field('product_image_no_video')['url']; ?>
       <img src="<?= $no_vide_image ?>" alt="">

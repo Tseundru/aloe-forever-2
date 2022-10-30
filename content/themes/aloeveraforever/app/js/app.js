@@ -1,5 +1,5 @@
 import {ProductGallery , ProductCarousel} from './carousel';
-
+import lazyload from './lazyload'
 
 
 //const carousel = require('./carousel');
@@ -19,6 +19,7 @@ const app = {
     popup.init();
     accordion.init();
     rates.init();
+    lazyload.init();
   },
 };
 

@@ -38,6 +38,7 @@
     "axios": "^0.21.1",
     "font-awesome": "^4.7.0",
     "jquery": "^3.6.0",
+    "lazyframe": "^2.2.7",
     "leaflet": "^1.7.1",
     "reset-css": "^5.0.1",
     "swiper": "^6.7.0"
