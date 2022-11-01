@@ -103,7 +103,23 @@
   grid-area:description;
   padding: $gutter-large 0;
   &__main{
+    & >ul{
+      list-style-type: square;
+      padding-left: $gutter-large;
+      & >li{
+        padding-bottom: $gutter;
+        line-height: $gutter;
+      }
+    }
 
+    & >ol{
+      list-style-type: decimal;
+      padding-left: $gutter-large;
+      & >li{
+        padding-bottom: $gutter;
+        line-height: $gutter;
+      }
+    }
     & >h3{
   
       font-size: $font-size-tall;
