@@ -323,8 +323,7 @@ if ($comments) {
       if(get_field('product_aloe_percentage')):?>
         <li class="feature">
           Contient plus de 
-          <?= get_field('product_aloe_percentage') ?>
-        % de gel pur d'aloe vera
+          <?= get_field('product_aloe_percentage')?>% de gel pur d'aloe vera
         </li>
       <?php endif ;
       $strengths_list = $is_variant ? get_field('product_strengths_list', $original_product_ID) : get_field('product_strengths_list');
