@@ -320,7 +320,13 @@ if ($comments) {
   <div class="singleProduct__feature">
     <ul class="singleProduct__feature__list">
       <?php
-      
+      if(get_field('product_aloe_percentage')):?>
+        <li class="feature">
+          Contient plus de 
+          <?= get_field('product_aloe_percentage') ?>
+          % de gel pur d'aloe vera
+        </li>
+      <?php endif ;
       $strengths_list = $is_variant ? get_field('product_strengths_list', $original_product_ID) : get_field('product_strengths_list');
       if ($strengths_list):
       foreach ($strengths_list as $strength) :
