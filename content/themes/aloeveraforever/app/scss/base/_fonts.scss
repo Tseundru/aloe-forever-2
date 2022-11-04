@@ -9,8 +9,12 @@
 
 @font-face {
   font-family: "scriptorama";
-  src: url("./../assets/fonts/scriptorama-tradeshow.ttf");}
+  src: url("./../assets/fonts/scriptorama-tradeshow.ttf");
+  font-display: swap;
+}
 
   @font-face {
     font-family: "EuclidFlex";
-    src: url("./../assets/fonts/EuclidFlex-Medium.ttf");}
+    src: url("./../assets/fonts/EuclidFlex-Medium.ttf");
+    font-display: swap;
+  }
