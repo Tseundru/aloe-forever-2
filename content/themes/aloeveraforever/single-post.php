@@ -5,7 +5,7 @@
 
 get_header();
 
-$the_post_categories = get_categories();
+$the_post_categories = wp_get_post_categories(get_the_ID());
 $args = [
   'hide_empty'      => false,
 ];
