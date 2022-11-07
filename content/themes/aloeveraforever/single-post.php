@@ -6,6 +6,7 @@
 get_header();
 
 $the_post_categories = wp_get_post_categories(get_the_ID());
+dump($the_post_categories);
 $args = [
   'hide_empty'      => false,
 ];
@@ -47,7 +48,7 @@ $blog_categories = get_categories($args);
               <div class="blogPost__header__meta__category">
                 
                 <?php foreach($the_post_categories as $category) : ?>
-                <a class="blogPost__header__meta__category__item" href="<?= get_category_link($category->term_id) ?>" title="<?= $category->name ?>"><span><?= $category->name ?></span></a>
+                <a class="blogPost__header__meta__category__item" href="<?= get_category_link($category) ?>" title="<?= get_cat_name($category); ?>"><span><?= get_cat_name($category); ?></span></a>
                 <?php endforeach ?>
               </div>
             </div>
