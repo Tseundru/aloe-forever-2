@@ -19,7 +19,9 @@ content/plugins/simply-show-hooks
 
 git rm --cached content/plugins/
 # WordPress themes
-content/themes/twentynineteen
+content/themes/twentytwentythree
+content/themes/twentytwentytwo
+
 
 # WordPress wp-content directories
 content/languages
