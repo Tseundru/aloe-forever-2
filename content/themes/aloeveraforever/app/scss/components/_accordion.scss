@@ -29,6 +29,11 @@
     &.open{
       display: block;
     }
+    & >h2{
+      font-size: $font-size-tall;
+      padding: $gutter-small 0;
+      font-weight: 500;
+    }
     & >h3{
       font-size: $font-size-tall;
       padding: $gutter-small 0;
