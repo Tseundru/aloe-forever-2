@@ -474,11 +474,12 @@ $product_benefits = $is_variant ? get_field('product_benefits', $original_produc
       </main>
     </section>
   <?php endif; ?>
+<div class="singleProduct__additionalAccordions">
 
   <?php $additionnal_accordions = $is_variant ? get_field('product_more_info_accordeon', $original_product_ID) : get_field('product_more_info_accordeon');?>
   <?php if ($additionnal_accordions) :
       foreach ($additionnal_accordions as $accordion) :?>
-    <section class="accordion singleProduct__additionalAccordions">
+    <section class="accordion">
   <header class="accordion__header js-accordion">
         <h2 class="accordion__header__title title title--2">
           <?= $accordion['more_info_accordeon_title']; ?>
@@ -491,7 +492,7 @@ $product_benefits = $is_variant ? get_field('product_benefits', $original_produc
     </section>
       <?php endforeach; ?>
       <?php endif;?>
-
+    </div>
   <!--singleProduct Media-->
   <div class="singleProduct__media">
     <?php
