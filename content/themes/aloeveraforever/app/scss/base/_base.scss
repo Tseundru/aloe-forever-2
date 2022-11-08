@@ -63,5 +63,16 @@ strong {
     font-weight: 300;
 }
 
-
+tr {
+    border: 1px solid #eee;
+    
+}
   
+td {
+    padding: $gutter ;
+}
+
+blockquote {
+    border-left: 5px solid $color-secondary;
+    padding-left: 20px;
+}
