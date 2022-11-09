@@ -95,6 +95,7 @@
 
     &__content{
       font-family: $font-stack-blog;
+      font-weight: 400;
       padding: $gutter-large;
       @media(min-width: $breakpoint-M){
         padding: $gutter $gutter-very-large;
