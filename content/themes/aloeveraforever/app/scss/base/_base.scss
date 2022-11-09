@@ -75,4 +75,6 @@ td {
 blockquote {
     border-left: 5px solid $color-secondary;
     padding-left: 20px;
+    margin-top: $gutter;
+    margin-bottom: $gutter;
 }
