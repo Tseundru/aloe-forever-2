@@ -120,19 +120,21 @@
             
       }
       &>h3{
+        margin: $gutter-large 0;
         font-family: $font-stack-blog;
-        color: $color-primary;
+        color: $color-text-secondary;
         font-size: $font-size-very-tall;
         margin: $gutter 0 $gutter-small ;
         font-weight: 700;
       }
   
       &>h4{
+        margin: $gutter 0;
         font-family: $font-stack-blog;
         font-size: $font-size-tall;
         margin: $gutter 0 $gutter-small ;
         font-weight: 700;
-        color: $color-primary;
+        color: $color-text-secondary;
       }
   
       & >ul{
