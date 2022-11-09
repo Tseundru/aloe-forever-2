@@ -94,7 +94,7 @@
     position: relative;
 
     &__content{
-      
+      font-family: $font-stack-blog;
       padding: $gutter-large;
       @media(min-width: $breakpoint-M){
         padding: $gutter $gutter-very-large;
@@ -103,33 +103,36 @@
         filter:blur(4px);
       }
       &>h2{
-        font-size: $font-size-very-tall;
-        font-family: $font-stack-title;
-        display: inline-block;
-        color: $color-text-secondary;
-        text-transform: uppercase;
-        margin: $gutter 0 $gutter-small ;
-        background-color: $color-primary;
+        font-size: $font-size-very-very-tall;
+        font-family: $font-stack-blog;
+        //display: inline-block;
+        color: $color-primary;
+        //text-transform: uppercase;
+        //margin: $gutter 0 $gutter-small ;
+        font-weight: 700;
             //transform: rotate(359deg);
-            margin-right: $gutter-small;
-  
-            &:before{
-              content:"#";
-              font-weight: 700;
-              color : $color-text-secondary;
-              padding-left: $gutter-small;
-            }
+          margin: $gutter-large 0;
+          padding-top : $gutter-large;
+          padding-bottom : $gutter-large;
+          border-top: 1px solid black;
+          border-bottom: 1px solid black;
+        text-align: center;
+            
       }
       &>h3{
-        font-size: $font-size-tall;
+        font-family: $font-stack-blog;
+        color: $color-primary;
+        font-size: $font-size-very-tall;
         margin: $gutter 0 $gutter-small ;
         font-weight: 700;
       }
   
       &>h4{
-        font-size: $font-size-tall*.8;
+        font-family: $font-stack-blog;
+        font-size: $font-size-tall;
         margin: $gutter 0 $gutter-small ;
         font-weight: 700;
+        color: $color-primary;
       }
   
       & >ul{
