@@ -92,7 +92,7 @@ if( !empty($block['align']) ) {
   </div>
 
   <div class="blockProduct__title">
-  <a href="<?php the_permalink($product_ID) ?>" title="<?= get_the_title($product_ID) ?>"><h3><?= get_the_title($product_ID) ?></h3></a>
+  <a href="<?php the_permalink($product_ID) ?>" title="<?= get_the_title($product_ID) ?>"><p><?= get_the_title($product_ID) ?></p></a>
   </div>
 
   <div class="blockProduct__meta">
