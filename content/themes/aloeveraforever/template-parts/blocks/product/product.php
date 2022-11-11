@@ -28,7 +28,7 @@ if ($comments) {
 
 
 
-
+if ($badge){
 $newest_product = count(array_filter($badge, function($obj){
   if (isset($obj->slug)) {
       if($obj->slug == 'nouveaute') return true;
@@ -42,6 +42,7 @@ $best_seller_product = count(array_filter($badge, function($obj){
   }
   return false;
 }));
+};
 //dump($block);
 
 $id = 'product-' . $block['id'];
