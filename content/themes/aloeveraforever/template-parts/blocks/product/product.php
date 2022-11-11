@@ -4,7 +4,8 @@ $product_ID = get_field('block_product_product_relation_field')[0];
 $image_ID = get_post_thumbnail_id($product_ID);
 $product_description = get_field('block_product_product_description_field');
 $badge = get_the_terms($product_ID , 'product_badge') ; 
-
+$best_seller_product = [];
+$newest_product = [];
 // Calcul de la note moyenne du produit
 
 $comments = get_comments(['post_id' => $product_ID, 'status' => 'approve']);
