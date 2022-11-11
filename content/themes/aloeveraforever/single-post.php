@@ -9,6 +9,7 @@ $the_post_categories = wp_get_post_categories(get_the_ID());
 
 $args = [
   'hide_empty'      => false,
+  'exclude' => [1,46305],
 ];
 $blog_categories = get_categories($args);
 
