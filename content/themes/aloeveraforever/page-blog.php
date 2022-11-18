@@ -9,7 +9,7 @@ $blog_post =  new WP_Query(array('post_type' => 'post', 'post_status' => 'publis
   <div class="headerPicture__image">
     <div class="headerPicture__image__text">
       <h1 class="headerPicture__image__text__title"><?php the_title(); ?></h1>
-      <h2 class="headerPicture__image__text__subtitle">Catégories</h2>
+      <h2 class="headerPicture__image__text__subtitle">Blog & Actualités</h2>
     </div>
   </div>
 </div>
