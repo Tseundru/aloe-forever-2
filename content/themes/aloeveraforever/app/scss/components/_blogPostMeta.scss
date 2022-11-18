@@ -1,0 +1,30 @@
+.blogPostMeta{
+  display:flex;
+  
+  align-items: center;
+  &__avatar{
+    width:2rem;
+    height:2rem;
+    border-radius: 50%;
+    
+  }
+  &__author{
+    padding-left : $gutter-small;
+    padding-right : $gutter-small;
+  }
+  &__publishDate{
+    padding-right : $gutter-small;
+    &::before{
+      @include fa-icon;
+    content: $fa-var-calendar;
+    padding-right: $gutter-small;
+    }
+  }
+  &__timeToRead{
+    &::before{
+      @include fa-icon;
+    content: $fa-var-clock-o;
+    padding-right: $gutter-small;
+    }
+  }
+}

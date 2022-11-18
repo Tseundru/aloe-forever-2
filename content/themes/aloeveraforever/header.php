@@ -78,7 +78,7 @@ $blog_categories = get_categories($args);
     src="https://connect.facebook.net/fr_FR/sdk.js#xfbml=1&version=v11.0&appId=1994970534156032&autoLogAppEvents=1"
     nonce="PzJvz49M"></script>
 
-  <div class="container <?= is_singular('post')? 'container--blog' : '' ?>">
+  <div class="container <?= is_singular('post') || is_category() || is_page('blog') ? 'container--blog' : '' ?> ">
     <!--<div class="alert shipping">
       Délai de livraison dans les 1-3 jours ouvrables
     </div>-->

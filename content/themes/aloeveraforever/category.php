@@ -8,7 +8,7 @@ $blog_post =  new WP_Query(array('post_type' => 'post', 'post_status' => 'publis
   <div class=" headerPicture__imageBlur"></div>
   <div class="headerPicture__image">
     <div class="headerPicture__image__text">
-      <h1 class="headerPicture__image__text__title"><?php the_title(); ?></h1>
+      <h1 class="headerPicture__image__text__title"><?php single_cat_title(); ?></h1>
       <h2 class="headerPicture__image__text__subtitle">Catégories</h2>
     </div>
   </div>
@@ -17,8 +17,8 @@ $blog_post =  new WP_Query(array('post_type' => 'post', 'post_status' => 'publis
  
   <div class="pageBlog__content">
 
-    <?php if ($blog_post->have_posts()) :
-      while ($blog_post->have_posts()) : $blog_post->the_post(); ?>
+    <?php if (have_posts()) :
+      while (have_posts()) : the_post(); ?>
         
         <article class="blogPostExcerpt">
           <div class="blogPostExcerpt__picture">
@@ -46,17 +46,7 @@ $blog_post =  new WP_Query(array('post_type' => 'post', 'post_status' => 'publis
     wp_reset_postdata();
     ?>
 
-    <?php
-
-    if (have_posts()) : while (have_posts()) : the_post();
-
-        the_content();
-
-
-      endwhile;
-    endif;
-
-    ?>
+    
   </div>
   <?php get_template_part('template-parts/posts/blogSidebar/blogSidebar'); ?>
 </main>

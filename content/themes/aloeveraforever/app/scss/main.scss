@@ -25,6 +25,7 @@ $fa-font-path: '~font-awesome/fonts';
                 'layout/bannerGallery',
                 'layout/blockProduct',
                 'layout/blogPost',
+                'layout/blogPostExcerpt',
                 'layout/blogSidebar',
                 'layout/blogSingle',
                 'layout/carousel',
@@ -48,6 +49,7 @@ $fa-font-path: '~font-awesome/fonts';
 //5. Components
 @import  
                   'components/accordion',
+                  'components/blogPostMeta',
                   'components/brand',
                   'components/breadcrumb',
                   'components/burger',
@@ -85,4 +87,5 @@ $fa-font-path: '~font-awesome/fonts';
 
  //6. Pages
  @import  'pages/homepage',
+                  'pages/pageBlog',
                   'pages/singleProductPage';

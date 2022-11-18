@@ -141,7 +141,7 @@ if ($comments) {
 
 
 
-<main class="main singleProduct">
+<main class="main singleProduct ">
   <!-- Breadcrumb -->
   <nav class="breadcrumb">
     <ul class="breadcrumb__list">

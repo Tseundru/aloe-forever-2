@@ -2,6 +2,8 @@
 //Theme Version
 define( 'ALLOYOGI_THEME_VERSION', '1.0' );
 // Main Menu URL and Slug
+define('BLOG_SLUG','blog' );
+define('BLOG_URL', get_home_url().'/'.BLOG_SLUG.'/');
 define('ALOE_VERA_SLUG','aloe-vera' );
 define('ALOE_VERA_URL', get_home_url().'/'.ALOE_VERA_SLUG.'/');
 define('JOIN_US_SLUG','rejoignez-nous' );
@@ -216,6 +218,20 @@ register_sidebar( array(
  'after_title'   => '',
 )
 );
+
+/* CALCUL TEMPS ESTIME LECTURE ARTICLES */
+function temps_lecture() {
+  $content = get_post_field( 'post_content', $post->ID );
+  $word_count = str_word_count( strip_tags( $content ) );
+  $readingtime = ceil($word_count / 200);
+  if ($readingtime == 1) {
+    $timer = " min";
+  } else {
+    $timer = " min";
+  }
+  $totalreadingtime = $readingtime . $timer;
+  return $totalreadingtime;
+}
 //require_once(dirname(__FILE__) . '/includes/smtp.php'); 
 // Inclusion des fichiers de configuration
 //Post Type
