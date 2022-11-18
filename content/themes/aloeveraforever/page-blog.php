@@ -35,7 +35,7 @@ $blog_post =  new WP_Query(array('post_type' => 'post', 'post_status' => 'publis
             <p class="blogPostExcerpt__main__text"><?php the_excerpt() ?></p>
           </main>
           <footer class="blogPostExcerpt__footer">
-            <p class="blogPostExcerpt__footer__view">99 vues</p>
+            <p class="blogPostExcerpt__footer__view"><?= gt_get_post_view(); ?> vues</p>
             
           </footer>
         </article>
@@ -46,17 +46,7 @@ $blog_post =  new WP_Query(array('post_type' => 'post', 'post_status' => 'publis
     wp_reset_postdata();
     ?>
 
-    <?php
-
-    if (have_posts()) : while (have_posts()) : the_post();
-
-        the_content();
-
-
-      endwhile;
-    endif;
-
-    ?>
+   
   </div>
   <?php get_template_part('template-parts/posts/blogSidebar/blogSidebar'); ?>
 </main>

@@ -18,7 +18,7 @@ $blog_categories = get_categories($args);
 
 <?php if (have_posts()) : ?>
   <?php while (have_posts()) : the_post(); ?>
-
+  <?php gt_set_post_view(); ?>
     <div class="headerPicture">
       <?php write_src_set_image(get_post_thumbnail_id(), '.headerPicture__imageBlur, .headerPicture__image'); ?>
       <div class=" headerPicture__imageBlur"></div>
