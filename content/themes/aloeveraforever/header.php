@@ -46,7 +46,8 @@ ksort($terms_sort_by_order, SORT_NUMERIC);
 
 
 $args = [
-  'hide_empty'      => false,
+  'hide_empty'      => true,
+  'exclude' => [1,46305],
 ];
 $blog_categories = get_categories($args);
 ?>
