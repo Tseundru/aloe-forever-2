@@ -1,5 +1,5 @@
 <?php get_header();
-
+dump(get_field('categories_picture_field', 'category_'.get_queried_object()->term_id));
 ?>
 
 <div class="headerPicture">
