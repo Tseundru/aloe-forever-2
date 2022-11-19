@@ -1,5 +1,4 @@
 <?php get_header();
-dump(get_field('categories_picture_field', 'category_'.get_queried_object()->term_id));
 ?>
 
 <div class="headerPicture">
@@ -8,7 +7,7 @@ dump(get_field('categories_picture_field', 'category_'.get_queried_object()->ter
   <div class="headerPicture__image">
     <div class="headerPicture__image__text">
       <h1 class="headerPicture__image__text__title"><?php single_cat_title(); ?></h1>
-      <h2 class="headerPicture__image__text__subtitle">Catégories</h2>
+      <h2 class="headerPicture__image__text__subtitle">Blog</h2>
     </div>
   </div>
 </div>
