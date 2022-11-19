@@ -87,7 +87,7 @@ function create_blogPost_categories_picture_field(){
                     'key' => 'categories_picture_field2',
                     'label' => 'image2',
                     'name' => 'categories_picture2',
-                    'type' => 'image',
+                    'type' => 'text',
                     'instructions' => '',
                     'required' => 1,
                     'conditional_logic' => 0,
