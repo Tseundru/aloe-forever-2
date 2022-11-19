@@ -1,7 +1,7 @@
 <?php get_header();
 $blog_post =  new WP_Query(array('post_type' => 'post', 'post_status' => 'publish', 'posts_per_page' => -1));;
 dump(get_fields());
-dump(get_field('categories_picture_field2','category_'.get_queried_object()->term_id));
+
 ?>
 
 <div class="headerPicture">
@@ -44,8 +44,7 @@ dump(get_field('categories_picture_field2','category_'.get_queried_object()->ter
 
     <?php endwhile;
     endif;
-    wp_reset_postdata();
-    ?>
+wp_reset_query()    ?>
 
     
   </div>
