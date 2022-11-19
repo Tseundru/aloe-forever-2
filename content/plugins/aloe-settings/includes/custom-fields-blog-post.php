@@ -72,7 +72,7 @@ function create_blogPost_categories_picture_field(){
                         'class' => '',
                         'id' => '',
                     ],
-                    'return_format' => 'id',
+                    'return_format' => 'bla ',
                     'preview_size' => 'medium',
                     'library' => 'all',
                     'min_width' => '',
