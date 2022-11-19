@@ -1,11 +1,9 @@
 <?php get_header();
-$blog_post =  new WP_Query(array('post_type' => 'post', 'post_status' => 'publish', 'posts_per_page' => -1));;
-dump(get_fields());
 
 ?>
 
 <div class="headerPicture">
-  <?php write_src_set_image(get_field('categories_picture_field2'), '.headerPicture__imageBlur, .headerPicture__image'); ?>
+  <?php write_src_set_image(get_field('categories_picture_field', 'category_'.get_queried_object()->term_id), '.headerPicture__imageBlur, .headerPicture__image'); ?>
   <div class=" headerPicture__imageBlur"></div>
   <div class="headerPicture__image">
     <div class="headerPicture__image__text">
@@ -44,7 +42,8 @@ dump(get_fields());
 
     <?php endwhile;
     endif;
-wp_reset_query()    ?>
+    wp_reset_postdata();
+    ?>
 
     
   </div>
