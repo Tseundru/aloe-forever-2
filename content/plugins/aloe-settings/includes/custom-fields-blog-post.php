@@ -60,7 +60,7 @@ function create_blogPost_categories_picture_field(){
             'title' => 'categories blog',
             'fields' => [
                 [
-                    'key' => 'categories_picture',
+                    'key' => 'categories_picture_field',
                     'label' => 'image',
                     'name' => 'categories_picture',
                     'type' => 'image',
