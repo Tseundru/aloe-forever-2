@@ -4,7 +4,7 @@ $blog_post =  new WP_Query(array('post_type' => 'post', 'post_status' => 'publis
 ?>
 
 <div class="headerPicture">
-  <?php write_src_set_image(get_post_thumbnail_id(), '.headerPicture__imageBlur, .headerPicture__image'); ?>
+  <?php write_src_set_image(get_field('categories_picture'), '.headerPicture__imageBlur, .headerPicture__image'); ?>
   <div class=" headerPicture__imageBlur"></div>
   <div class="headerPicture__image">
     <div class="headerPicture__image__text">
