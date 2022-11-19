@@ -5,7 +5,7 @@ dump(get_field('categories_picture_field','category_52'));
 ?>
 
 <div class="headerPicture">
-  <?php write_src_set_image(get_field('categories_picture_field'), '.headerPicture__imageBlur, .headerPicture__image'); ?>
+  <?php write_src_set_image(get_field('categories_picture_field2'), '.headerPicture__imageBlur, .headerPicture__image'); ?>
   <div class=" headerPicture__imageBlur"></div>
   <div class="headerPicture__image">
     <div class="headerPicture__image__text">
