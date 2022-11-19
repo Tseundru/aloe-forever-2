@@ -48,3 +48,64 @@ function create_blogPost_private_content_field(){
       ]
   );
 }
+
+
+
+add_action('acf/init', 'create_blogPost_categories_picture_field');
+function create_blogPost_categories_picture_field(){
+    if( function_exists('acf_add_local_field_group') ):
+
+        acf_add_local_field_group([
+            'key' => 'categories_blog',
+            'title' => 'categories blog',
+            'fields' => [
+                [
+                    'key' => 'categories_picture',
+                    'label' => 'image',
+                    'name' => 'categories_picture',
+                    'type' => 'image',
+                    'instructions' => '',
+                    'required' => 1,
+                    'conditional_logic' => 0,
+                    'wrapper' => [
+                        'width' => '',
+                        'class' => '',
+                        'id' => '',
+                    ],
+                    'return_format' => 'id',
+                    'preview_size' => 'medium',
+                    'library' => 'all',
+                    'min_width' => '',
+                    'min_height' => '',
+                    'min_size' => '',
+                    'max_width' => '',
+                    'max_height' => '',
+                    'max_size' => '',
+                    'mime_types' => '',
+                ],
+            ],
+            'location' => [
+                [
+                    [
+                        'param' => 'taxonomy',
+                        'operator' => '==',
+                        'value' => 'category',
+                    ],
+                ],
+            ],
+            'menu_order' => 0,
+            'position' => 'normal',
+            'style' => 'default',
+            'label_placement' => 'top',
+            'instruction_placement' => 'label',
+            'hide_on_screen' => '',
+            'active' => true,
+            'description' => '',
+            'show_in_rest' => 0,
+        ]);
+        
+        endif;		
+}
+
+
+
