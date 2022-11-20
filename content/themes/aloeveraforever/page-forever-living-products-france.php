@@ -29,7 +29,9 @@ $tax_terms = get_terms($taxonomy, [
         </a>
       </li>
     </ul>
-  </nav><section class="products topSeller">
+  </nav>
+  
+  <section class="products topSeller">
   <header class="products__header">
     <h2 class="products__header__title title title--2">Produits Forever Les plus vendus en France</h2>
     
