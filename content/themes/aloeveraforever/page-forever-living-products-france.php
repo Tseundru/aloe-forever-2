@@ -52,7 +52,7 @@ $tax_terms = get_terms($taxonomy, [
         <p>Aloe Vera Forever est distributeur agréé <strong class="invisible">Forever Living Products en France</strong>  et commercialise ses produits à base d'aloe vera dans <strong class="invisible">tous les départements de France Métropole et dans les Dom-Tom.</strong> </p>
         <p><strong>Trouvez ci dessous la liste des régions et départements de France ou nous distribuons nos Produits.</strong> </p>
         <?php foreach($tax_terms as $term)  :?>
-        <h3><?=$term->name?></h3>
+        <h3><a href="<?= get_term_link($term->term_id, 'location')?>"><?=$term->name?></a></h3>
         <?php 
             $departments = get_terms($taxonomy, [
             'hide_empty' => false,
@@ -75,7 +75,7 @@ $tax_terms = get_terms($taxonomy, [
         <p>
           <?php
         foreach($departments as $department):?>
-        <?=$department->name?> ,
+        <a href="<?= get_term_link($department->term_id, 'location')?>"><?=$department->name?> ,</a>
         <?php endforeach; ?>
         </p>
         <?php endforeach; ?>

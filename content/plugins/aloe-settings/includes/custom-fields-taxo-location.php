@@ -68,11 +68,18 @@ function  register_taxonomy_location_custom_fields(){
                       'Département' => 'Département',
                       'Ville'                  => 'Ville',
                     ],
+                    
                     'allow_null' => 0,
                     'multiple' => 0,
                     'ui' => 0,
                     'return_format' => 'value',
                     'ajax' => 0,
+                  ],
+                  [
+                    'key'                           => 'big_city_field',
+                    'label'                         => 'Grande ville',
+                    'name'                        => 'big_city',
+                    'type'                          => 'true_false',
                   ],
                  
                   
