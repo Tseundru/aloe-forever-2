@@ -7,6 +7,7 @@
       if($args['methode']==='filter'){
         $queryArgs = [
           'post_type'  => 'product',
+          'posts_per_page' => 15,
           'tax_query' => [
             [
               'taxonomy' => 'product_badge',
@@ -19,6 +20,7 @@
         $queryArgs= [
           'post__in' => $args['ids'],
           'post_type'  => 'product',
+          'posts_per_page' => 15,
         ];
       }
 
