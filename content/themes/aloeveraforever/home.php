@@ -46,7 +46,7 @@ $ten_and_eleven = array_slice($terms_sort_by_order, 9, 2, true);
       <a href=<?= get_term_link('top-vente', 'product_badge'); ?> class="products__header__subtitle__link" title="Meilleures ventes des produits Forever">Voir Tous</a>
     </p>
   </header>
-  <?php get_template_part('template-parts/product/products-carousel', null, ['filter' => 'top-vente','methode'=>'filter']);?>
+  <?php get_template_part('template-parts/product/products-carousel', null, ['filter' => 'favorite','methode'=>'filter']);?>
 </section>
 
 <!-- banner gallery -->
