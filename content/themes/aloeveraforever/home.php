@@ -23,13 +23,13 @@ foreach ($tax_terms as $tax_term) {
 }
 
 sort($terms_sort_by_order);
-//dump($terms_sort_by_order);
 $five_first_terms = array_slice($terms_sort_by_order, 0, 5, true);
 $six_and_seven_terms = array_slice($terms_sort_by_order, 5, 2, true);
 $eight_and_nine_terms = array_slice($terms_sort_by_order, 7, 2, true);
 $ten_and_eleven = array_slice($terms_sort_by_order, 9, 2, true);
 
 ?>
+<!-- banner gallery -->
 <div class="bannerGallery">
   <?php
   foreach ($five_first_terms as $tax_term) :
@@ -37,7 +37,7 @@ $ten_and_eleven = array_slice($terms_sort_by_order, 9, 2, true);
   endforeach;
   ?>
 </div>
-
+<!-- Top Seller -->
 <section class="products topSeller">
   <header class="products__header">
     <h2 class="products__header__title title title--2">Les plus vendus</h2>
@@ -46,38 +46,10 @@ $ten_and_eleven = array_slice($terms_sort_by_order, 9, 2, true);
       <a href=<?= get_term_link('top-vente', 'product_badge'); ?> class="products__header__subtitle__link" title="Meilleures ventes des produits Forever">Voir Tous</a>
     </p>
   </header>
-  <main class="products__main swiper-container">
-    <div class="carousel swiper-wrapper">
-      <?php
-      $top_seller_args = [
-        'post_type'  => 'product',
-        'tax_query' => [
-          [
-            'taxonomy' => 'product_badge',
-            'field'    => 'slug',
-            'terms'    => array( 'top-vente' ),
-          ]
-        ]
-      ];
-      $top_seller_query = new WP_Query($top_seller_args);
-      if ($top_seller_query->have_posts()) :
-        while ($top_seller_query->have_posts()) : $top_seller_query->the_post();
-          get_template_part('template-parts/product/product-card');
-        endwhile;
-      endif;
-      wp_reset_postdata();
-      ?>
-    </div>
-    <!-- If we need pagination -->
-
-    <!-- If we need navigation buttons -->
-    <div class="swiper-button-prev"></div>
-    <div class="swiper-button-next"></div>
-
-    <!-- If we need scrollbar -->
-  </main>
+  <?php get_template_part('template-parts/product/products-carousel', null, ['filter' => 'top-vente','methode'=>'filter']);?>
 </section>
 
+<!-- banner gallery -->
 <div class="gallery gallery--2pics gallery2">
   <?php
   foreach ($six_and_seven_terms as $tax_term) :
@@ -86,6 +58,8 @@ $ten_and_eleven = array_slice($terms_sort_by_order, 9, 2, true);
   <?php endforeach; ?>
 </div>
 
+
+<!-- New products -->
 <section class="products newProducts">
       <header class="products__header">
         <h2 class="products__header__title title title--2">Nouveaux produits</h2>
@@ -96,38 +70,10 @@ $ten_and_eleven = array_slice($terms_sort_by_order, 9, 2, true);
           </a>
         </p>
       </header>
-      <main class="products__main swiper-container">
-        <div class="carousel swiper-wrapper">
-        <?php
-      $newest_args = [
-        'post_type'  => 'product',
-        'tax_query' => [
-          [
-            'taxonomy' => 'product_badge',
-            'field'    => 'slug',
-            'terms'    => array( 'nouveaute' ),
-          ]
-        ]
-      ];
-      $newest_query = new WP_Query($newest_args);
-      if ($newest_query->have_posts()) :
-        while ($newest_query->have_posts()) : $newest_query->the_post();
-          get_template_part('template-parts/product/product-card');
-        endwhile;
-      endif;
-      wp_reset_postdata();
-      ?>
-        </div>
-        <!-- If we need pagination -->
-
-        <!-- If we need navigation buttons -->
-        <div class="swiper-button-prev"></div>
-        <div class="swiper-button-next"></div>
-
-
-
-      </main>
+     <?php get_template_part('template-parts/product/products-carousel', null, ['filter' => 'nouveaute']);?>
     </section>
+
+    <!-- banner gallery -->
     <div class="gallery gallery--2pics gallery2">
   <?php
   foreach ($eight_and_nine_terms as $tax_term) :
@@ -135,6 +81,8 @@ $ten_and_eleven = array_slice($terms_sort_by_order, 9, 2, true);
   ?>
   <?php endforeach; ?>
 </div>
+
+<!-- Aloe Max -->
 <section class="products aloeMax">
       <header class="products__header">
         <h2 class="products__header__title title title--2">Teneur en Aloe Vera</h2>
@@ -145,33 +93,10 @@ $ten_and_eleven = array_slice($terms_sort_by_order, 9, 2, true);
           </a>
         </p>
       </header>
-      <main class="products__main swiper-container">
-        <div class="carousel swiper-wrapper">
-        <?php
-      $aloeMax_args = [
-        
-        'post_type'  => 'product',
-        'tax_query' => [
-          [
-            'taxonomy' => 'product_badge',
-            'field'    => 'slug',
-            'terms'    => array( 'aloemax' ),
-          ]
-        ]
-      ];
-      $aloeMax_query = new WP_Query($aloeMax_args);
-      if ($aloeMax_query->have_posts()) :
-        while ($aloeMax_query->have_posts()) : $aloeMax_query->the_post();
-          get_template_part('template-parts/product/product-card');
-        endwhile;
-      endif;
-      wp_reset_postdata();
-      ?>
-        </div>
-        <div class="swiper-button-prev"></div>
-        <div class="swiper-button-next"></div>
-      </main>
+      <?php get_template_part('template-parts/product/products-carousel', null, ['filter' => 'aloemax']);?>
     </section>
+
+    <!-- banner gallery -->
     <div class="gallery gallery--2pics gallery2">
   <?php
   foreach ($ten_and_eleven as $tax_term) :
@@ -179,6 +104,8 @@ $ten_and_eleven = array_slice($terms_sort_by_order, 9, 2, true);
   ?>
   <?php endforeach; ?>
 </div>
+
+<!-- Last Posts -->
 <section class="lastPosts">
       <header class="lastPosts__header">
         <p class="lastPosts__header__title title title--2">
