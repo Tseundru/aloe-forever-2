@@ -51,11 +51,7 @@ switch ($location_type) {
           'value' => $location->name,
           'compare' => '='
         ],
-        [
-          'key' => 'big_city',
-          'value' => true,
-          'compare' => '='
-        ]
+        
       ]
     ]);
     break;
