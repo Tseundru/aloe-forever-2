@@ -70,7 +70,7 @@ $ten_and_eleven = array_slice($terms_sort_by_order, 9, 2, true);
           </a>
         </p>
       </header>
-     <?php get_template_part('template-parts/product/products-carousel', null, ['filter' => 'nouveaute']);?>
+     <?php get_template_part('template-parts/product/products-carousel', null, ['filter' => 'nouveaute','methode'=>'filter']);?>
     </section>
 
     <!-- banner gallery -->
@@ -93,7 +93,7 @@ $ten_and_eleven = array_slice($terms_sort_by_order, 9, 2, true);
           </a>
         </p>
       </header>
-      <?php get_template_part('template-parts/product/products-carousel', null, ['filter' => 'aloemax']);?>
+      <?php get_template_part('template-parts/product/products-carousel', null, ['filter' => 'aloemax','methode'=>'filter']);?>
     </section>
 
     <!-- banner gallery -->
