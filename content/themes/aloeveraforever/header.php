@@ -170,13 +170,13 @@ $blog_categories = get_categories($args);
         </div>
 
         <ul class="header__actions__list">
-          <li class="header__actions__list__item">
+          <!-- <li class="header__actions__list__item">
             <svg xmlns="http://www.w3.org/2000/svg" class="icon icon--user js-user-icon" viewBox="0 0 33 31">
               <path
                 d="M30.2 30.2c0-5.9-4.1-10.7-9.8-12.3 3.1-1.4 5.4-4.6 5.4-8.2 0-5.1-4.2-9.1-9.2-9.1S7.3 4.7 7.3 9.7c0 3.7 2.2 6.8 5.4 8.2-5.6 1.6-9.8 6.4-9.9 12.3">
               </path>
             </svg>
-          </li>
+          </li> -->
           <li class="header__actions__list__item">
             <svg xmlns="http://www.w3.org/2000/svg" class="icon icon--search js-search-icon" viewBox="0 0 33 31">
               <path d="M12.7 22.3c6.1 0 11-4.9 11-11s-4.9-11-11-11-11 4.9-11 11 5 11 11 11"></path>
