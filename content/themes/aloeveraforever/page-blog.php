@@ -1,6 +1,6 @@
 <?php get_header();
-$blog_post =  new WP_Query(array('post_type' => 'post', 'post_status' => 'publish', 'posts_per_page' => -1));;
-//dump($blog_post);
+$blog_post =  new WP_Query(array('post_type' => 'post', 'post_status' => 'publish', 'posts_per_page' => 10,'paged' => 1));;
+dump($blog_post);
 ?>
 
 <div class="headerPicture">
@@ -16,29 +16,11 @@ $blog_post =  new WP_Query(array('post_type' => 'post', 'post_status' => 'publis
 <main class="main pageBlog">
  
   <div class="pageBlog__content">
-
+<div class="publication-list">
     <?php if ($blog_post->have_posts()) :
       while ($blog_post->have_posts()) : $blog_post->the_post(); ?>
         
-        <article class="blogPostExcerpt">
-          <div class="blogPostExcerpt__picture">
-            <a href="<?php the_permalink() ?>">
-            <?php the_post_thumbnail('large', ['class' => 'blogPostExcerpt__picture__img', 'title' => get_the_title()]) ?>
-          </a>
-          </div>
-          <header class="blogPostExcerpt__header">
-            <?php get_template_part('template-parts/posts/blogPostMeta/blogPostMeta'); ?>
-
-          </header>
-          <main class="blogPostExcerpt__main">
-            <a class="blogPostExcerpt__main__title" href="<?php the_permalink() ?>"><?php the_title(); ?></a>
-            <p class="blogPostExcerpt__main__text"><?php the_excerpt() ?></p>
-          </main>
-          <footer class="blogPostExcerpt__footer">
-            <p class="blogPostExcerpt__footer__view"><?= gt_get_post_view(); ?> vues</p>
-            
-          </footer>
-        </article>
+        <?php get_template_part('template-parts/posts/blogPostExerpt/blogPostExerpt'); ?>
         
 
     <?php endwhile;
@@ -46,7 +28,14 @@ $blog_post =  new WP_Query(array('post_type' => 'post', 'post_status' => 'publis
     wp_reset_postdata();
     ?>
 
-   
+</div>
+<?php if($blog_post->max_num_pages > 1): ?>
+<div class="btn__wrapper">
+  <button class="button button--loadmore" id="load-more">
+    Charger la suite
+    </button>
+</div>
+<?php endif; ?>
   </div>
   <?php get_template_part('template-parts/posts/blogSidebar/blogSidebar'); ?>
 </main>

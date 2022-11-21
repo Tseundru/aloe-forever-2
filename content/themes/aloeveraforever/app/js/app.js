@@ -9,6 +9,7 @@ const searchBar = require('./searchBar');
 const instaFeed = require('./instaFeed');
 const popup = require('./popup');
 const accordion = require('./accordion');
+const loadmore = require('./loadmore');
 const rates = require('./rates');
 const app = {
   init: function() {
@@ -18,8 +19,9 @@ const app = {
     instaFeed.init();
     popup.init();
     accordion.init();
-    rates.init();
+    loadmore.init();
     lazyload.init();
+    rates.init();
   },
 };
 

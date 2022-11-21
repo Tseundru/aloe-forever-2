@@ -280,6 +280,41 @@ function distance($lat1, $lng1, $lat2, $lng2, $unit = 'k') {
   }
   return $meter;
 }
+
+// load more function
+function weichie_load_more() {
+  $ajaxposts = new WP_Query([
+    'post_type' => 'post',
+    'posts_per_page' => 10,
+    'orderby' => 'date',
+    'order' => 'DESC',
+    'paged' => $_POST['paged'],
+  ]);
+
+  $response = '';
+  $max_pages = $ajaxposts->max_num_pages;
+
+  if($ajaxposts->have_posts()) {
+    ob_start();
+    while($ajaxposts->have_posts()) : $ajaxposts->the_post();
+        $response .= get_template_part('template-parts/posts/blogPostExerpt/blogPostExerpt');
+    endwhile;
+    $output = ob_get_contents();
+    ob_end_clean();
+  } else {
+    $response = '';
+  }
+
+  $result = [
+    'max' => $max_pages,
+    'html' => $output,
+  ];
+
+  echo json_encode($result);
+  exit;
+}
+add_action('wp_ajax_weichie_load_more', 'weichie_load_more');
+add_action('wp_ajax_nopriv_weichie_load_more', 'weichie_load_more');
 //require_once(dirname(__FILE__) . '/includes/smtp.php'); 
 // Inclusion des fichiers de configuration
 //Post Type

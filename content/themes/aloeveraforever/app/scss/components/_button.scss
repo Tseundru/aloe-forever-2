@@ -119,4 +119,15 @@
             margin-bottom: $gutter;
       }
 
+
+      &--loadmore{
+            margin-left: auto;
+            margin-right: auto;
+            display: block;
+            width: fit-content;
+            margin-bottom: $gutter;
+            margin-top: $gutter;
+            
+      }
+
 }
