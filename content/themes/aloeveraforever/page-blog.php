@@ -1,5 +1,5 @@
 <?php get_header();
-$blog_post =  new WP_Query(array('post_type' => 'post', 'post_status' => 'publish', 'posts_per_page' => 1,'paged' => 1));;
+$blog_post =  new WP_Query(array('post_type' => 'post', 'post_status' => 'publish', 'posts_per_page' => 10,'paged' => 1));;
 //dump($blog_post);
 ?>
 
