@@ -163,11 +163,14 @@ $blog_categories = get_categories($args);
         <i class="fa fa-bars mainmenu__icon js-burger-icon" aria-hidden="true"></i>
       </nav>
       <nav class="header__actions">
-        <div class="header__actions__search js-search-bar">
-          <input type="text" name="search" id="search" class="header__actions__search__input js-search-bar-input"
+        <form role="search" method="get" id="searchform" class="header__actions__search js-search-bar" action="<?= WP_HOME ?>" >
+          <input type="s" name="s" id="s" class="header__actions__search__input js-search-bar-input"
             placeholder="recherche..." autocomplete="off">
+            <input type="hidden" value="1" name="sentence" />
+            <input type="hidden" value="post" name="post_type[]" />
+            <input type="hidden" value="<?= Post_Type_Product::NAME ?>" name="post_type[]" />
           <i class="fa fa-times header__actions__search__closeIcon js-search-close-icon" aria-hidden="true"></i>
-        </div>
+        </form>
 
         <ul class="header__actions__list">
           <li class="header__actions__list__item">
