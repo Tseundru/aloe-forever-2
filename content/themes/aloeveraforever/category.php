@@ -23,7 +23,7 @@
       wp_reset_postdata();
       ?>
     </div>
-    <?php if ($blog_post->max_num_pages > 1) : ?>
+    <?php if (get_queried_object()->max_num_pages > 1) : ?>
       <div class="btn__wrapper">
         <button class="button button--loadmore" id="load-more">
           Charger la suite
