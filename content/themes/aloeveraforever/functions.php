@@ -283,12 +283,14 @@ function distance($lat1, $lng1, $lat2, $lng2, $unit = 'k') {
 
 // load more function
 function weichie_load_more() {
+  
   $ajaxposts = new WP_Query([
     'post_type' => 'post',
     'posts_per_page' => 10,
     'orderby' => 'date',
     'order' => 'DESC',
     'paged' => $_POST['paged'],
+    'cat' => $_POST['category']
   ]);
 
   $response = '';

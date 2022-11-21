@@ -26,7 +26,7 @@ global $wp_query;
     </div>
     <?php if ($wp_query->max_num_pages > 1) : ?>
       <div class="btn__wrapper">
-        <button class="button button--loadmore" id="load-more">
+        <button class="button button--loadmore" id="load-more" data-category="<?=get_queried_object()->term_id?>" >
           Charger la suite
         </button>
       </div>

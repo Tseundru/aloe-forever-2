@@ -15,6 +15,7 @@ const loadmore = {
         data: {
           action: 'weichie_load_more',
           paged: loadmore.currentPage,
+          category: loadmore.loadMoreButton.dataset.category
         },
         success: function (res) {
           
