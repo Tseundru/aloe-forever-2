@@ -289,6 +289,7 @@ function weichie_load_more() {
     'posts_per_page' => 10,
     'orderby' => 'date',
     'order' => 'DESC',
+    'post_status' => 'publish',
     'paged' => $_POST['paged'],
     'cat' => $_POST['category']
   ]);
