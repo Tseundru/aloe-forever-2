@@ -1,4 +1,5 @@
 <?php get_header();
+global $wp_query;
 ?>
 
 <div class="headerPicture">
@@ -23,7 +24,7 @@
       wp_reset_postdata();
       ?>
     </div>
-    <?php if (get_queried_object()->max_num_pages > 1) : ?>
+    <?php if ($wp_query->max_num_pages > 1) : ?>
       <div class="btn__wrapper">
         <button class="button button--loadmore" id="load-more">
           Charger la suite
