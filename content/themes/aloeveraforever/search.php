@@ -20,8 +20,15 @@ global $wp_query;
       <?php endif;
       wp_reset_postdata();
       ?>
+      
     </div>
-    
+    <?php if($wp_query->max_num_pages > 1): ?>
+<div class="btn__wrapper">
+  <button class="button button--loadmore" id="load-more" data-posttype="['post','product']" data-searchkeyword="<?= get_search_query(); ?>">
+    Charger la suite
+    </button>
+</div>
+<?php endif; ?>
   </div>
 
 

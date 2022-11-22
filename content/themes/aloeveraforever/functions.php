@@ -284,6 +284,7 @@ function distance($lat1, $lng1, $lat2, $lng2, $unit = 'k') {
 // load more function
 function weichie_load_more() {
   
+if($_POST['postType']==='post' ){
   $ajaxposts = new WP_Query([
     'post_type' => 'post',
     'posts_per_page' => 10,
@@ -293,6 +294,22 @@ function weichie_load_more() {
     'paged' => $_POST['paged'],
     'cat' => $_POST['category']
   ]);
+}else{
+  $ajaxposts = new WP_Query([
+    'post_type' => ['post','product'],
+    's' => $_POST['searchKeyword'],
+    'posts_per_page' => 10,
+    'orderby' => 'date',
+    'order' => 'DESC',
+    'post_status' => 'publish',
+    'paged' => $_POST['paged'],
+    'cat' => $_POST['category']
+  ]);
+}
+
+
+
+  
 
   $response = '';
   $max_pages = $ajaxposts->max_num_pages;
@@ -300,7 +317,7 @@ function weichie_load_more() {
   if($ajaxposts->have_posts()) {
     ob_start();
     while($ajaxposts->have_posts()) : $ajaxposts->the_post();
-        $response .= get_template_part('template-parts/posts/blogPostExerpt/blogPostExerpt');
+        $response .= get_post_type()=='post' ? get_template_part('template-parts/posts/blogPostExerpt/blogPostExerpt') : get_template_part('template-parts/product/product-card');
     endwhile;
     $output = ob_get_contents();
     ob_end_clean();

@@ -31,7 +31,7 @@ $blog_post =  new WP_Query(array('post_type' => 'post', 'post_status' => 'publis
 </div>
 <?php if($blog_post->max_num_pages > 1): ?>
 <div class="btn__wrapper">
-  <button class="button button--loadmore" id="load-more">
+  <button class="button button--loadmore" id="load-more" data-posttype="post">
     Charger la suite
     </button>
 </div>
