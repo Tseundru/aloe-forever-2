@@ -225,6 +225,10 @@ ksort($terms_sort_by_order, SORT_NUMERIC);
   </div>
   </div>
   <div class="productCategory__products">
+  <?php if($term_name == 'Packs'): ?>
+    <div class="productCategory__products__description">
+      <p><?= $catDescription; ?></p>
+      <?php endif; ?>
     <div class="productCategory__products__list">
       <?php
 
@@ -239,9 +243,10 @@ ksort($terms_sort_by_order, SORT_NUMERIC);
       wp_reset_postdata();
       ?>
     </div>
+    <?php if($term_name != 'Packs'): ?>
     <div class="productCategory__products__description">
       <p><?= $catDescription; ?></p>
-
+      <?php endif; ?>
 
 
     </div>
