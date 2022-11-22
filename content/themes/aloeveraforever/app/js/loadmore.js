@@ -10,7 +10,7 @@ const loadmore = {
       loadmore.currentPage++;
       $.ajax({
         type: 'POST',
-        url: '/aloeveraforever/wp/wp-admin/admin-ajax.php',
+        url: '/wp/wp-admin/admin-ajax.php',
         dataType: 'json', // <-- Change dataType from 'html' to 'json'
         data: {
           action: 'weichie_load_more',
