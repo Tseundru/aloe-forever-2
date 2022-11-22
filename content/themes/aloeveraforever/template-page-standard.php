@@ -10,7 +10,7 @@ get_header();
 //dump(get_queried_object());
 
 ?>
-<main>
+<main class="main">
  <?php the_content(); ?>
 
 </main>
