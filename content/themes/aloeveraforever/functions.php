@@ -347,6 +347,9 @@ function register_my_menus() {
    );
  }
  add_action( 'init', 'register_my_menus' );
+
+
+ 
 //require_once(dirname(__FILE__) . '/includes/smtp.php'); 
 // Inclusion des fichiers de configuration
 //Post Type

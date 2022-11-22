@@ -42,20 +42,24 @@
 
       
         <main class="footer__main">
-       
-        <nav class="footer__main__menu footer__main__widget">
-          <p class="footer__main__menu__title  footer__main__widget__title">
+       <div class="footer__main__widget">
+        <nav class="footer__main__menu ">
+        <p class="footer__main__menu__title  footer__main__widget__title">
             Service Client
           </p>
-          <ul class="footer__main__menu__list footer__main__widget__text">
-            <li class="footer__main__menu__list__item"><a href="#"> FAQ</a></li>
-            <li class="footer__main__menu__list__item"><a href="#">Expédition</a></li>
-            <li class="footer__main__menu__list__item"><a href="#">Contact</a></li>
-            <li class="footer__main__menu__list__item"><a href="#">Politique de confidentialité</a></li>
-            <li class="footer__main__menu__list__item"><a href="#">CGV</a></li>
+        <?php wp_nav_menu( [ 
+          'theme_location' => 'footer-menu' ,
+          'container' => 'ul',
+          
+          'menu_class' => 'footer__main__menu__list footer__main__widget__text',
+          
 
-          </ul>
+          ] );?>
         </nav>
+        
+       </div>
+         
+        
         <div class="footer__main__info footer__main__widget">
           <p class="footer__main__info__title  footer__main__widget__title ">
           <?=bloginfo( 'name' );?>
@@ -102,15 +106,15 @@
         </div>
       </main>
       <footer class="footer__footer">
-        <nav class="footer__footer__menu">
-          <ul class="footer__footer__menu__list">
-            <li class="footer__footer__menu__list__item"><a href="#">www.foreverliving.fr</a> </li>
-            <li class="footer__footer__menu__list__item"><a href="#">www.fevad.com</a></li>
-            <li class="footer__footer__menu__list__item"><a href="#">www.foreverliving.com</a></li>
-            <li class="footer__footer__menu__list__item"><a href="#">Mentions légales</a></li>
-            <li class="footer__footer__menu__list__item"><a href="#">Plan du site</a></li>
-          </ul>
-        </nav>
+        
+        <?php wp_nav_menu( [ 
+          'theme_location' => 'footer-line-menu' ,
+          'container' => 'nav',
+          'container_class' => 'footer__footer__menu',
+          'menu_class' => 'footer__footer__menu',
+          
+
+          ] );?>
       </footer>
     </footer>
   </div>
