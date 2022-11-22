@@ -103,7 +103,7 @@
       &--blur{
         filter:blur(4px);
       }
-      &>h2{
+      & h2{
         font-size: $font-size-very-very-tall;
         line-height: $font-size-very-very-tall*1.5;
         font-family: $font-stack-blog;
@@ -121,7 +121,7 @@
         text-align: center;
             
       }
-      &>h3{
+      & h3{
         margin: $gutter-large 0 $gutter 0;
         font-family: $font-stack-blog;
         font-size: $font-size-very-tall;
@@ -129,7 +129,7 @@
         font-weight: 700;
       }
   
-      &>h4{
+      & h4{
         margin: $gutter 0;
         font-family: $font-stack-blog;
         font-size: $font-size-tall;
@@ -139,7 +139,7 @@
         
       }
   
-      & >ul{
+      &  ul{
         list-style-type: square;
         padding-left: $gutter-large;
         & >li{
@@ -148,10 +148,10 @@
         }
       }
   
-      & >ol{
+      &  ol{
         list-style-type: decimal;
         padding-left: $gutter-large;
-        & >li{
+        &  li{
           padding-bottom: $gutter;
           line-height: $gutter*1.5;
         }
