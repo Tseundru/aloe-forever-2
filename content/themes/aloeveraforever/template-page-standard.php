@@ -11,6 +11,7 @@ get_header();
 
 ?>
 <main class="blogPost__main__content">
+  <p></p>
 <h1 class="blogPost__header__title"><span><?php the_title(); ?></span></h1>
 
  <?php the_content(); ?>
