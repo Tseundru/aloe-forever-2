@@ -335,6 +335,18 @@ if($_POST['postType']==='post' ){
 }
 add_action('wp_ajax_weichie_load_more', 'weichie_load_more');
 add_action('wp_ajax_nopriv_weichie_load_more', 'weichie_load_more');
+
+
+
+function register_my_menus() {
+  register_nav_menus(
+    array(
+      'footer-menu' => __( 'Footer Menu' ),
+      'footer-line-menu' => __( 'Footer Line Menu' )
+     )
+   );
+ }
+ add_action( 'init', 'register_my_menus' );
 //require_once(dirname(__FILE__) . '/includes/smtp.php'); 
 // Inclusion des fichiers de configuration
 //Post Type
