@@ -1,7 +1,7 @@
 
 <?php
 /*
-Template Name: Page Header
+Template Name: Page Standard
 */
 
 
