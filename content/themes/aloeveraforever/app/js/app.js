@@ -19,8 +19,8 @@ const app = {
     instaFeed.init();
     popup.init();
     accordion.init();
-    loadmore.init();
     lazyload.init();
+    loadmore.init();
     rates.init();
   },
 };

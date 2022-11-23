@@ -5,11 +5,13 @@ const rates = {
   commentForm: document.querySelector('.evaluations__header__form'),
   init: function(){
     console.log(rates.inputs);
-    rates.findNote();
-    rates.inputs.forEach(input => input.addEventListener('click', rates.findNote))
-    rates.labels.forEach(label => label.addEventListener('mouseover', rates.onHoverNote))
-    rates.labels.forEach(label => label.addEventListener('mouseleave', rates.findNote))
-    rates.leaveCommentButton.addEventListener('click', rates.openForm)
+    if (rates.inputs){
+      rates.findNote();
+      rates.inputs.forEach(input => input.addEventListener('click', rates.findNote))
+      rates.labels.forEach(label => label.addEventListener('mouseover', rates.onHoverNote))
+      rates.labels.forEach(label => label.addEventListener('mouseleave', rates.findNote))
+      rates.leaveCommentButton.addEventListener('click', rates.openForm)
+    }
   },
 
   openForm: function(){

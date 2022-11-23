@@ -3,7 +3,9 @@ const loadmore = {
   loadMoreButton: document.getElementById('load-more'),
   init: function(){
     console.log('loadmore');
-    loadmore.loadMoreButton.addEventListener("click", loadmore.loadMorePosts );
+    if(loadmore.loadMoreButton){
+      loadmore.loadMoreButton.addEventListener("click", loadmore.loadMorePosts );
+    }
     },
     loadMorePosts : function(){
       console.log(loadmore.currentPage);
