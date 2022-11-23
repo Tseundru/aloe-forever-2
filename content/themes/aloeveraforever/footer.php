@@ -66,7 +66,7 @@
           </p>
           <div class="footer__main__info__text footer__main__widget__text">
             <p class="footer__main__info__text__phone"> <a href="tel:+33<?=substr(str_replace(' ', '', get_field('telNum_field', 'option')), 1);?>"><?php the_field('telNum_field', 'option'); ?></a> </p>
-            <p class="footer__main__info__text__mail"><a href="mailto:<?= get_field('Mail_field', 'option'); ?>"><?= str_replace('@','{@}', get_field('option_page_Mail_field', 'option')); ?></a></p>
+            <p class="footer__main__info__text__mail"><a href="mailto:<?= get_field('option_page_Mail_field', 'option'); ?>"><?= str_replace('@','{@}', get_field('option_page_Mail_field', 'option')); ?></a></p>
 
             <p class="footer__main__info__text__title">Entrepreneur indépendant <br /> Partenaire de la société <br />
               Forever Living Products</p>
