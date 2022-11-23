@@ -84,6 +84,38 @@ function page_title_sc( ){
 }
 add_shortcode( 'page_title', 'page_title_sc' );
 
+//Shortcode Option Page
+
+function joinForeverLink_func($atts){
+  $linkText = $atts['text'];
+  $linkTitle = $atts['title'];
+  $classTitle = $atts['class'];
+  $linkUrl = get_field('option_page_joinURL_field', 'option');
+  $FBONum = get_field('FBONum_field', 'option');
+  $link = '<a href="'.$linkUrl.$FBONum.'" title="'.$linkTitle.'" class="'.$classTitle.'" target="_blank" rel="no-follow">'.$linkText.'</a>';
+ return $link;
+  
+}
+add_shortcode( 'JoinLink', 'joinForeverLink_func' );
+
+function orderForeverLink_func($atts){
+  $linkText = $atts['text'];
+  $linkTitle = $atts['title'];
+  $classTitle = $atts['class'];
+  $linkUrl = get_field('option_page_shopURL_field', 'option');
+  $FBONum = get_field('FBONum_field', 'option');
+  $link = '<a href="'.$linkUrl.$FBONum.'" title="'.$linkTitle.'" class="'.$classTitle.'" target="_blank" rel="no-follow">'.$linkText.'</a>';
+ return $link;
+  
+}
+add_shortcode( 'OrderLink', 'orderForeverLink_func' );
+
+
+
+
+
+
+
 
 //Sort image srcset
 function getSrcSet($id) {
@@ -110,6 +142,8 @@ function getSrcSet($id) {
 add_filter( 'rank_math/vars/replacements', function( $vars ) {
     return $vars;
    });
+
+
   // Option page
   add_action('acf/init', 'my_acf_op_init');
 function my_acf_op_init() {
@@ -120,6 +154,7 @@ function my_acf_op_init() {
             'page_title'  => __('Réglages généraux'),
             'menu_title'  => __('Options'),
             'redirect'    => false,
+            'autoload' => true,
         ));
     }
 }
@@ -262,7 +297,7 @@ function gt_posts_custom_column_views( $column ) {
 add_filter( 'manage_posts_columns', 'gt_posts_column_views' );
 add_action( 'manage_posts_custom_column', 'gt_posts_custom_column_views' );
 
-
+// calcule la distance entre deux points gps
 function distance($lat1, $lng1, $lat2, $lng2, $unit = 'k') {
   $earth_radius = 6378137;   // Terre = sphère de 6378km de rayon
   $rlo1 = deg2rad($lng1);

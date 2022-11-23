@@ -29,6 +29,7 @@ require PLUGIN_DIR_PATH_ALOE_SETTINGS . 'includes/custom-fields-taxo-location.ph
 require PLUGIN_DIR_PATH_ALOE_SETTINGS . 'includes/custom-fields-taxo-badge.php';
 require PLUGIN_DIR_PATH_ALOE_SETTINGS . 'includes/custom-fields-blog-post.php';
 require PLUGIN_DIR_PATH_ALOE_SETTINGS . 'includes/custom-fields-page.php';
+require PLUGIN_DIR_PATH_ALOE_SETTINGS . 'includes/custom-fields-option-page.php';
 
 require PLUGIN_DIR_PATH_ALOE_SETTINGS . 'includes/blocks/custom-fields-product-block.php';
 require PLUGIN_DIR_PATH_ALOE_SETTINGS . 'includes/blocks/custom-fields-carousel-product-block.php';
