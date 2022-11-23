@@ -106,7 +106,11 @@ if( !empty($block['align']) ) {
 </div>
 
 <div class="blockProduct__footer">
-  <a href="<?= ORDER_URL ?>" title="commander les produits Forever" class="button">Commander</a>
+<?php $orderUrl =get_field('option_page_shopURL_field', 'option').get_field('FBONum_field', 'option').'/'.get_field('product_ref',$product_ID); ?>
+<a href="<?= $orderUrl ?>" class="singleProduct__header__action__order button button--order" title="Commander <?php the_title(); ?> sur la boutique en ligne" rel="no-follow" target="_blank">
+Commander
+      </a>
+  
 </div>
 
 </div>

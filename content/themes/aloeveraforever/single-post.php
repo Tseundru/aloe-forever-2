@@ -18,17 +18,17 @@ $blog_categories = get_categories($args);
 
 <?php if (have_posts()) : ?>
   <?php while (have_posts()) : the_post(); ?>
-  <?php gt_set_post_view(); ?>
+  <?php gt_set_post_view(); ?> 
     <div class="headerPicture">
       <?php write_src_set_image(get_post_thumbnail_id(), '.headerPicture__imageBlur, .headerPicture__image'); ?>
       <div class=" headerPicture__imageBlur"></div>
       <div class="headerPicture__image">
         <div class="blogPost__header__sharing ">
-          <a class="blogPost__header__sharing__link" href="javascript:PopupWindow(this,'https://www.facebook.com/sharer.php?u=<?php the_permalink(); ?>');"> <i class="fa fa-facebook" aria-hidden="true"></i></a>
-          <a class="blogPost__header__sharing__link" href="javascript:PopupWindow(this,' https://twitter.com/intent/tweet?url=<?php the_permalink(); ?>&text=<?php the_title(); ?>');"> <i class="fa fa-twitter" aria-hidden="true"></i></a>
-          <a class="blogPost__header__sharing__link" href="javascript:PopupWindow(this,' https://pinterest.com/pin/create/button/?url=<?php the_permalink(); ?>&media=<?php the_post_thumbnail_url(); ?>&description=<?php the_title(); ?>');"> <i class="fa fa-pinterest" aria-hidden="true"></i></a>
-          <a class="blogPost__header__sharing__link" href="javascript:PopupWindow(this,' https://www.linkedin.com/shareArticle?mini=true&url=<?php the_permalink(); ?>');"> <i class="fa fa-linkedin" aria-hidden="true"></i></a>
-          <a class="blogPost__header__sharing__link" href="mailto:?&subject=%0A<?php the_title(); ?>&cc=&bcc=&body=<?php the_permalink(); ?>%0A<?php the_title(); ?>" target="_blank"> <i class="fa fa-envelope" aria-hidden="true"></i></a>
+          <a class="blogPost__header__sharing__link"  title="Partager sur Facebook" href="javascript:PopupWindow(this,'https://www.facebook.com/sharer.php?u=<?php the_permalink(); ?>');"> <i class="fa fa-facebook" aria-hidden="true"></i></a>
+          <a class="blogPost__header__sharing__link" title="Partager sur Twitter" href="javascript:PopupWindow(this,' https://twitter.com/intent/tweet?url=<?php the_permalink(); ?>&text=<?php the_title(); ?>');"> <i class="fa fa-twitter" aria-hidden="true"></i></a>
+          <a class="blogPost__header__sharing__link" title="Partager sur Pinterest" href="javascript:PopupWindow(this,' https://pinterest.com/pin/create/button/?url=<?php the_permalink(); ?>&media=<?php the_post_thumbnail_url(); ?>&description=<?php the_title(); ?>');"> <i class="fa fa-pinterest" aria-hidden="true"></i></a>
+          <a class="blogPost__header__sharing__link" title="Partager sur Linkedin" href="javascript:PopupWindow(this,' https://www.linkedin.com/shareArticle?mini=true&url=<?php the_permalink(); ?>');"> <i class="fa fa-linkedin" aria-hidden="true"></i></a>
+          <a class="blogPost__header__sharing__link"  title="Partager par mail" href="mailto:?&subject=%0A<?php the_title(); ?>&cc=&bcc=&body=<?php the_permalink(); ?>%0A<?php the_title(); ?>" target="_blank"> <i class="fa fa-envelope" aria-hidden="true"></i></a>
         </div>
       </div>
 
@@ -67,7 +67,7 @@ $blog_categories = get_categories($args);
                     <p>Ce contenu est exclusivement réservé aux distributeurs de l'équipe Aloe Vera Forever et aux membres de l'annuaire Forever.</p>
                     <p class=" title title--2">Veuillez vous connecter</p>
                     <?php if (is_user_logged_in()) { ?>
-                      <a href="<?php echo wp_logout_url(get_permalink()) ?>">Déconnexion</a>
+                      <a href="<?php echo wp_logout_url(get_permalink()) ?>" title="Déconnexion">Déconnexion</a>
                     <?php } else { ?>
                       <form class="loginForm" id="login" method="post" action="<?php echo wp_login_url(get_permalink()) ?>">
                         <fieldset class="loginForm__fieldset">

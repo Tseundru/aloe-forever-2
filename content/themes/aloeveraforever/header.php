@@ -93,13 +93,14 @@ $blog_categories = get_categories($args);
         alt="logo aloe vera forever living" class="logo">
         <?php if(is_home()):?>
           <h1 class="brand js-brand">
-            <a href=<?= get_home_url();?>>
+            <a href=<?= get_home_url();?> title="<?=bloginfo( 'name' );?>">
             <?=bloginfo( 'name' );?>
+            title=
           </a> 
           </h1>
         <?php else: ?>
           <p class="brand js-brand">
-            <a href=<?= get_home_url();?>>
+            <a href=<?= get_home_url();?>  title="<?=bloginfo( 'name' );?>">
             <?=bloginfo( 'name' );?>
           </a> 
           </p>

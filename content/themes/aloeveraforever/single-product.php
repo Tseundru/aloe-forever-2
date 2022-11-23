@@ -146,12 +146,12 @@ if ($comments) {
   <nav class="breadcrumb">
     <ul class="breadcrumb__list">
       <li class="breadcrumb__list__item">
-        <a href="<?= get_home_url(); ?>/produits-forever/" class="breadcrumb__list__item__link">
+        <a href="<?= get_home_url(); ?>/produits-forever/" class="breadcrumb__list__item__link" title="Produits Forever">
           Produits Forever
         </a>
       </li>
       <li class="breadcrumb__list__item">
-        <a href=<?= $category_term_link ?> class="breadcrumb__list__item__link">
+        <a href=<?= $category_term_link ?> class="breadcrumb__list__item__link" title="<?= $category_term_name ?>">
           <?= $category_term_name ?>
         </a>
       </li>
@@ -206,7 +206,7 @@ if ($comments) {
 
     <!-- Average Rating -->
     <div class="singleProduct__header__averageRating">
-      <a href="#evaluations">
+      <a href="#evaluations" title="Laisser un avis">
         <?php
         if ($product_rate != null) {
           echo ('<ul class="ratingStars">');
@@ -235,8 +235,8 @@ if ($comments) {
     <div class="singleProduct__header__data">
       <p class="singleProduct__header__data__price productTitle">
         <?= get_field('product_price'); ?>€
-        <a href="#">
-          <img src="<?= wp_get_attachment_image_url( 944, 'full' ); ?>" alt="" class="singleProduct__header__data__price__satisfaction">
+        <a href="<?= ORDER_URL.'#garanty' ?>">
+          <img src="<?= wp_get_attachment_image_url( 944, 'full' ); ?>" alt="garantie satisfait ou remboursé 30 jours" class="singleProduct__header__data__price__satisfaction">
         </a>
       </p>
       <p class="singleProduct__header__data__ref">
@@ -260,19 +260,25 @@ if ($comments) {
         window.open(strWindowToOpen, '', strWindowFeatures);
       }
     </script>
+    <?php 
+    $orderUrl =get_field('option_page_shopURL_field', 'option').get_field('FBONum_field', 'option').'/'.get_field('product_ref'); 
+    $joinUrl = get_field('option_page_joinURL_field', 'option').get_field('FBONum_field', 'option'); 
+    
+    ?>
+
     <div class="singleProduct__header__action">
-      <a href="#" class="singleProduct__header__action__order button button--order">
+      <a href="<?= $orderUrl ?>" class="singleProduct__header__action__order button button--order" title="Commander <?php the_title(); ?> sur la boutique en ligne" rel="no-follow" target="_blank">
         Acheter ce produit
       </a>
-      <a href="#" class="singleProduct__header__action__sell button  button button--sell">
+      <a href="<?= $joinUrl ?>" class="singleProduct__header__action__sell button  button button--sell" title="Devenir distributeur Forever Living" rel="no-follow" target="_blank">
         Vendre
       </a>
       <div class="singleProduct__header__action__share button button--social  ">
-        <a class="button--social__icon" href="javascript:PopupWindow(this,'https://www.facebook.com/sharer.php?u=<?php the_permalink(); ?>');"> <i class="fa fa-facebook" aria-hidden="true"></i></a>
-        <a class="button--social__icon" href="javascript:PopupWindow(this,' https://twitter.com/intent/tweet?url=<?php the_permalink(); ?>&text=<?php the_title(); ?>');"> <i class="fa fa-twitter" aria-hidden="true"></i></a>
-        <a class="button--social__icon" href="javascript:PopupWindow(this,' https://pinterest.com/pin/create/button/?url=<?php the_permalink(); ?>&media=<?php the_post_thumbnail_url(); ?>&description=<?php the_title(); ?>');"> <i class="fa fa-pinterest" aria-hidden="true"></i></a>
-        <a class="button--social__icon" href="javascript:PopupWindow(this,' https://www.linkedin.com/shareArticle?mini=true&url=<?php the_permalink(); ?>');"> <i class="fa fa-linkedin" aria-hidden="true"></i></a>
-        <a class="button--social__icon" href="mailto:?&subject=%0A<?php the_title(); ?>&cc=&bcc=&body=<?php the_permalink(); ?>%0A<?php the_title(); ?>" target="_blank"> <i class="fa fa-envelope" aria-hidden="true"></i></a>
+        <a class="button--social__icon" title="Partager sur Facebook" href="javascript:PopupWindow(this,'https://www.facebook.com/sharer.php?u=<?php the_permalink(); ?>');"> <i class="fa fa-facebook" aria-hidden="true"></i></a>
+        <a class="button--social__icon" title="Partager sur Twitter" href="javascript:PopupWindow(this,' https://twitter.com/intent/tweet?url=<?php the_permalink(); ?>&text=<?php the_title(); ?>');"> <i class="fa fa-twitter" aria-hidden="true"></i></a>
+        <a class="button--social__icon" title="Partager sur Pinterest" href="javascript:PopupWindow(this,' https://pinterest.com/pin/create/button/?url=<?php the_permalink(); ?>&media=<?php the_post_thumbnail_url(); ?>&description=<?php the_title(); ?>');"> <i class="fa fa-pinterest" aria-hidden="true"></i></a>
+        <a class="button--social__icon" title="Partager sur Linkedin" href="javascript:PopupWindow(this,' https://www.linkedin.com/shareArticle?mini=true&url=<?php the_permalink(); ?>');"> <i class="fa fa-linkedin" aria-hidden="true"></i></a>
+        <a class="button--social__icon" title="Partager par mail" href="mailto:?&subject=%0A<?php the_title(); ?>&cc=&bcc=&body=<?php the_permalink(); ?>%0A<?php the_title(); ?>" target="_blank"> <i class="fa fa-envelope" aria-hidden="true"></i></a>
       </div>
     </div>
 
