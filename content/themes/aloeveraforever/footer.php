@@ -4,13 +4,13 @@
           Aloe Vera Forever
         </h2>
         <ul class="footer__header__social">
-          <li class="footer__header__social__item"><a class="footer__header__social__item__link" href="#"><i
+          <li class="footer__header__social__item"><a class="footer__header__social__item__link" href="<?= get_field('option_page_facebookURL_field', 'option'); ?>"><i
                 class="fa fa-facebook" aria-hidden="true"></i></a>
           </li>
-          <li class="footer__header__social__item"><a class="footer__header__social__item__link" href="#"><i
+          <li class="footer__header__social__item"><a class="footer__header__social__item__link" href="<?= get_field('option_page_instagramURL_field', 'option'); ?>"><i
                 class="fa fa-instagram" aria-hidden="true"></i></a>
           </li>
-          <li class="footer__header__social__item"><a class="footer__header__social__item__link" href="#"><i
+          <li class="footer__header__social__item"><a class="footer__header__social__item__link" href="<?= get_field('option_page_youtubeURL_field', 'option'); ?>"><i
                 class="fa fa-youtube-square" aria-hidden="true"></i></a>
           </li>
         </ul>

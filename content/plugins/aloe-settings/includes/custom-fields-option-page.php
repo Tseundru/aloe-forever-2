@@ -110,3 +110,52 @@ function create_option_page_shopURL_field(){
   );
 }
 
+add_action('acf/init', 'create_option_page_facebookURL_field');
+function create_option_page_facebookURL_field(){
+    acf_add_local_field(
+      [
+    'key'                           => 'option_page_facebookURL_field',
+    'label'                         => 'Url de la page Facebook',
+    'parent'                      => 'option_page_group',
+    'name'                        => 'option_page_facebookURL',
+    'type'                          => 'url',
+    'instructions'            => '',
+    'required'                  => 0,
+    'conditional_logic'  => 0,
+      ]
+  );
+}
+
+add_action('acf/init', 'create_option_page_instagramURL_field');
+function create_option_page_instagramURL_field(){
+    acf_add_local_field(
+      [
+    'key'                           => 'option_page_instagramURL_field',
+    'label'                         => 'Url de la page Instagram',
+    'parent'                      => 'option_page_group',
+    'name'                        => 'option_page_instagramURL',
+    'type'                          => 'url',
+    'instructions'            => '',
+    'required'                  => 0,
+    'conditional_logic'  => 0,
+      ]
+  );
+}
+
+add_action('acf/init', 'create_option_page_youtubeURL_field');
+function create_option_page_youtubeURL_field(){
+    acf_add_local_field(
+      [
+    'key'                           => 'option_page_youtubeURL_field',
+    'label'                         => 'Url de la page Youtube',
+    'parent'                      => 'option_page_group',
+    'name'                        => 'option_page_youtubeURL',
+    'type'                          => 'url',
+    'instructions'            => '',
+    'required'                  => 0,
+    'conditional_logic'  => 0,
+      ]
+  );
+}
+
+
