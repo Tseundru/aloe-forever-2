@@ -95,7 +95,7 @@ $blog_categories = get_categories($args);
           <h1 class="brand js-brand">
             <a href=<?= get_home_url();?> title="<?=bloginfo( 'name' );?>">
             <?=bloginfo( 'name' );?>
-            title=
+            
           </a> 
           </h1>
         <?php else: ?>
