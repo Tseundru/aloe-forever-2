@@ -110,6 +110,26 @@ function orderForeverLink_func($atts){
 }
 add_shortcode( 'OrderLink', 'orderForeverLink_func' );
 
+function phoneLink_func($atts){
+  $linkText = $atts['text'];
+  $classTitle = $atts['class'];
+  $TelNum = get_field('telNum_field', 'option');
+  $link = '<a href="tel:+33'.substr(str_replace(' ', '', $TelNum), 1).'" title="Joindre Aloe Vera Forever par téléphone" class="'.$classTitle.'">'.$linkText ? $linkText : $TelNum .'</a>';
+ return $link;
+  
+}
+add_shortcode( 'PhoneLink', 'phoneLink_func' );
+
+function mailLink_func($atts){
+  $linkText = $atts['text'];
+  $classTitle = $atts['class'];
+  $Mail = get_field('option_page_Mail_field', 'option');
+  $link = '<a href="mailto:'.$Mail.'" title="Joindre Aloe Vera Forever par mail" class="'.$classTitle.'">'.$linkText ? $linkText : str_replace('@','{@}',$Mail ).'</a>';
+ return $link;
+  
+}
+add_shortcode( 'MailLink', 'mailLink_func' );
+
 
 
 
