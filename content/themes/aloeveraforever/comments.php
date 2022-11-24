@@ -37,7 +37,9 @@
                     'style'       => 'ol',
                     'short_ping'  => true,
                     'avatar_size' => 74,
-                    'callback' => 'better_comments'
+                    'callback' => 'better_comments',
+                    'reverse_top_level' => true
+
                 ) );
             ?>
 
