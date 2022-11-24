@@ -137,8 +137,6 @@ add_shortcode( 'MailLink', 'mailLink_func' );
 
 
 
-
-
 //Sort image srcset
 function getSrcSet($id) {
     $img_srcset   = wp_get_attachment_image_srcset($id, 'full');

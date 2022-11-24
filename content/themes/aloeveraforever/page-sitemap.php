@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-<main class="main">
+<main class="main blogPost__main">
   <h1 class=" title title--1">Plan du site</h1>
   <ul>
     <li><a class="title title--2" href="<?= ALOE_VERA_URL; ?>" title="Aloe vera">Aloe vera</a></li>

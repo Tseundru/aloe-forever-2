@@ -200,6 +200,30 @@ function create_product_pack_field(){
   );
 }
 
+add_action('acf/init', 'create_product_is_fbo_field');
+function create_product_is_fbo_field(){
+    acf_add_local_field(
+      [
+    'key'                           => 'product_is_fbo_field',
+    'label'                         => 'Produits FBO',
+    'parent'                      => 'product_group',
+    'name'                        => 'product_is_fbo',
+    'type'                          => 'true_false',
+    'instructions'            => 'Indiqué si ce produit permet de devenir distributeur ou client privilégié',
+    'required'                  => 0,
+    'conditional_logic'  => [
+      'field'         => 'product_pack',
+      'operator' => '==',
+       'value'       => '1'
+    ],
+    'ui'                              => 1,
+    'default_value'         => 0,
+    'ui_on_text'               => 'Oui',
+    'ui_off_text'               => 'Non',
+      ]
+  );
+}
+
 add_action('acf/init', 'create_product_pack_products_field');
 function create_product_pack_products_field(){
     acf_add_local_field(
