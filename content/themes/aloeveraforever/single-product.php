@@ -263,7 +263,7 @@ if ($comments) {
     <?php 
     $orderUrl =get_field('option_page_shopURL_field', 'option').get_field('FBONum_field', 'option').'/'.get_field('product_ref'); 
     $joinUrl = get_field('option_page_joinURL_field', 'option').get_field('FBONum_field', 'option'); 
-   dump(get_field('product_is_fbo_field'));
+   
     if(get_field('product_is_fbo_field')){
       $orderUrl = $joinUrl;
     }
