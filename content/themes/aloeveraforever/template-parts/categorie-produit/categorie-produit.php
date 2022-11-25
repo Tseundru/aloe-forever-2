@@ -61,7 +61,7 @@ if (isset($_POST) && $_POST != null) {
 <?php
 if(is_page(ALL_PRODUCTS_SLUG)){
   $imageID = get_post_thumbnail_id();
-  $catSubtitle = 'Tout pour votre bien être';
+  $catSubtitle = 'Tous les prodruits Forever';
   $catTitle = get_the_title();
   $catDescription = get_the_content() ;
 
