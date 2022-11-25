@@ -133,11 +133,11 @@ function mailLink_func($atts){
 add_shortcode( 'MailLink', 'mailLink_func' );
 
 
-//shortcode catégories button title
+//shortcode catégories button 
 function page_cat_button_func($atts){
   $catName = $atts['cat'];
   $linkText = $atts['text'];
-  $termLink = get_term_link($catName,Post_Type_Product::TAXONOMY_NAME_CATEGORY);
+  $termLink = get_term_link($catName,'product_category');
   $link ='<a href="'.$termLink.'" class="button">'.$linkText.'.</a>';
   return $link ;
 }
