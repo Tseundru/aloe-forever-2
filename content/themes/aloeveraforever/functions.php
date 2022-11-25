@@ -137,7 +137,9 @@ add_shortcode( 'MailLink', 'mailLink_func' );
 function page_cat_button_func($atts){
   $catName = $atts['cat'];
   $linkText = $atts['text'];
-  return '<a href="'.$catName.'" class="button">'.$linkText.'.</a>';
+  $termLink = get_term_link($catName,Post_Type_Product::TAXONOMY_NAME_CATEGORY);
+  $link ='<a href="'.$termLink.'" class="button">'.$linkText.'.</a>';
+  return $link ;
 }
 add_shortcode( 'page_cat_button', 'page_cat_button_func' );
 
