@@ -141,7 +141,7 @@ function page_cat_button_func($atts){
   $link ='<a href="'.$termLink.'" class="button">'.$linkText.'.</a>';
   return $link ;
 }
-add_shortcode( 'page_cat_button', 'page_cat_button_func' );
+add_shortcode( 'CatButton', 'page_cat_button_func' );
 
 
 
