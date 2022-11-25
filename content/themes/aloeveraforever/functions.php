@@ -137,7 +137,7 @@ add_shortcode( 'MailLink', 'mailLink_func' );
 function page_cat_button_func($atts){
   $catName = $atts['cat'];
   $linkText = $atts['text'];
-  return '<a href="'.get_term_link('boissons_aloe', Post_Type_Product::TAXONOMY_NAME_CATEGORY).'" class="button">'.$linkText.'.</a>';
+  return '<a href="'.$catName.'" class="button">'.$linkText.'.</a>';
 }
 add_shortcode( 'page_cat_button', 'page_cat_button_func' );
 
