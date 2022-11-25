@@ -77,6 +77,10 @@
       }
     }
     &__main{
+      & h2 h3 {
+        padding-top: $gutter-small;
+        padding-bottom: $gutter-small;
+      }
       &__list{
         &__item{
           padding: $gutter-small;
