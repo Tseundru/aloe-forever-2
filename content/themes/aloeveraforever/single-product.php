@@ -187,9 +187,9 @@ if ($comments) {
 
   <!-- Product Header-->
   <div class="singleProduct__header">
-    <p class="singleProduct__header__category ">
+    <a href="<?=$category_term_link ?>"class="singleProduct__header__category " title="Produit Forever <?=$category_term_name?>">
       <?= $category_term_name ?>
-    </p>
+      </a>
     <h1 class="singleProduct__header__title productTitle">
       <?php the_title(); ?>
 
