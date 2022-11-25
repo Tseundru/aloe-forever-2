@@ -244,7 +244,7 @@ ksort($terms_sort_by_order, SORT_NUMERIC);
       ?>
     </div>
     <?php if($term_name != 'Packs'): ?>
-    <div class="productCategory__products__description">
+    <div class="blogPost__main__content">
     <?php if(is_page(ALL_PRODUCTS_SLUG)) :?>
       <p><?php the_content();?></p>
       <?php else : ?>
