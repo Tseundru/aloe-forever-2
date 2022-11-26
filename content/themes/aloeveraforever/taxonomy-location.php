@@ -5,6 +5,8 @@ $taxonomy =  Post_Type_Distributor::TAXONOMY_NAME_LOCATION;
 $pageFrance = get_page_by_title('Forever Living Products France');
 
 $location_type = get_field('location_type_field', 'location_' . $location->term_id);
+$location_code_postal = get_field('code_postal_field');
+$location_code_departement= get_field('departement_code_field');
 $locationName = '';
 $locationTerms = '';
 
@@ -32,7 +34,7 @@ switch ($location_type) {
     ]);
     break;
   case 'Département':
-    $locationName = 'dans le département ' . $location->name;
+    $locationName = 'dans le département ' . $location->name.' ('.$location_code_departement.')';
     $region = get_field('region', 'location_' . $location->term_id);
     $locationIntro = 'Trouvez ci dessous la liste des villes du département ' . $location->name . ' ou nous distribuons nos Produits.';
     $locationSituation = '<p>Aloe Vera Forever est distributeur agréé <strong class="invisible">Forever Living Products '. $locationName.' </strong> et commercialise ses produits à base d\'aloe vera dans <strong class="invisible">toute la Région '.$region.'.</strong> </p>';
@@ -60,7 +62,7 @@ switch ($location_type) {
     ]);
     break;
   case 'Ville':
-    $locationName = 'à ' . $location->name;
+    $locationName = 'à ' . $location->name.' ('.$location_code_postal.')';
     $locationIntro = 'Trouvez ci dessous la liste des villes proches de ' . $location->name . ' ou nous distribuons nos Produits.';
     $departement = get_field('departement', 'location_' . $location->term_id);
     $region = get_field('region', 'location_' . $location->term_id);
@@ -103,17 +105,16 @@ switch ($location_type) {
           <a href="<?= get_term_link($region, 'location') ?>"><?= $region ?></a>
         </li>
       <?php endif; ?>
-      <?php if ($location_type === 'Ville') :
-       
-      ?>
+      <?php if ($location_type === 'Ville') :?>
         <li class="breadcrumb__list__item">
           <a href="<?= get_term_link($departement, 'location') ?>"><?= $departement ?></a>
         </li>
       <?php endif; ?>
-
+      <?php if ($location_type === 'Ville' || $location_type === 'Département' ) :?>
       <li class="breadcrumb__list__item">
           <?= $location->name ?>
         </li>
+        <?php endif; ?>
     </ul>
   </nav>
   <section class="products topSeller">
