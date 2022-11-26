@@ -16,7 +16,7 @@ const app = {
     console.log('init app');
     burgerMenu.init();
     searchBar.init();
-    instaFeed.init();
+    //instaFeed.init();
     popup.init();
     accordion.init();
     lazyload.init();
