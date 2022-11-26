@@ -91,6 +91,7 @@
           text-transform: uppercase;
           border-bottom: 3px solid white;
           padding-bottom: $gutter;
+          text-align: center;
           @media(min-width: $breakpoint-M){
             font-size: $font-size-very-very-tall*2;
           }
