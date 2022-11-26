@@ -154,11 +154,7 @@ function create_product_aloe_percentage_field(){
     'type'                          => 'number',
     'instructions'            => '',
     'required'                  => 0,
-    'conditional_logic'  => [
-      'field'         => 'product_is_variant_field',
-      'operator' => '==',
-       'value'       => '0'
-    ],
+    'conditional_logic'  => 0,
       ]
   );
 }
