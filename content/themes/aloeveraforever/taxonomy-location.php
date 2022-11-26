@@ -6,7 +6,7 @@ $pageFrance = get_page_by_title('Forever Living Products France');
 
 $location_type = get_field('location_type_field', 'location_' . $location->term_id);
 $location_code_postal = get_field('code_postal_field');
-$location_code_departement= get_field('departement_code_field');
+$location_code_departement= strlen(get_field('departement_code_field')) > 1 ? get_field('departement_code_field') : '0'.get_field('departement_code_field') ;
 $locationName = '';
 $locationTerms = '';
 
