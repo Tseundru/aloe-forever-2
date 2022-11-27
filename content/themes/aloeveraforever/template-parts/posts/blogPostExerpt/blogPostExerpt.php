@@ -13,7 +13,7 @@
             <p class="blogPostExcerpt__main__text"><?php the_excerpt() ?></p>
           </main>
           <footer class="blogPostExcerpt__footer">
-            <p class="blogPostExcerpt__footer__view"><?= gt_get_post_view(); ?> vues</p>
+            <p class="blogPostExcerpt__footer__view"><?= gt_get_post_view(); ?></p>
             
           </footer>
         </article>
