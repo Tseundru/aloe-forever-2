@@ -1,6 +1,9 @@
 <?php
 
 //Logo
+
+use RankMath\Sitemap\Providers\Post_Type;
+
 $page_custom_classes ="" ;
 if (is_singular('post')){
   $page_custom_classes ="blog-post-article" ;
@@ -17,6 +20,10 @@ if($is_variant){
 } 
 
 };
+
+if(is_tax(Post_Type_Product::TAXONOMY_NAME_BADGE)){
+  $canonical_link = ALL_PRODUCTS_URL;
+}
 
 
 

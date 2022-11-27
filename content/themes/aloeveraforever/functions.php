@@ -244,7 +244,7 @@ function write_src_set_image($img_id, $CSSclass,  $size= 'full'  ){
       if ($set['width'] > 1600) continue;
       if ($set['width'] < 768) continue;
       if ($set['width'] < 769) {
-        $css .= '@media only screen and (min-width: ' . 300 . 'px) {
+        $css .= '@media only screen and (min-width: ' . 150 . 'px) {
           '.$CSSclass.' { background-image: url(' . $set['src'] . '); } }';
         };
         $css .= '@media only screen and (min-width: ' . $set['width'] . 'px) {
@@ -283,7 +283,7 @@ register_sidebar( array(
 );
 
 /* CALCUL TEMPS ESTIME LECTURE ARTICLES */
-function temps_lecture() {
+function temps_lecture($post) {
   $content = get_post_field( 'post_content', $post->ID );
   $word_count = str_word_count( strip_tags( $content ) );
   $readingtime = ceil($word_count / 200);

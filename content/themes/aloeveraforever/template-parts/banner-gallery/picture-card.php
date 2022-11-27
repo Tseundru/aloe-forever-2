@@ -18,7 +18,7 @@
     if ($set['width'] < 768) continue;
    
     if ($set['width'] < 769) {
-    $css .= '@media only screen and (min-width: ' . 300 . 'px) {
+    $css .= '@media only screen and (min-width: ' . 150 . 'px) {
       .card'. $x .' { background-image: url(' . $set['src'] . '); } }';
     };
    
