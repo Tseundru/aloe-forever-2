@@ -36,7 +36,7 @@ switch ($location_type) {
   case 'Département':
     $locationName = 'dans le département ' . $location->name.' ('.$location_code_departement.')';
     $region = get_field('region', 'location_' . $location->term_id);
-    $regionID = get_term_by('name', $region, 'location')->ID;
+    $regionID = get_term_by('name', $region, 'location')->term_id;
     $locationIntro = 'Trouvez ci dessous la liste des villes du département ' . $location->name . ' ou nous distribuons nos Produits.';
     $locationSituation = '<p>Aloe Vera Forever est distributeur agréé <strong class="invisible">Forever Living Products '. $locationName.' </strong> et commercialise ses produits à base d\'aloe vera dans <strong class="invisible">toute la Région <a href="'.get_permalink($regionID).'">'.$region.'</a>.</strong> </p>'; 
     $locationTerms = get_terms($taxonomy, [
