@@ -202,7 +202,7 @@ function better_comments($comment, $args, $depth) {
                     }               
                 ?>
             </ul>
-            <span class="date float-right">le <?php printf(/* translators: 1: date and time(s). */ esc_html__('%1$s à %2$s' , '5balloons_theme'), get_comment_date(),  get_comment_time()) ?></span>
+            <span class="date float-right">le <?php printf(/* translators: 1: date and time(s). */ esc_html__('%1$s à %2$s' , '5balloons_theme'), get_comment_date()) ?></span>
             <p class="review__text__content"><?php comment_text() ?></p>
             <?php if ($comment->comment_approved == '0') : ?>
                     <strong><?php esc_html_e('Votre commentaire est en attente de modération.','5balloons_theme') ?></strong>
