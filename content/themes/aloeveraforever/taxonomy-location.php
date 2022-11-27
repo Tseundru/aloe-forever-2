@@ -37,8 +37,9 @@ switch ($location_type) {
     $locationName = 'dans le département ' . $location->name.' ('.$location_code_departement.')';
     $region = get_field('region', 'location_' . $location->term_id);
     $regionID = get_term_by('name', $region, 'location')->term_id;
+
     $locationIntro = 'Trouvez ci dessous la liste des villes du département ' . $location->name . ' ou nous distribuons nos Produits.';
-    $locationSituation = '<p>Aloe Vera Forever est distributeur agréé <strong class="invisible">Forever Living Products '. $locationName.' </strong> et commercialise ses produits à base d\'aloe vera dans <strong class="invisible">toute la Région <a href="'.get_permalink($regionID).'">'.$region.'</a>.</strong> </p>'; 
+    $locationSituation = '<p>Aloe Vera Forever est distributeur agréé <strong class="invisible">Forever Living Products '. $locationName.' </strong> et commercialise ses produits à base d\'aloe vera dans <strong class="invisible">toute la Région <a href="'.get_term_link($regionID).'"  title="Distributeur Forever Living Products '.$region.'">'.$region.'</a>.</strong> </p>'; 
     $locationTerms = get_terms($taxonomy, [
       'hide_empty' => false,
       'include' => [],
@@ -66,8 +67,9 @@ switch ($location_type) {
     $locationName = 'à ' . $location->name.' ('.$location_code_postal.')';
     $locationIntro = 'Trouvez ci dessous la liste des villes proches de ' . $location->name . ' ou nous distribuons nos Produits.';
     $departement = get_field('departement', 'location_' . $location->term_id);
+    $departementID = get_term_by('name', $departement, 'location')->term_id;
     $region = get_field('region', 'location_' . $location->term_id);
-    $locationSituation = '<p>Aloe Vera Forever est distributeur agréé <strong class="invisible">Forever Living Products '. $locationName.' </strong> et commercialise ses produits à base d\'aloe vera dans <strong class="invisible">tout le département '.$departement.'.</strong> </p>';
+    $locationSituation = '<p>Aloe Vera Forever est distributeur agréé <strong class="invisible">Forever Living Products '. $locationName.' </strong> et commercialise ses produits à base d\'aloe vera dans <strong class="invisible">tout le département <a href="'.get_term_link($departementID).'" title="Distributeur Forever Living Products '.$departement.'">'.$departement.'</a>.</strong> </p>';
     break;
 }
 
