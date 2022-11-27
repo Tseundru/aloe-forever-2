@@ -241,6 +241,7 @@ switch ($location_type) {
             foreach ($cities as $city) :
               $lat2 = get_field('latitude_field', 'location_' . $city->term_id);
               $lng2 = get_field('longitude_field', 'location_' . $city->term_id);
+              if(!is_float($lat2)){dump($city);}
               if (distance($lat1, $lng1, $lat2, $lng2) <= 15 && $location->term_id != $city->term_id) :
             ?>
               <a href="<?= get_term_link($city->term_id, 'location') ?>"> <strong><?= $city->name ?></strong> </a> ,
