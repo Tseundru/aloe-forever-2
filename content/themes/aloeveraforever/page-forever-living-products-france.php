@@ -13,8 +13,8 @@ $tax_terms = get_terms($taxonomy, [
   <div class=" headerPicture__imageBlur"></div>
   <div class="headerPicture__image">
     <div class="headerPicture__image__text">
-      <h1 class="headerPicture__image__text__title">Forever Living Products France </h1>
-      <h2 class="headerPicture__image__text__subtitle">Distributeur Forever France</h2>
+      <h1 class="headerPicture__image__text__title is_center">Forever Living Products France </h1>
+      <h2 class="headerPicture__image__text__subtitle is_center">Distributeur Forever France</h2>
     </div>
   </div>
 </div>

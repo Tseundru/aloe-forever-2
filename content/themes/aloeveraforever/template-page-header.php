@@ -15,8 +15,8 @@ $imageID = get_post_thumbnail_id();
   <div class="headerPicture__imageBlur"></div>
   <div class="headerPicture__image headerPicture__image--full">
     <div class="headerPicture__image__text">
-      <h1 class="headerPicture__image__text__title"><?php the_title(); ?></h1>
-      <h2 class="headerPicture__image__text__subtitle"><?= get_field('page_subtitle'); ?></h2>
+      <h1 class="headerPicture__image__text__title is_center"><?php the_title(); ?></h1>
+      <h2 class="headerPicture__image__text__subtitle is_center"><?= get_field('page_subtitle'); ?></h2>
     </div>
   </div>
 </div>
