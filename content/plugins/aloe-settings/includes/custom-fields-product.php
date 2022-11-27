@@ -692,6 +692,60 @@ function create_product_comment_field_group(){
     endif;		
 }
 
+add_action('acf/init', 'create_product_stop_field');
+function create_product_stop_field(){
+    acf_add_local_field(
+      [
+    'key'                           => 'product_stop_field',
+    'label'                         => 'Produit Non commercialisé en France',
+    'parent'                      => 'product_group',
+    'name'                        => 'product_stop',
+    'type'                          => 'true_false',
+    'instructions'            => 'Indiquez si ce produit est arreté en France',
+    'required'                  => 0,
+    'conditional_logic'  => 0,
+    'ui'                              => 1,
+    'default_value'         => 0,
+    'ui_on_text'               => 'Oui',
+    'ui_off_text'               => 'Non',
+      ]
+  );
+}
+
+add_action('acf/init', 'create_product_replace_field');
+function create_product_replace_field(){
+    acf_add_local_field(
+      [
+    'key'                           => 'product_replace_field',
+    'label'                         => 'Produit de remplacement',
+    'parent'                      => 'product_group',
+    'name'                        => 'product_replace',
+    'type'                          => 'relationship',
+    'instructions'            => '',
+    'required'                  => 0,
+    'conditional_logic'  => [
+      'field'         => 'product_stop_field',
+      'operator' => '==',
+       'value'       => '1'
+    ],
+    'post_type'       => 
+      [
+        0  => 'product',
+      ],
+      'taxonomy'    => '',
+      'filters'           => 
+      [
+				0   => 'search',
+				1   => 'post_type',
+				2   => 'taxonomy',
+			],
+      'elements'        => '',
+			'min'                   => 0,
+			'max'                  => 1,
+			'return_format' => 'object',
+    ]);
+}
+
 
 
 // add_action('acf/init', 'create_product_average_rate_field');

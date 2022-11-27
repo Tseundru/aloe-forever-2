@@ -30,7 +30,9 @@
       
       if ($query->have_posts()) :
         while ($query->have_posts()) : $query->the_post();
+        if(!get_field('product_stop_field')){
           get_template_part('template-parts/product/product-card');
+         }
         endwhile;
       endif;
       wp_reset_postdata();

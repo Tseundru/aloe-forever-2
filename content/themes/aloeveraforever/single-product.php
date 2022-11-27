@@ -230,18 +230,35 @@ if ($comments) {
           ) avis | Ajouter un avis </p>
       </a>
     </div>
-
+<?php 
+$is_productStop = get_field('product_stop_field');
+$replacementProduct="";
+if($is_productStop){
+  if(get_field('product_replace_field')){
+    $replacementProduct = get_field('product_replace_field')[0]->ID;
+  }
+   
+}
+?>
     <!-- singleProduct Data-->
     <div class="singleProduct__header__data">
       <p class="singleProduct__header__data__price productTitle">
-        <?= get_field('product_price'); ?>€
+        <?= $is_productStop ? '0,00' : get_field('product_price'); ?>€
+        <?php if(!$is_productStop) : ?>
         <a href="<?= ORDER_URL.'#garanty' ?>">
           <img src="<?= wp_get_attachment_image_url( 944, 'full' ); ?>" alt="garantie satisfait ou remboursé 30 jours" class="singleProduct__header__data__price__satisfaction">
         </a>
+        <?php  endif ; ?>
       </p>
       <p class="singleProduct__header__data__ref">
+        <?php if(!$is_productStop ): ?>
         Réf: <?= get_field('product_ref'); ?>
+        <?php else : ?>
+          
+          Ce produit n'est plus commercialisé en France ! <?= $replacementProduct ? 'Il à été remplacé par <a href="'.get_permalink($replacementProduct).'">'.get_post($replacementProduct)->post_title.'</a>' : '' ;?>
+          <?php endif ;?>
       </p>
+      
       <p class="singleProduct__header__data__content">
         Contenu :
       </p>
@@ -270,9 +287,11 @@ if ($comments) {
     ?>
 
     <div class="singleProduct__header__action">
+    <?php if(!$is_productStop) : ?>
       <a href="<?= $orderUrl ?>" class="singleProduct__header__action__order button button--order" title="Commander <?php the_title(); ?> sur la boutique en ligne" rel="no-follow" target="_blank">
         Acheter ce produit
       </a>
+      <?php endif ; ?>
       <a href="<?= $joinUrl ?>" class="singleProduct__header__action__sell button  button button--sell" title="Devenir distributeur Forever Living" rel="no-follow" target="_blank">
         Vendre
       </a>
@@ -549,9 +568,13 @@ $product_benefits = $is_variant ? get_field('product_benefits', $original_produc
       <?php $related_products = get_field('product_related_products');
       if ($related_products) : ?>
         <?php foreach ($related_products as $post) : ?>
-          <?php setup_postdata($post); ?>
-          <?php get_template_part('template-parts/product/product-card'); ?>
-        <?php endforeach; ?>
+          <?php 
+          setup_postdata($post); 
+          if(!get_field('product_stop_field')){
+           get_template_part('template-parts/product/product-card');
+          }
+         endforeach; 
+         ?>
         <?php wp_reset_postdata(); ?>
       <?php endif; ?>
     </div>

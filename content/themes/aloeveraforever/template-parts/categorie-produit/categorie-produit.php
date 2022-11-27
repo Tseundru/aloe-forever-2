@@ -235,7 +235,9 @@ ksort($terms_sort_by_order, SORT_NUMERIC);
       $taxo_category_product_query = new WP_Query($product_category_args);
       if ($taxo_category_product_query->have_posts()) :
         while ($taxo_category_product_query->have_posts()) : $taxo_category_product_query->the_post();
+        if(!get_field('product_stop_field')){
           get_template_part('template-parts/product/product-card');
+        }
         endwhile;
       else :
         echo ('<h2> Aucun résultats pour votre recherche </h2>  ');
