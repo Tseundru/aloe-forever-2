@@ -90,7 +90,7 @@ switch ($location_type) {
   <nav class="breadcrumb">
     <ul class="breadcrumb__list">
       <li class="breadcrumb__list__item">
-        <a href="<?= get_permalink($pageFrance->ID); ?>"> France</a>
+        <a href="<?= get_permalink($pageFrance->ID); ?>" title="Forever Living Products France"> France</a>
       </li>
       <?php if ($location_type === 'Région') : ?>
         <li class="breadcrumb__list__item">
@@ -102,12 +102,12 @@ switch ($location_type) {
         
       ?>
         <li class="breadcrumb__list__item">
-          <a href="<?= get_term_link($region, 'location') ?>"><?= $region ?></a>
+          <a href="<?= get_term_link($region, 'location') ?>" title="Distributeur Forever Living <?= $region ?>"><?= $region ?></a>
         </li>
       <?php endif; ?>
       <?php if ($location_type === 'Ville') :?>
         <li class="breadcrumb__list__item">
-          <a href="<?= get_term_link($departement, 'location') ?>"><?= $departement ?></a>
+          <a href="<?= get_term_link($departement, 'location') ?>" title="Distributeur Forever Living <?= $departement ?>"><?= $departement ?></a>
         </li>
       <?php endif; ?>
       <?php if ($location_type === 'Ville' || $location_type === 'Département' ) :?>
