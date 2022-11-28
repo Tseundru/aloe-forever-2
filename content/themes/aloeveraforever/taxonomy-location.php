@@ -91,31 +91,39 @@ switch ($location_type) {
 
   <!-- Breadcrumb -->
   <nav class="breadcrumb">
-    <ul class="breadcrumb__list">
-      <li class="breadcrumb__list__item">
-        <a href="<?= get_permalink($pageFrance->ID); ?>" title="Forever Living Products France"> France</a>
+    <ul class="breadcrumb__list" itemscope itemtype="https://schema.org/BreadcrumbList">
+      <li class="breadcrumb__list__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <a href="<?= get_permalink($pageFrance->ID); ?>" title="Forever Living Products France" itemprop="item"> <meta itemprop="name" content="France" />France</a><meta itemprop="position" content="1" />
       </li>
       <?php if ($location_type === 'Région') : ?>
-        <li class="breadcrumb__list__item">
-          <?= $location->name ?>
+        <li class="breadcrumb__list__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <meta itemprop="name" content="<?= $location->name ?>" />
+        <div itemprop="item"><?= $location->name ?></div>
+        <meta itemprop="position" content="2" />
         </li>
       <?php endif; ?>
 
       <?php if ($location_type === 'Département' || $location_type === 'Ville') :
         
       ?>
-        <li class="breadcrumb__list__item">
-          <a href="<?= get_term_link($region, 'location') ?>" title="Distributeur Forever Living <?= $region ?>"><?= $region ?></a>
+        <li class="breadcrumb__list__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+          <a href="<?= get_term_link($region, 'location') ?>" title="Distributeur Forever Living <?= $region ?>" itemprop="item" ><?= $region ?></a>
+          <meta itemprop="name" content="<?= $region ?>" />
+          <meta itemprop="position" content="2" />
         </li>
       <?php endif; ?>
       <?php if ($location_type === 'Ville') :?>
-        <li class="breadcrumb__list__item">
-          <a href="<?= get_term_link($departement, 'location') ?>" title="Distributeur Forever Living <?= $departement ?>"><?= $departement ?></a>
+        <li class="breadcrumb__list__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+          <a href="<?= get_term_link($departement, 'location') ?>" title="Distributeur Forever Living <?= $departement ?>" itemprop="item"><?= $departement ?></a>
+          <meta itemprop="name" content="<?= $departement ?>" />
+          <meta itemprop="position" content="3" />
         </li>
       <?php endif; ?>
       <?php if ($location_type === 'Ville' || $location_type === 'Département' ) :?>
-      <li class="breadcrumb__list__item">
-          <?= $location->name ?>
+      <li class="breadcrumb__list__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+      <div itemprop="item"><?= $location->name ?></div>
+          <meta itemprop="name" content="<?= $location->name ?>" />
+          <meta itemprop="position" content="<?= $location_type === 'Ville' ? '4' : '3'?>" />
         </li>
         <?php endif; ?>
     </ul>
