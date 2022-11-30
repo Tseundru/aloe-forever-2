@@ -123,6 +123,8 @@ switch ($location_type) {
       <li class="breadcrumb__list__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
       <div itemprop="item"><?= $location->name ?></div>
           <meta itemprop="name" content="<?= $location->name ?>" />
+          <meta itemprop="id" content="<?= get_term_link($location->name, 'location') ?>" />
+          
           <meta itemprop="position" content="<?= $location_type === 'Ville' ? '4' : '3'?>" />
         </li>
         <?php endif; ?>
