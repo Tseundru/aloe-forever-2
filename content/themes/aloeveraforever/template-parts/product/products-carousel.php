@@ -13,6 +13,8 @@
               'taxonomy' => 'product_badge',
               'field'    => 'slug',
               'terms'    => array( $args['filter'] ),
+              'orderby'  => 'ID',
+              'order' => 'ASC'
             ]
           ]
         ];
