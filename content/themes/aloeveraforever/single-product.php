@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
 <?php
 $id = get_the_ID();
 $category_term = get_the_terms($id, Post_Type_Product::TAXONOMY_NAME_CATEGORY)[0];
