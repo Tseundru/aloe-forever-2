@@ -271,7 +271,7 @@ function verify_google_recaptcha() {
 if (!is_user_logged_in()) { 
   add_action('pre_comment_on_post', 'verify_google_recaptcha'); 
 
-
+}
 
 
 
