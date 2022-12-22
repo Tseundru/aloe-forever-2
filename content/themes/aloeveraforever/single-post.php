@@ -128,7 +128,8 @@ $blog_categories = get_categories($args);
         </article>
         <?php get_template_part('template-parts/posts/blogSidebar/blogSidebar'); ?>
       </main>
-    <?php endwhile; ?>
+    <?php endwhile; 
+    wp_reset_postdata();?>
   <?php endif; ?>
     </div>
 

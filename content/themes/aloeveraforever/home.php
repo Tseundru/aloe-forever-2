@@ -5,7 +5,7 @@ $tax_terms = get_terms($taxonomy, [
   'include' => [],
 ]);
 $terms_sort_by_order = [];
-$x = 0; 
+$x = 0;
 foreach ($tax_terms as $tax_term) {
   $order = get_field('category_order_field', $tax_term);
   $subtitle = get_field('category_subtitle_field', $tax_term);
@@ -37,16 +37,37 @@ $ten_and_eleven = array_slice($terms_sort_by_order, 9, 2, true);
   endforeach;
   ?>
 </div>
+
+<section class="products">
+  <article class="accordion">
+    <header class="accordion__header js-accordion">
+      <h2 class="accordion__header__title title title--2">
+        Distributeur Forever Living Products France
+      </h2>
+      <i class="fa fa-plus accordion__header__icon" aria-hidden="true"></i>
+    </header>
+    <main class="accordion__main main">
+      <p> Bienvenue sur Aloe Vera Forever France - aloeveraforever.fr, le site de Benjamin et Audrey Sergeant distributeurs des produits aloe vera Forever Living en France et dans le monde.
+      </p>
+      <p>Forever living products est spécialisé dans les produits à base d'aloe vera. En effet la marque s'est fait connaitre grâce à son Forever Aloe Vera Gel. Ce produit naturel concentre les vitamines et les nutriments de la plante dans sa nouvelle formule riche en propriétés pour la peau et l'organisme. L'aloe vera de Forever Living Products apporte de l'énergie à vos cellules, renforce votre système immunitaire, contribue à la perte de poids et à la beauté de la peau.</p>
+      <p>Mais les produits à l'aloe vera ne se limitent pas aux diverses boissons comme Berry Nectar, Aloe Pêche ou Freedom à l'orange. En effet l'aloe vera Forever est utilisée dans la fabrication de produits d'hygiène pour le corps et les cheveux mais aussi des crèmes et des soins pour la peau du visage</p>
+      <p>En plus des produits à l'aloe vera, la marque commercialise également des compléments alimentaires qui vous apporteront eux aussi leur lot de vitamines et nutriments contribuant ainsi à améliorer votre alimentation. Le pack C9 qui vous aide à perdre du poids grâce à l'aloe vera brille également par sa qualité et son efficacité à travers le monde. </p>
+      <p>En effet, les avis clients sur Forever Living Products en France et dans le monde mettent toujours en avant la qualité des produits avec des notes qui avoisinent toujours les 5/5</p>
+    </main>
+  </article>
+</section>
+
+
 <!-- Top Seller -->
 <section class="products topSeller">
   <header class="products__header">
     <h2 class="products__header__title title title--2">Les plus vendus</h2>
-    
+
     <p class="products__header__subtitle">Vos produits Forever préférés, des produits qui ont faits leurs preuves
       <a href=<?= get_term_link('top-vente', 'product_badge'); ?> class="products__header__subtitle__link" title="Meilleures ventes des produits Forever">Voir Tous</a>
     </p>
   </header>
-  <?php get_template_part('template-parts/product/products-carousel', null, ['filter' => 'favorite','methode'=>'filter']);?>
+  <?php get_template_part('template-parts/product/products-carousel', null, ['filter' => 'favorite', 'methode' => 'filter']); ?>
 </section>
 
 <!-- banner gallery -->
@@ -61,20 +82,19 @@ $ten_and_eleven = array_slice($terms_sort_by_order, 9, 2, true);
 
 <!-- New products -->
 <section class="products newProducts">
-      <header class="products__header">
-        <h2 class="products__header__title title title--2">Nouveaux produits</h2>
-        <p class="products__header__subtitle">
-          Vos nouveaux produits préférés de la marque Forever Living 
-          <a href=<?= get_term_link('nouveaute', 'product_badge'); ?>
-            class="products__header__subtitle__link" title="Nouveaux produits Forever">Voir Tous
-          </a>
-        </p>
-      </header>
-     <?php get_template_part('template-parts/product/products-carousel', null, ['filter' => 'nouveaute','methode'=>'filter']);?>
-    </section>
+  <header class="products__header">
+    <h2 class="products__header__title title title--2">Nouveaux produits</h2>
+    <p class="products__header__subtitle">
+      Vos nouveaux produits préférés de la marque Forever Living
+      <a href=<?= get_term_link('nouveaute', 'product_badge'); ?> class="products__header__subtitle__link" title="Nouveaux produits Forever">Voir Tous
+      </a>
+    </p>
+  </header>
+  <?php get_template_part('template-parts/product/products-carousel', null, ['filter' => 'nouveaute', 'methode' => 'filter']); ?>
+</section>
 
-    <!-- banner gallery -->
-    <div class="gallery gallery--2pics gallery2">
+<!-- banner gallery -->
+<div class="gallery gallery--2pics gallery2">
   <?php
   foreach ($eight_and_nine_terms as $tax_term) :
     get_template_part('template-parts/banner-gallery/picture-card', null, $tax_term);
@@ -84,20 +104,19 @@ $ten_and_eleven = array_slice($terms_sort_by_order, 9, 2, true);
 
 <!-- Aloe Max -->
 <section class="products aloeMax">
-      <header class="products__header">
-        <h2 class="products__header__title title title--2">Teneur en Aloe Vera</h2>
-        <p class="products__header__subtitle">
-          Les produits à l'aloe vera de Forever avec une forte teneur en gel d'aloe vera 
-          <a href=<?= get_term_link('aloemax', 'product_badge'); ?>
-            class="products__header__subtitle__link" title="Produits Forever à base d'aloe vera">Voir Tous
-          </a>
-        </p>
-      </header>
-      <?php get_template_part('template-parts/product/products-carousel', null, ['filter' => 'aloemax','methode'=>'filter']);?>
-    </section>
+  <header class="products__header">
+    <h2 class="products__header__title title title--2">Teneur en Aloe Vera</h2>
+    <p class="products__header__subtitle">
+      Les produits à l'aloe vera de Forever avec une forte teneur en gel d'aloe vera
+      <a href=<?= get_term_link('aloemax', 'product_badge'); ?> class="products__header__subtitle__link" title="Produits Forever à base d'aloe vera">Voir Tous
+      </a>
+    </p>
+  </header>
+  <?php get_template_part('template-parts/product/products-carousel', null, ['filter' => 'aloemax', 'methode' => 'filter']); ?>
+</section>
 
-    <!-- banner gallery -->
-    <div class="gallery gallery--2pics gallery2">
+<!-- banner gallery -->
+<div class="gallery gallery--2pics gallery2">
   <?php
   foreach ($ten_and_eleven as $tax_term) :
     get_template_part('template-parts/banner-gallery/picture-card', null, $tax_term);
@@ -105,30 +124,33 @@ $ten_and_eleven = array_slice($terms_sort_by_order, 9, 2, true);
   <?php endforeach; ?>
 </div>
 
+
+
+
 <!-- Last Posts -->
 <section class="lastPosts">
-      <header class="lastPosts__header">
-        <p class="lastPosts__header__title title title--2">
-          Derniers articles du blog
-        </p>
-      </header>
-      <main class="lastPosts__main swiper-container">
-      <?php 
-      $recent_posts_args = [
-        'numberposts' => 5,
-        'post_status' => 'publish'
-      ];
-      $recent_posts = wp_get_recent_posts($recent_posts_args , 'object'); 
-      
-      ?>
-        <div class="lastPosts__main__list swiper-wrapper">
-          <?php foreach($recent_posts as $post): ?>
-           <?php  get_template_part('template-parts/posts/latestPost/latestPost', null, $post); ?>
-          <?php endforeach; ?>
-        </div>
-        <div class="swiper-button-prev"></div>
-        <div class="swiper-button-next"></div>
-      </main>
+  <header class="lastPosts__header">
+    <p class="lastPosts__header__title title title--2">
+      Derniers articles du blog
+    </p>
+  </header>
+  <main class="lastPosts__main swiper-container">
+    <?php
+    $recent_posts_args = [
+      'numberposts' => 5,
+      'post_status' => 'publish'
+    ];
+    $recent_posts = wp_get_recent_posts($recent_posts_args, 'object');
 
-    </section>
+    ?>
+    <div class="lastPosts__main__list swiper-wrapper">
+      <?php foreach ($recent_posts as $post) : ?>
+        <?php get_template_part('template-parts/posts/latestPost/latestPost', null, $post); ?>
+      <?php endforeach; ?>
+    </div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+  </main>
+
+</section>
 <?php get_footer(); ?>
