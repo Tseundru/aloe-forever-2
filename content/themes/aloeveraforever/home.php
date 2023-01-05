@@ -25,7 +25,7 @@ foreach ($tax_terms as $tax_term) {
 sort($terms_sort_by_order);
 $five_first_terms = array_slice($terms_sort_by_order, 0, 5, true);
 $six_and_seven_terms = array_slice($terms_sort_by_order, 5, 2, true);
-$eight_and_nine_terms = array_slice($terms_sort_by_order, 7, 2, true);
+$eight_and_nine_terms = array_slice($terms_sort_by_order, 7, 1, true);
 $ten_and_eleven = array_slice($terms_sort_by_order, 9, 2, true);
 
 ?>

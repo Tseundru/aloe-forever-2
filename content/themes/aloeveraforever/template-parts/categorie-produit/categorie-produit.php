@@ -143,6 +143,7 @@ if(is_tax($taxonomy_badge)){
 $tax_terms = get_terms($taxonomy_category, [
   'hide_empty' => false,
   'include' => [],
+  'exclude' => [42]
 ]);
 $terms_sort_by_order = [];
 $x = 0;

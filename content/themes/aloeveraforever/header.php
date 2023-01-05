@@ -32,6 +32,7 @@ $taxonomy =  Post_Type_Product::TAXONOMY_NAME_CATEGORY;
 $tax_terms = get_terms($taxonomy, [
   'hide_empty' => false,
   'include' => [],
+  'exclude' => [42]
 ]);
 $terms_sort_by_order = [];
 $x = 0; 
