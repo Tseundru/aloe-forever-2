@@ -412,6 +412,12 @@ function register_my_menus() {
  }
  add_action( 'init', 'register_my_menus' );
 
+ function delete_post_type(){
+  unregister_post_type( Post_Type_Distributor::NAME );
+  unregister_taxonomy(Post_Type_Distributor::TAXONOMY_NAME_LOCATION);
+}
+add_action('init','delete_post_type');
+
 
  
 //require_once(dirname(__FILE__) . '/includes/smtp.php'); 

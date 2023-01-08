@@ -56,6 +56,7 @@ $aloe_settings_activation = function() use (
 
     $post_type_distributor->register_taxonomies();
     $post_type_distributor->register_post_type();
+    
 
   flush_rewrite_rules();
 };
