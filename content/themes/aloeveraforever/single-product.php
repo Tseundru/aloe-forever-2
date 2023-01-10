@@ -537,7 +537,8 @@ $product_benefits = $is_variant ? get_field('product_benefits', $original_produc
       </div>
     <?php else : ?>
       <?php $no_vide_image = get_field('product_image_no_video')['url']; ?>
-      <img src="<?= $no_vide_image ?>" alt="">
+      <?php $altvideo = isset(get_post_meta(get_field('product_image_no_video')['ID'], '_wp_attachment_image_alt')[0]) ? get_post_meta(get_field('product_image_no_video')['ID'], '_wp_attachment_image_alt')[0] : $title; ?>
+      <img src="<?= $no_vide_image ?>" alt=<?=$altvideo?>>
     <?php endif; ?>
   </div>
   <div class="singleProduct__image" style="background-image: url(<?=  get_field('product_image_description')['url']; ?>); background-repeat:no-repeat">
