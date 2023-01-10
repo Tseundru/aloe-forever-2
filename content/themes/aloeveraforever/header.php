@@ -135,7 +135,8 @@ $blog_categories = get_categories($args);
             </ul>
           </li>
           <li class="mobilemenu__list__item"> <a href="<?= ALOE_VERA_URL; ?>" class="mobilemenu__list__item__link" title="Aloe vera" >Aloe vera</a> </li>
-          
+          <li class="mobilemenu__list__item"> <a href="<?= FOREVER_LIVING_URL; ?>" class="mobilemenu__list__item__link" title="Forever Living Products" >Forever Living</a> </li>
+
           <li class="mobilemenu__list__item"><a href="<?= JOIN_US_URL; ?>" class="mobilemenu__list__item__link" title="Devenez distributeur Forever" >Rejoignez-nous !</a></li>
           <li class="mobilemenu__list__item"><a href="<?= ORDER_URL; ?>" class="mobilemenu__list__item__link" title="Commander les produits Forever Living"  >Commander</a></li>
           <li class="mobilemenu__list__item"><a href="<?= BLOG_URL; ?>" class="mobilemenu__list__item__link" title="Blog aloe vera Forever" >Blog</a>
@@ -166,6 +167,8 @@ $blog_categories = get_categories($args);
             </ul>
           </li>
           <li class="mainmenu__list__item"> <a href="<?= ALOE_VERA_URL; ?>" class="mainmenu__list__item__link" title="Aloe vera" >Aloe vera</a> </li>
+          <li class="mainmenu__list__item"> <a href="<?= FOREVER_LIVING_URL; ?>" class="mainmenu__list__item__link" title="Forever Living Products" >Forever Living</a> </li>
+
           <li class="mainmenu__list__item"><a href="<?= JOIN_US_URL; ?>" class="mainmenu__list__item__link" title="Devenez distributeur Forever" >Rejoignez-nous !</a></li>
           <li class="mainmenu__list__item"><a href="<?= ORDER_URL; ?>" class="mainmenu__list__item__link" title="Commander les produits Forever Living">Commander</a></li>
         </ul>

@@ -12,6 +12,8 @@ define('ORDER_SLUG','commander' );
 define('ORDER_URL', get_home_url().'/'.ORDER_SLUG.'/');
 define('ALL_PRODUCTS_SLUG','produits-forever' );
 define('ALL_PRODUCTS_URL', get_home_url().'/'.ALL_PRODUCTS_SLUG.'/');
+define('FOREVER_LIVING_SLUG','forever-living-products' );
+define('FOREVER_LIVING_URL', get_home_url().'/'.FOREVER_LIVING_SLUG.'/');
 // Theme support
 function alloyogi_setup() {
     //Gestion des titres par Wordpress
