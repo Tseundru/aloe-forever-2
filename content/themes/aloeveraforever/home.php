@@ -306,7 +306,7 @@ $ten_and_eleven = array_slice($terms_sort_by_order, 9, 2, true);
       Qu'est-ce qui fait de Forever Living Le leader mondial de l'aloe vera ?
     </h2>
     <div class="videoBlock__video">
-      <iframe class="video video--full" src="https://www.youtube.com/watch?v=FAG7cJD3xOI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <iframe class="video video--full" src="https://www.youtube.com/embed/FAG7cJD3xOI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>
   </div>
   <?php write_responsive_image(378, 'full') ?>
