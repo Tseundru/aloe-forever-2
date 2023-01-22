@@ -190,7 +190,7 @@ $ten_and_eleven = array_slice($terms_sort_by_order, 9, 2, true);
   </main>
 
 </section>
-<main>
+<main class="ourAloe">
 <?php
 $page = get_page_by_path( 'aloe-vera' );
 $content =  get_post($page)->post_content;
