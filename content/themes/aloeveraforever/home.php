@@ -190,5 +190,11 @@ $ten_and_eleven = array_slice($terms_sort_by_order, 9, 2, true);
   </main>
 
 </section>
-<?php  the_content(); ?>
+<?php
+$page = get_page_by_path( 'aloe-vera' );
+$content =  get_post($page)->post_content;
+$content = apply_filters('the_content', $content);
+$content = str_replace(']]>', ']]>', $content);
+echo $content;
+?>
 <?php get_footer(); ?>
