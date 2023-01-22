@@ -191,6 +191,8 @@ $ten_and_eleven = array_slice($terms_sort_by_order, 9, 2, true);
 
 </section>
 
+<main class="ourAloe">
+
 
   <div class="sectionBlock">
     <h2 id="aloe-vera">L'aloe vera, la plante aux milles vertus</h2>
@@ -450,6 +452,6 @@ $ten_and_eleven = array_slice($terms_sort_by_order, 9, 2, true);
 
   </div>
   <a href="<?= ALL_PRODUCTS_URL; ?>" class="button button--center" title="Produits Forever Living"> Découvrez les produits Forever</a>
-
+  </main>
 
 <?php get_footer(); ?>
