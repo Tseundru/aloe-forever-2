@@ -193,7 +193,7 @@ $ten_and_eleven = array_slice($terms_sort_by_order, 9, 2, true);
 
 <main class="ourAloe">
   <div class="sectionBlock">
-    <h2 id="aloe-vera">L'aloe vera, la plante aux milles vertus</h2>
+   <a href="https://www.aloeveraforever.fr/aloe-vera-plante-aux-milles-vertus/" title="Aloe vera plante aux milles vertus"> <h2 id="aloe-vera">L'aloe vera, la plante aux milles vertus</h2></a>
     <p>Cette plante mythique qu’est l’Aloe Vera est reconnu depuis plusieurs milliers d’années pour ses nombreux bienfaits. L’Aloe Vera est composée de plus de 250 principes actifs, y compris les Vitamines A, B, C et E, de nombreux minéraux comme le cuivre, le fer, le magnésium, la manganèse ou le zinc, on y trouve du glucose, du mannose et de la cellulose.</p>
   </div>
   <div class="featureBlock">
@@ -306,7 +306,7 @@ $ten_and_eleven = array_slice($terms_sort_by_order, 9, 2, true);
       Qu'est-ce qui fait de Forever Living Le leader mondial de l'aloe vera ?
     </h2>
     <div class="videoBlock__video">
-      <iframe class="video video--full" src="https://www.youtube.com/embed/-_gA2aVl0tI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <iframe class="video video--full" src="https://youtu.be/FAG7cJD3xOI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>
   </div>
   <?php write_responsive_image(378, 'full') ?>
