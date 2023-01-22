@@ -193,7 +193,7 @@ $ten_and_eleven = array_slice($terms_sort_by_order, 9, 2, true);
 
 <main class="ourAloe">
   <div class="sectionBlock">
-   <a href="https://www.aloeveraforever.fr/aloe-vera-plante-aux-milles-vertus/" title="Aloe vera plante aux milles vertus"> <h2 id="aloe-vera">L'aloe vera, la plante aux milles vertus</h2></a>
+   <h2 id="aloe-vera"><a href="https://www.aloeveraforever.fr/aloe-vera-plante-aux-milles-vertus/" title="Aloe vera plante aux milles vertus"> L'aloe vera, la plante aux milles vertus</a></h2>
     <p>Cette plante mythique qu’est l’Aloe Vera est reconnu depuis plusieurs milliers d’années pour ses nombreux bienfaits. L’Aloe Vera est composée de plus de 250 principes actifs, y compris les Vitamines A, B, C et E, de nombreux minéraux comme le cuivre, le fer, le magnésium, la manganèse ou le zinc, on y trouve du glucose, du mannose et de la cellulose.</p>
   </div>
   <div class="featureBlock">
