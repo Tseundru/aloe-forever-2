@@ -262,7 +262,7 @@ $ten_and_eleven = array_slice($terms_sort_by_order, 9, 2, true);
     </div>
   </div>
   <div class="sectionBlock">
-    <h2>De la plante jusqu'au consommateur Forever fonctionne en intégration verticale</h2>
+    <h2 id="integration">De la plante jusqu'au consommateur Forever fonctionne en intégration verticale</h2>
     <p>
       De la Culture à la récolte et extraction de la pulpe, sa stabilisation, la fabrication et le conditionnement des produits Forever maitrise chaque étape de production. Ce système de production intégrée fait de Forever Living Products le premier producteur Mondial de gel d’Aloe Vera.
     </p>
@@ -348,7 +348,7 @@ $ten_and_eleven = array_slice($terms_sort_by_order, 9, 2, true);
 
   <?php write_responsive_image(389, 'full') ?>
   <div class="sectionBlock">
-    <h2>Pour son Aloe Vera Forever Forever exige l'excellence</h2>
+    <h2 id="excellence">Pour son Aloe Vera Forever Forever exige l'excellence</h2>
     <p>
       L’aloe vera est un des plus beaux cadeaux que nous fait la nature, il est normal que Forever Living mette tout en oeuvre pour en dévoiler tout son potientiel. C’est pour cette raison que Forever à décidé de maitriser toutes les étapes de la production, afin de garantir une Pulpe de la meilleure qualité qui soit. Ce n’est pas pour rien que tous les produits Forever à Base d’aloe vera sont certifiés par le prestigieux label IASC.
     </p>
