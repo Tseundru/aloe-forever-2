@@ -4,8 +4,8 @@ define( 'ALLOYOGI_THEME_VERSION', '1.0' );
 // Main Menu URL and Slug
 define('BLOG_SLUG','blog' );
 define('BLOG_URL', get_home_url().'/'.BLOG_SLUG.'/');
-define('ALOE_VERA_SLUG','aloe-vera' );
-define('ALOE_VERA_URL', get_home_url().'/'.ALOE_VERA_SLUG.'/#aloe-vera');
+define('ALOE_VERA_SLUG','#aloe-vera' );
+define('ALOE_VERA_URL', get_home_url().'/'.ALOE_VERA_SLUG);
 define('JOIN_US_SLUG','rejoignez-nous' );
 define('JOIN_US_URL', get_home_url().'/'.JOIN_US_SLUG.'/');
 define('ORDER_SLUG','commander' );
