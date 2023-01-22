@@ -158,6 +158,7 @@ $ten_and_eleven = array_slice($terms_sort_by_order, 9, 2, true);
     get_template_part('template-parts/banner-gallery/picture-card', null, $tax_term);
   ?>
   <?php endforeach; ?>
+ 
 </div>
 
 
@@ -189,4 +190,5 @@ $ten_and_eleven = array_slice($terms_sort_by_order, 9, 2, true);
   </main>
 
 </section>
+<?php  the_content(); ?>
 <?php get_footer(); ?>
