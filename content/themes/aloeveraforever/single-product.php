@@ -250,7 +250,7 @@ if($is_productStop){
         </a>
         <?php  endif ; ?>
       </p>
-      <p>Prix France Métropole TTC</p>
+      <p>Prix France Métropole</p>
       <p class="singleProduct__header__data__ref">
         <?php if(!$is_productStop ): ?>
         Réf: <?= get_field('product_ref'); ?>
