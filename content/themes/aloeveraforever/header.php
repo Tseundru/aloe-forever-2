@@ -75,7 +75,7 @@ $blog_categories = get_categories($args);
     if ($location_type === 'Ville'){
       if(!get_field('big_city')){
         echo '<meta name="robots" content="noindex, follow, nocache">';
-        echo'<meta http-equiv="refresh" content="durée;URL='.get_term_link($departementID).'">';
+        echo'<meta http-equiv="refresh" content="0;URL='.get_term_link($departementID).'">';
     }
   }
   }?>
