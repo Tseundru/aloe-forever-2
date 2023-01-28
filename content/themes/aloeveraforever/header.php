@@ -67,6 +67,15 @@ $blog_categories = get_categories($args);
 <head>
   <meta charset="<?php bloginfo( 'charset' ); ?>">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <?php  if(is_tax(Post_Type_Distributor::TAXONOMY_NAME_LOCATION)){
+    $location = get_queried_object();
+    $location_type = get_field('location_type_field', 'location_' . $location->term_id);
+    if ($location_type === 'Ville'){
+      if(!get_field('big_city')){
+        echo '<meta name="robots" content="noindex, follow, nocache">';
+    }
+  }
+  }?>
 </div>
   <?php wp_head(); ?>
   <?php if(is_home()):?>
