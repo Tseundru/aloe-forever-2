@@ -420,19 +420,9 @@ function register_my_menus() {
 // }
 // add_action('init','delete_post_type');
 
-// function redirect_410_aloevera(){
 
-//   if(is_tax(Post_Type_Distributor::TAXONOMY_NAME_LOCATION)){
-//     $location = get_queried_object();
-//     $location_type = get_field('location_type_field', 'location_' . $location->term_id);
-//     if ($location_type === 'Ville'){
-//       if(!get_field('big_city')){
-//         header("Status: 410 Gone", false, 410);
-//     }
-//   }
-//   }
-// }
-// add_action( 'wp_head', 'redirect_410_aloevera' );
+
+
  
 //require_once(dirname(__FILE__) . '/includes/smtp.php'); 
 // Inclusion des fichiers de configuration
