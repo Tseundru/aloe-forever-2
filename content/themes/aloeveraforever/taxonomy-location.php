@@ -260,7 +260,7 @@ switch ($location_type) {
               $lng2 = get_field('longitude_field', 'location_' . $city->term_id);
               if (distance($lat1, $lng1, $lat2, $lng2) <= 15 && $location->term_id != $city->term_id) :
             ?>
-              <a href="<?= get_term_link($city->term_id, 'location') ?>" title="Distributeur Forever Living Products <?= $city->name ?>"> <strong><?= $city->name ?></strong> </a> ,
+              <?= $city->name ?>  ,
           <?php endif;
             endforeach; ?>
         </p>
