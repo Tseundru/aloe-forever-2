@@ -4,6 +4,7 @@
 
 use RankMath\Sitemap\Providers\Post_Type;
 
+
 $page_custom_classes ="" ;
 if (is_singular('post')){
   $page_custom_classes ="blog-post-article" ;
