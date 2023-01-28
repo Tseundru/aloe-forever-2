@@ -233,9 +233,7 @@ switch ($location_type) {
 
       <!-- VILLES -->
       <?php if ($location_type === 'Ville') : ?>
-        <?php if(!get_field('big_city')){
-          header("Status: 410 Gone", false, 410);
-        } ?>
+        
         <?php
         $lat1 = get_field('latitude_field', 'location_' . $location->term_id);
         $lng1 = get_field('longitude_field', 'location_' . $location->term_id);

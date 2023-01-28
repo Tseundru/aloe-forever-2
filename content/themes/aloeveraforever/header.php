@@ -4,6 +4,14 @@
 
 use RankMath\Sitemap\Providers\Post_Type;
 
+if(is_tax(Post_Type_Distributor::TAXONOMY_NAME_LOCATION)){
+  $location_type = get_field('location_type_field', 'location_' . $location->term_id);
+  if ($location_type === 'Ville'){
+    if(!get_field('big_city')){
+      header("Status: 410 Gone", false, 410);
+  }
+}
+}
 
 $page_custom_classes ="" ;
 if (is_singular('post')){
