@@ -70,9 +70,12 @@ $blog_categories = get_categories($args);
  <?php  if(is_tax(Post_Type_Distributor::TAXONOMY_NAME_LOCATION)){
     $location = get_queried_object();
     $location_type = get_field('location_type_field', 'location_' . $location->term_id);
+    $departement = get_field('departement', 'location_' . $location->term_id);
+    $departementID = get_term_by('name', $departement, 'location')->term_id;
     if ($location_type === 'Ville'){
       if(!get_field('big_city')){
         echo '<meta name="robots" content="noindex, follow, nocache">';
+        echo'<meta http-equiv="refresh" content="durée;URL='.get_term_link($departementID).'">'
     }
   }
   }?>
