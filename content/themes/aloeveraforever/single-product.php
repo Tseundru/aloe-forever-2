@@ -467,7 +467,7 @@ $product_benefits = $is_variant ? get_field('product_benefits', $original_produc
     <section class="accordion singleProduct__benefit">
       <header class="accordion__header js-accordion">
         <h2 class="accordion__header__title title title--2">
-          Bienfaits de <?php the_title(); ?>
+          Bienfaits  ?>
         </h2>
         <i class="fa fa-plus accordion__header__icon" aria-hidden="true"></i>
       </header>
@@ -480,7 +480,7 @@ $product_benefits = $is_variant ? get_field('product_benefits', $original_produc
   <section class="accordion singleProduct__use">
     <header class="accordion__header js-accordion">
       <h2 class="accordion__header__title title title--2">
-        Conseil d'utilisation pour <?php the_title(); ?>
+        Conseils d'utilisations 
       </h2>
       <i class="fa fa-plus accordion__header__icon" aria-hidden="true"></i>
     </header>
@@ -494,7 +494,7 @@ $product_benefits = $is_variant ? get_field('product_benefits', $original_produc
     <section class="accordion singleProduct__faq">
       <header class="accordion__header js-accordion">
         <h2 class="accordion__header__title title title--2">
-          Questions fréquemment posée sur <?php the_title(); ?>
+          Questions fréquemment posée 
         </h2>
         <i class="fa fa-plus accordion__header__icon" aria-hidden="true"></i>
       </header>
@@ -592,7 +592,7 @@ $product_benefits = $is_variant ? get_field('product_benefits', $original_produc
 <section class=" evaluations">
       <header class=" evaluations__header">
         <h2 class=" evaluations__header__title title title--2" id="evaluations">
-          Ce que nos clients disent sur <?php the_title(); ?>
+          Avis clients
         </h2>
         <button class="button evaluations__header__button"> Laisser un avis </button>
 <?php comments_template(); // Par ici les commentaires 
