@@ -467,7 +467,7 @@ $product_benefits = $is_variant ? get_field('product_benefits', $original_produc
     <section class="accordion singleProduct__benefit">
       <header class="accordion__header js-accordion">
         <h2 class="accordion__header__title title title--2">
-          Bienfaits  ?>
+          Bienfaits 
         </h2>
         <i class="fa fa-plus accordion__header__icon" aria-hidden="true"></i>
       </header>
@@ -494,7 +494,7 @@ $product_benefits = $is_variant ? get_field('product_benefits', $original_produc
     <section class="accordion singleProduct__faq">
       <header class="accordion__header js-accordion">
         <h2 class="accordion__header__title title title--2">
-          Questions fréquemment posée 
+          F.A.Q 
         </h2>
         <i class="fa fa-plus accordion__header__icon" aria-hidden="true"></i>
       </header>
