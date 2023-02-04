@@ -414,6 +414,33 @@ function register_my_menus() {
  }
  add_action( 'init', 'register_my_menus' );
 
+
+ 
+function get_child_pages_by_parent_title($pageId,$limit = -1)
+{
+    // needed to use $post
+    global $post;
+    // used to store the result
+    $pages = array();
+
+    // What to select
+    $args = array(
+        'post_type' => 'cocon',
+        'post_parent' => $pageId,
+        'posts_per_page' => $limit
+    );
+    $the_query = new WP_Query( $args );
+
+    while ( $the_query->have_posts() ) {
+        $the_query->the_post();
+        $pages[] = $post->ID;
+    }
+    wp_reset_postdata();
+    return $pages;
+}
+
+
+
 //  function delete_post_type(){
 //   unregister_post_type( Post_Type_Distributor::NAME );
 //   unregister_taxonomy(Post_Type_Distributor::TAXONOMY_NAME_LOCATION);
