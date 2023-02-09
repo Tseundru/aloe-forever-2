@@ -141,6 +141,13 @@ $blog_categories = get_categories($args);
           </div>
           <li class="mobilemenu__list__item"><a href="<?= ALL_PRODUCTS_URL; ?>" class="mobilemenu__list__item__link" title="Produits aloe vera Forever" >Produits</a>
             <ul class="mobilemenu__list__item__sublist">
+            <li class="mobilemenu__list__item__sublist__subitem">
+              <a href="<?= get_term_link('gel-aloe-vera', 'product_badge'); ?>"
+                  class="mobilemenu__list__item__sublist__subitem__link"
+                   title="Gel d'aloe vera - Tous les produits">
+                   Gel d'aloe vera
+              </a>
+            </li>
               <?php foreach($terms_sort_by_order as $term):?>
               <li class="mobilemenu__list__item__sublist__subitem"><a href="<?= $term->link ?>"
                   class="mobilemenu__list__item__sublist__subitem__link" title="<?= $term->name ?>"><?= $term->name ?></a></li>
@@ -154,6 +161,7 @@ $blog_categories = get_categories($args);
           <li class="mobilemenu__list__item"><a href="<?= ORDER_URL; ?>" class="mobilemenu__list__item__link" title="Commander les produits Forever Living"  >Commander</a></li>
           <li class="mobilemenu__list__item"><a href="<?= BLOG_URL; ?>" class="mobilemenu__list__item__link" title="Blog aloe vera Forever" >Blog</a>
             <ul class="mobilemenu__list__item__sublist">
+            
               <?php foreach($blog_categories as $category):?>
               <li class="mobilemenu__list__item__sublist__subitem"><a href="<?= get_category_link($category->term_id) ?>"
                   class="mobilemenu__list__item__sublist__subitem__link" title="<?= $category->name ?>"><?= $category->name ?></a></li>
@@ -170,6 +178,11 @@ $blog_categories = get_categories($args);
         <ul class="mainmenu__list">
           <li class="mainmenu__list__item"><a href="<?= ALL_PRODUCTS_URL; ?>" class="mainmenu__list__item__link" title="Produits aloe vera Forever" >Produits</a>
             <ul class="mainmenu__list__item__sublist">
+            <li class="mainmenu__list__item__sublist__subitem">
+                <a href="<?= get_term_link('gel-aloe-vera', 'product_badge'); ?>" class="mainmenu__list__item__sublist__subitem__link" title="Gel d'aloe vera - Tous les produits">
+                Gel d'aloe vera
+                </a>
+              </li>
             <?php foreach($terms_sort_by_order as $term):?>
               <li class="mainmenu__list__item__sublist__subitem">
                 <a href="<?= $term->link ?>" class="mainmenu__list__item__sublist__subitem__link" title="<?= $term->name ?>">
