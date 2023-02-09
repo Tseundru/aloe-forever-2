@@ -17,11 +17,11 @@ $labels = get_terms([
 ]);
 
 //Filter and sort options
-$filter_orderby = '';
-$filter_order = 'ASC';
-$filter_order_type = 'name';
+$filter_orderby = 'product_aloe_percentage';
+$filter_order = 'DESC';
+$filter_order_type = 'meta_value_num';
 $filter_option = array();
-$sort_option = 'none';
+$sort_option = '';
 
 
 if (isset($_POST) && $_POST != null) {
