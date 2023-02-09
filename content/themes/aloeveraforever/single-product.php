@@ -350,10 +350,10 @@ if($is_productStop){
     <ul class="singleProduct__feature__list">
       <?php
       if(get_field('product_aloe_percentage')):?>
-        <li class="feature">
+       <li class="feature">
           Contient plus de 
-          <?= get_field('product_aloe_percentage')?>% de gel pur d'aloe vera
-        </li>
+          <?= get_field('product_aloe_percentage')?>% de pur <a href="<?= get_term_link('gel-aloe-vera', 'product_badge'); ?>">gel d'aloe vera 
+        </li></a> 
       <?php endif ;
       $strengths_list = $is_variant ? get_field('product_strengths_list', $original_product_ID) : get_field('product_strengths_list');
       if ($strengths_list):
