@@ -160,13 +160,7 @@ $blog_categories = get_categories($args);
           <li class="mobilemenu__list__item"><a href="<?= JOIN_US_URL; ?>" class="mobilemenu__list__item__link" title="Devenez distributeur Forever" >Rejoignez-nous !</a></li>
           <li class="mobilemenu__list__item"><a href="<?= ORDER_URL; ?>" class="mobilemenu__list__item__link" title="Commander les produits Forever Living"  >Commander</a></li>
           <li class="mobilemenu__list__item"><a href="<?= BLOG_URL; ?>" class="mobilemenu__list__item__link" title="Blog aloe vera Forever" >Blog</a>
-            <ul class="mobilemenu__list__item__sublist">
             
-              <?php foreach($blog_categories as $category):?>
-              <li class="mobilemenu__list__item__sublist__subitem"><a href="<?= get_category_link($category->term_id) ?>"
-                  class="mobilemenu__list__item__sublist__subitem__link" title="<?= $category->name ?>"><?= $category->name ?></a></li>
-              <?php endforeach; ?>
-            </ul>
           </li>
         </ul>
         <div class="mobilemenu__emptyspace js-emptySpace"></div>
