@@ -36,7 +36,7 @@ $tax_terms = get_terms($taxonomy, [
     <h2 class="products__header__title title title--2">Produits Aloe Vera Forever Linving Products France</h2>
     
     <p class="products__header__subtitle">Vos produits Aloe Vera Forever Living préférés, découvrez les produits les plus vendus dans l'hexagone.
-      <a href=<?= get_term_link('top-vente', 'gel-aloe-vera'); ?> class="products__header__subtitle__link" title="Meilleures ventes des produits Forever">Voir Tous</a>
+      <a href=<?= get_term_link('gel-aloe-vera', 'product_badge'); ?> class="products__header__subtitle__link" title="Meilleures ventes des produits Forever">Voir Tous</a>
     </p>
   </header>
   <?php get_template_part('template-parts/product/products-carousel', null, ['filter' => 'gel-aloe-vera','methode'=>'filter']);?>
