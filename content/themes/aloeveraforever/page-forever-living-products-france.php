@@ -139,5 +139,12 @@ $tax_terms = get_terms($taxonomy, [
       </main>
 
     </section>
+    <?php
+$page = get_page_by_path( 'forever-living-products' );
+$content =  get_post($page)->post_content;
+$content = apply_filters('the_content', $content);
+$content = str_replace(']]>', ']]>', $content);
+echo $content;
+?>
 </main>
 <?php get_footer(); ?>
