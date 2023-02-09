@@ -269,6 +269,9 @@ ksort($terms_sort_by_order, SORT_NUMERIC);
           <li class="productCategory__products__category__main__list__item <?= is_page(ALL_PRODUCTS_SLUG) ? 'productCategory__products__category__main__list__item--active' : '' ?>">
             <a href="<?= ALL_PRODUCTS_URL; ?>" title="Produits Forever"> Tous les produits</a>
           </li>
+          <li class="productCategory__products__category__main__list__item <?= is_page(ALL_PRODUCTS_SLUG) ? 'productCategory__products__category__main__list__item--active' : '' ?>">
+            <a href="<?= get_term_link('gel-aloe-vera', 'product_badge'); ?>" title="Gel d'aloe vera - Tous les produits">Gel d'aloe vera</a>
+          </li>
           <?php foreach ($terms_sort_by_order as $term) : ?>
             <li class="productCategory__products__category__main__list__item <?= $term->term_id == $term_id ?  'productCategory__products__category__main__list__item--active' : '' ?>">
               <a href="<?= $term->link ?>" title="<?= $term->name ?>"> <?= $term->name ?></a>
