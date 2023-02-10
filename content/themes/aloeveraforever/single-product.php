@@ -289,11 +289,11 @@ if($is_productStop){
 
     <div class="singleProduct__header__action">
     <?php if(!$is_productStop) : ?>
-      <a href="<?= $orderUrl ?>" class="singleProduct__header__action__order button button--order" title="Commander <?php the_title(); ?> sur la boutique en ligne" rel="no-follow" target="_blank">
+      <a href="<?= $orderUrl ?>" class="singleProduct__header__action__order button button--order" title="Commander <?php the_title(); ?> sur la boutique en ligne" rel="nofollow" target="_blank">
         Acheter ce produit
       </a>
       <?php endif ; ?>
-      <a href="<?= $joinUrl ?>" class="singleProduct__header__action__sell button  button button--sell" title="Devenir distributeur Forever Living" rel="no-follow" target="_blank">
+      <a href="<?= $joinUrl ?>" class="singleProduct__header__action__sell button  button button--sell" title="Devenir distributeur Forever Living" rel="nofollow" target="_blank">
         Vendre
       </a>
       <div class="singleProduct__header__action__share button button--social  ">
