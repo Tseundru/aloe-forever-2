@@ -19,6 +19,7 @@ if (is_singular('product')){
 if($is_variant){
   $original_product_ID = get_field('product_variant')[0]->ID;
   $canonical_link = get_permalink($original_product_ID);
+  add_filter( 'rank_math/frontend/canonical', '__return_false' );
 } 
 
 };
